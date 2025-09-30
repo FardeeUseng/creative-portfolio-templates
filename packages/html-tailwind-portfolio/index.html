@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Portfolio</title>
+
+    <!-- ============ Favicon ============ -->
+    <link href="./assets/favicon.svg" rel="icon" type="image/x-icon" />
+
+    <!-- ============ Tailwind CSS ============ -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="./tailwind-config.js"></script>
+    
+    <!-- ============ Fonts ============ -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- ============ Icons & Animations ============ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    >
+
+    <!-- ============ Custom CSS ============ -->
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body
+    class="
+      overflow-x-hidden
+      bg-background-light dark:bg-background-dark
+      font-display text-gray-800 dark:text-gray-200
+    "
+  >
+
+    <!-- ========== Header ========== -->
+    <header
+      class="
+        sticky top-0 z-10
+        w-full border-b border-gray-200/50 dark:border-gray-700/50
+        bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm
+      "
+    >
+      <div
+        class="
+          container
+          mx-auto px-4 py-4 sm:px-6 lg:px-8
+          flex items-center justify-between
+        "
+      >
+        <div class="flex items-center gap-3">
+          <svg
+            class="h-8 w-8 text-primary"
+            fill="none"
+            viewBox="0 0 48 48"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="
+                M39.475 21.6262C40.358 21.4363 40.6863 21.5589 
+                40.7581 21.5934C40.7876 21.655 40.8547 21.857 
+                40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 
+                39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 
+                33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 
+                25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 
+                22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 
+                21.5934 40.7581C21.5589 40.6863 21.4363 40.358 
+                21.6262 39.475C21.8562 38.4054 22.4689 36.9657 
+                23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 
+                28.7621 28.762C30.9744 26.5497 33.2417 24.7574 
+                35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 
+                39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 
+                44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 
+                44.659 25.5148 44.1631 26.9723 43.4579C29.9052 
+                42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 
+                33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 
+                25.5148 44.659 24.0585 44.7893 22.7217C44.9179 
+                21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 
+                4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 
+                3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 
+                5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 
+                11.5858C9.18354 13.988 7.18717 16.4978 5.74802 
+                18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 
+                24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z
+              "
+              fill="currentColor"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+          <h1 class="text-xl font-bold text-gray-900 dark:text-white">
+            Sarah
+          </h1>
+        </div>
+
+        <!-- ===== Navigator ===== -->
+        <nav class="hidden items-center gap-8 md:flex">
+          <a
+            class="
+              text-sm font-medium
+              text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary
+            "
+            href="#hero"
+          >
+            Hero
+          </a>
+          <a
+            class="
+              text-sm font-medium 
+              text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary
+            "
+            href="#about"
+          >
+            About
+          </a>
+          <a
+            class="
+              text-sm font-medium 
+              text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary
+            "
+            href="#poroject"
+          >
+            Projects
+          </a>
+          <a
+            class="
+              text-sm font-medium 
+              text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary
+            "
+            href="#testimonials"
+          >
+            Testimonials
+          </a>
+          <a
+            class="
+              text-sm font-medium 
+              text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary
+            "
+            href="#contact"
+          >
+            Contact
+          </a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <!-- <button
+            class="
+              h-8 w-16
+              flex items-center justify-center gap-x-1
+              rounded-lg bg-gray-200/50 dark:bg-gray-700/50 
+              text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700
+            "
+          >
+            <span class="material-symbols-outlined text-sm">
+              translate
+            </span>
+            <span class="text-sm">EN</span>
+          </button> -->
+          <button
+            id="theme-toggle"
+            class="
+              h-8 w-8
+              flex items-center justify-center
+              rounded-lg bg-gray-200/50 dark:bg-gray-700/50 
+              text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700
+            "
+          >
+            <!-- ===== ☀️ Light Mode ===== -->
+            <span class="material-symbols-outlined text-base block dark:hidden">
+              light_mode
+            </span>
+
+            <!-- ===== 🌙 Dark Mode ===== -->
+            <span class="material-symbols-outlined text-base hidden dark:block">
+              dark_mode
+            </span>
+          </button>
+
+          <!-- ===== User Profile ===== -->
+          <div
+            class="h-10 w-10 rounded-full bg-cover bg-center"
+            style="
+              background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuZmZoPb1A7qPh7FBTuPC-Fa2zMf5-yiLB8SvUOGeVxP90RbP2A_qY4tCjZm9hsJceQejuIXsKgRlL4FOG9nhFK7DrAHvio0_dDHX7HeJhh9rkd3ghKziAdZiGisUuysVBeilrPGhit1RYuImdl0Ic5ZLatuwziDHf8x2w2ak01oDYZz4D7-MDsvWdrmNXDnPiV0elxtuwskTMfeJ2tT8pOZVffcWmGDX4CFF7hK1tfQ2FWBVD32cGExFAwsXIHLMng0FJIYUCJSaA');
+            "
+          ></div>
+
+          <!-- ===== Display menu button for mobile screen ===== -->
+          <button id="menu-toggle" class="md:hidden">
+            <span
+              id="menu-icon"
+              class="material-symbols-outlined text-gray-800 dark:text-gray-200"
+            >
+              menu
+            </span>
+          </button>
+
+          <!-- ===== Mobile menu (hidden by default) ===== -->
+          <div id="sidebar" 
+            class="
+              h-screen w-64 md:hidden
+              fixed top-0 right-0 z-50
+              bg-white dark:bg-gray-900 shadow-lg 
+              transform translate-x-full transition-transform 
+              duration-300 ease-in-out
+            "
+          >
+            <div
+              class="
+                flex items-center justify-between 
+                p-4 border-b dark:border-gray-700
+              "
+            >
+              <h2 class="text-lg font-bold">Menu</h2>
+              <button
+                id="close-btn"
+                class="rounded hover:bg-gray-200 dark:hover:bg-gray-700 max-h-8 max-w-8"
+              >
+                <span class="material-symbols-outlined">close</span>
+              </button>
+            </div>
+
+            <nav class="flex flex-col gap-4 p-4">
+              <a href="#home" class="hover:text-primary">Home</a>
+              <a href="#about" class="hover:text-primary">About</a>
+              <a href="#projects" class="hover:text-primary">Projects</a>
+              <a href="#contact" class="hover:text-primary">Contact</a>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- ========== Hero Section ========== -->
+    <section
+      id="hero"
+      class="
+        flex flex flex-col justify-center
+        min-h-[calc(100vh-75px)] 
+        bg-background-light dark:bg-background-dark
+      "
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
+
+          <!-- ===== Introduction ===== -->
+          <div class="order-2 lg:order-1">
+            <h1
+              class="
+                animate__animated
+                text-4xl sm:text-5xl lg:text-6xl
+                font-black tracking-tight
+                text-gray-900 dark:text-white
+              "
+              data-animate="animate__flash"
+            >
+              Hi, I'm Sarah, a Frontend Developer
+            </h1>
+
+            <p
+              class="
+                animate__animated
+                mt-4 text-lg text-gray-600 dark:text-gray-300
+              "
+              data-animate="animate__fadeInUp"
+            >
+              I craft intuitive and engaging web experiences using modern
+              technologies. Let's build something amazing together.
+            </p>
+            <div
+              class="
+                animate__animated
+                mt-8 flex flex-wrap gap-4
+              "
+              data-animate="animate__fadeInUp"
+            >
+              <button
+                class="
+                  h-12 px-6
+                  flex items-center justify-center
+                  rounded-lg bg-primary shadow-md 
+                  text-base font-bold text-white
+                  transition-transform hover:scale-105
+                "
+              >
+                Hire Me
+              </button>
+              <a
+                href="./pdf/Brian-CV.pdf"
+                target="_blank"
+                download
+                class="
+                  h-12 px-6 
+                  flex items-center justify-center
+                  rounded-lg bg-gray-200 dark:bg-gray-700 shadow-md 
+                  text-base font-bold text-gray-800 dark:text-gray-200 
+                  transition-transform hover:scale-105
+                "
+              >
+                Download CV
+              </a>
+            </div>
+          </div>
+
+          <!-- ===== User Profile ===== -->
+          <div
+            class="order-1 lg:order-2 animate__animated"
+            data-animate="animate__jackInTheBox"
+          >
+            <div
+              class="
+                aspect-square
+                w-full max-w-md mx-auto lg:max-w-none
+                rounded-xl shadow-lg 
+                bg-cover bg-center 
+              "
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAANiC0s3uEAXP8aPsn8E09kVi2bubM9arKM4OUpSao1u6FsTxhFZKaM1yxUg79aAO6RqUaE0A2owRIsTghjX63Mdqjobeifbx6lrbWiEuzUP6E1rPKM9nSPCuUq6tSphorJzk3s95Vrz-AQu8UKFMYyCW9nmrujpSwFuoxkN4weU0j7BSmgmZHNPozEcV5TxbEkBdcxtLtN28__asZq-cJMlRGGEvPBRkNu7arqWBIcBXUyDj0hdTL1D57Y22HH6IqYKUW9WO29iGH');
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== About Section ========== -->
+    <section id="about" class="bg-gray-100 dark:bg-gray-800/50 py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+
+          <!-- ===== About me ===== -->
+          <div>
+            <h2
+              class="
+                animate__animated
+                text-3xl font-bold text-center
+                text-gray-900 dark:text-white
+              "
+              data-animate="animate__fadeInUp"
+            >
+              About Me
+            </h2>
+            <p 
+              class="
+                animate__animated mt-4
+                text-center text-gray-600 dark:text-gray-300
+              "
+              data-animate="animate__fadeInUp"
+            >
+              I'm a passionate frontend developer with 5+ years of experience in
+              creating responsive and user-friendly web applications. My
+              expertise lies in HTML, CSS, JavaScript, and modern frameworks
+              like React and Vue.js. I'm dedicated to continuous learning and
+              staying updated with the latest industry trends.
+            </p>
+          </div>
+
+          <!-- ===== What i do ===== -->
+          <div class="mt-16">
+            <h3
+              class="
+                animate__animated
+                text-2xl font-bold text-center 
+                text-gray-900 dark:text-white
+              "
+              data-animate="animate__fadeInUp"
+            >
+              What I Do
+            </h3>
+            <div class="mt-8 grid gap-8 md:grid-cols-2">
+              <a
+                href="#"
+                class="
+                  animate__animated p-6
+                  shadow-sm hover:shadow-lg text-center
+                  rounded-lg bg-background-light dark:bg-gray-700/50
+                "
+                data-animate="animate__zoomInUp"
+              >
+                <div
+                  class="
+                    h-16 w-16 mx-auto
+                    flex items-center justify-center
+                    rounded-full bg-primary text-white
+                  "
+                >
+                  <span class="material-symbols-outlined text-3xl">code</span>
+                </div>
+                <h4
+                  class="
+                    mt-4
+                    text-lg font-bold
+                    text-gray-900 dark:text-white
+                  "
+                >
+                  Web Development
+                </h4>
+                <p class="mt-2 text-gray-600 dark:text-gray-300">
+                  Building responsive and interactive websites from scratch
+                  using the latest technologies.
+                </p>
+              </a>
+              <a
+                href="#"
+                class="
+                  animate__animated p-6 rounded-lg 
+                  shadow-sm text-center hover:shadow-lg 
+                  bg-background-light dark:bg-gray-700/50  
+                "
+                data-animate="animate__zoomInUp"
+              >
+                  <div
+                    class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white mx-auto"
+                  >
+                    <span class="material-symbols-outlined text-3xl"
+                      >design_services</span
+                    >
+                  </div>
+                  <h4
+                    class="mt-4 text-lg font-bold text-gray-900 dark:text-white"
+                  >
+                    UI/UX Design
+                  </h4>
+                  <p class="mt-2 text-gray-600 dark:text-gray-300">
+                    Designing user-centric interfaces that are both beautiful
+                    and easy to use.
+                  </p>
+              </a>
+            </div>
+          </div>
+
+          <!-- ===== Skills ===== -->
+          <div class="mt-16">
+            <h3
+              class="
+                animate__animated
+                text-2xl font-bold text-center
+                text-gray-900 dark:text-white
+              "
+              data-animate="animate__fadeInUp"
+            >
+              Skills
+            </h3>
+            <div class="mt-8 grid gap-8 md:grid-cols-2">
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-gray-900 dark:text-white">
+                    HTML &amp; CSS
+                  </h4>
+                  <span
+                    class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                  >
+                    95%
+                  </span>
+                </div>
+                <div
+                  class="
+                    h-2.5 w-full
+                    rounded-full bg-gray-200 dark:bg-gray-700
+                  "
+                >
+                  <div
+                    class="progress-bar bg-primary h-2.5 rounded-full"
+                    data-width="95%"
+                    style="width:0%"
+                  ></div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-gray-900 dark:text-white">
+                    JavaScript (ES6+)
+                  </h4>
+                  <span
+                    class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                  >
+                    90%
+                  </span>
+                </div>
+                <div
+                  class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700"
+                >
+                  <div
+                    class="progress-bar h-2.5 rounded-full bg-primary"
+                    data-width="90%"
+                    style="width: 90%"
+                  ></div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-gray-900 dark:text-white">
+                    React &amp; Vue.js
+                  </h4>
+                  <span
+                    class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                  >
+                    85%
+                  </span>
+                </div>
+                <div
+                  class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700"
+                >
+                  <div
+                    class="progress-bar h-2.5 rounded-full bg-primary"
+                    data-width="85%"
+                    style="width: 85%"
+                  ></div>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <h4 class="font-bold text-gray-900 dark:text-white">
+                    Responsive Design
+                  </h4>
+                  <span
+                    class="text-sm font-medium text-gray-500 dark:text-gray-400"
+                  >
+                    98%
+                  </span>
+                </div>
+                <div
+                  class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700"
+                >
+                  <div
+                    class="progress-bar h-2.5 rounded-full bg-primary"
+                    data-width="98%"
+                    style="width: 98%"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===== Career Timeline ===== -->
+          <div class="mt-16">
+            <h3
+              class="
+                animate__animated
+                text-2xl font-bold text-center 
+                text-gray-900 dark:text-white
+              "
+              data-animate="animate__fadeInUp"
+            >
+              Career Timeline
+            </h3>
+            <div
+              class="animate__animated mt-8 flow-root"
+              data-animate="animate__jackInTheBox"
+            >
+              <ul class="-mb-8">
+                <li>
+                  <div class="relative pb-8">
+                    <span
+                      aria-hidden="true"
+                      class="
+                        absolute left-6 top-5 -ml-px
+                        h-full w-0.5 
+                        bg-gray-300 dark:bg-gray-600
+                      "
+                    ></span>
+                    <div class="relative flex items-start space-x-3">
+                      <div>
+                        <div class="relative px-1">
+                          <div
+                            class="
+                              h-10 w-10 
+                              flex items-center justify-center 
+                              rounded-full ring-8 
+                              bg-primary ring-background-light dark:ring-gray-800/50
+                            "
+                          >
+                            <span class="material-symbols-outlined text-white"
+                              >work</span
+                            >
+                          </div>
+                        </div>
+                      </div>
+                      <div class="min-w-0 flex-1 py-1.5">
+                        <div
+                          class="text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Frontend Developer at Tech Innovators Inc.
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          2020 - Present
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="relative pb-8">
+                    <span
+                      aria-hidden="true"
+                      class="
+                        absolute left-6 top-5 -ml-px 
+                        h-full w-0.5 
+                        bg-gray-300 dark:bg-gray-600
+                      "
+                    ></span>
+                    <div class="relative flex items-start space-x-3">
+                      <div>
+                        <div class="relative px-1">
+                          <div
+                            class="
+                              h-10 w-10
+                              flex items-center justify-center 
+                              rounded-full bg-primary 
+                              ring-8 ring-background-light dark:ring-gray-800/50
+                            "
+                          >
+                            <span class="material-symbols-outlined text-white">
+                              work
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="min-w-0 flex-1 py-1.5">
+                        <div
+                          class="text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Web Developer at Creative Solutions Co.
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          2018 - 2020
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="relative">
+                    <div class="relative flex items-start space-x-3">
+                      <div>
+                        <div class="relative px-1">
+                          <div
+                            class="
+                              h-10 w-10 
+                              flex items-center justify-center
+                              rounded-full bg-primary 
+                              ring-8 ring-background-light dark:ring-gray-800/50
+                            "
+                          >
+                            <span class="material-symbols-outlined text-white">
+                              work
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="min-w-0 flex-1 py-1.5">
+                        <div
+                          class="text-sm font-medium text-gray-900 dark:text-white"
+                        >
+                          Junior Developer at Startup X
+                        </div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          2016 - 2018
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ===== Education ===== -->
+          <div class="mt-16">
+            <h3
+              class="
+                animate__animated
+                text-2xl font-bold text-center 
+                text-gray-900 dark:text-white
+              "
+              data-animate="animate__fadeInUp"
+            >
+              Education
+            </h3>
+            <div
+              class="animate__animated mt-8 flow-root"
+              data-animate="animate__jackInTheBox"
+            >
+              <ul class="-mb-8">
+                <li class="relative pb-8">
+                  <span
+                    aria-hidden="true"
+                    class="absolute left-6 top-5 -ml-px h-full w-0.5 bg-gray-300 dark:bg-gray-600"
+                  ></span>
+                  <div class="relative flex items-start space-x-3">
+                    <div>
+                      <div class="relative px-1">
+                        <div
+                          class="h-10 w-10 flex items-center justify-center 
+                                rounded-full bg-primary 
+                                ring-8 ring-background-light dark:ring-gray-800/50"
+                        >
+                          <span class="material-symbols-outlined text-white">
+                            school
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-w-0 flex-1 py-1.5">
+                      <div class="text-sm font-medium text-gray-900 dark:text-white">
+                        B.Sc. in Computer Science - University of Technology
+                      </div>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">
+                        2012 - 2016
+                      </p>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="relative pb-8">
+                  <div class="relative flex items-start space-x-3">
+                    <div>
+                      <div class="relative px-1">
+                        <div
+                          class="
+                            h-10 w-10 
+                            flex items-center justify-center 
+                            rounded-full bg-primary 
+                            ring-8 ring-background-light dark:ring-gray-800/50
+                          "
+                        >
+                          <span class="material-symbols-outlined text-white">
+                            school
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="min-w-0 flex-1 py-1.5">
+                      <div class="text-sm font-medium text-gray-900 dark:text-white">
+                        M.Sc. in Software Engineering - National University
+                      </div>
+                      <p class="text-sm text-gray-500 dark:text-gray-400">
+                        2017 - 2019
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ===== Certicates ===== -->
+          <div class="mt-16">
+            <h3
+              class="
+                animate__animated
+                text-2xl font-bold text-center 
+                text-gray-900 dark:text-white
+              "
+              data-animate="animate__fadeInUp"
+            >
+              Certificates
+            </h3>
+            <div class="mt-8 grid gap-8 md:grid-cols-2">
+              <a
+                href="#"
+                class="
+                  animate__animated
+                  rounded-lg p-6 shadow-sm hover:shadow-lg
+                  bg-background-light dark:bg-gray-700/50
+                  flex items-start gap-4
+                "
+                data-animate="animate__zoomInUp"
+              >
+                <div
+                  class="
+                    h-12 w-12 
+                    flex items-center justify-center
+                    rounded-full bg-primary shrink-0
+                    text-white
+                  "
+                >
+                  <span class="material-symbols-outlined">
+                    workspace_premium
+                  </span>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-gray-900 dark:text-white">
+                    Certified JavaScript Developer
+                  </h4>
+                  <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    Issued by Tech Certification Body, 2021
+                  </p>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="
+                  animate__animated
+                  rounded-lg p-6 shadow-sm hover:shadow-lg
+                  bg-background-light dark:bg-gray-700/50 
+                  flex items-start gap-4
+                "
+                data-animate="animate__zoomInUp"
+              >
+                <div
+                  class="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white shrink-0"
+                >
+                  <span class="material-symbols-outlined">
+                    workspace_premium
+                  </span>
+                </div>
+                <div>
+                  <h4 class="text-lg font-bold text-gray-900 dark:text-white">
+                    Advanced CSS and Sass
+                  </h4>
+                  <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    Issued by Online Learning Platform, 2020
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Project Section ========== -->
+    <section id="poroject" class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h1
+            class="
+              animate__animated
+              text-4xl md:text-5xl font-bold text-gray-900 dark:text-white
+            "
+            data-animate="animate__flash"
+          >
+            My Projects
+          </h1>
+          <p
+            class="
+              mt-4
+              animate__animated
+              text-lg text-gray-600 dark:text-gray-400
+            "
+            data-animate="animate__fadeInUp"
+          >
+            Explore a selection of my recent projects, showcasing my skills in
+            web development, app development, and design.
+          </p>
+        </div>
+
+        <!-- ===== Project category list ===== -->
+        <div
+          data-animate="animate__jackInTheBox"
+          class="
+            mb-10
+            filter-button animate__animated 
+            flex justify-center gap-2 flex-wrap
+          "
+        >
+        </div>
+
+        <!-- ===== Project list ===== -->
+        <div
+          data-animate="animate__jackInTheBox"
+          class="
+            projects-grid animate__animated 
+            grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8
+          "
+        >
+        </div>
+
+        <!-- ===== My services ===== -->
+        <div class="mt-20">
+          <div class="text-center mb-12">
+            <h2
+              class="
+                animate__animated
+                text-3xl md:text-4xl font-bold 
+                text-gray-900 dark:text-white
+              "
+              data-animate="animate__flash"
+            >
+              My Services
+            </h2>
+            <p
+              class="
+                mt-4 
+                animate__animated
+                text-lg text-gray-600 dark:text-gray-400
+              "
+              data-animate="animate__fadeInUp"
+            >
+              I offer a range of services to bring your digital ideas to life.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <a
+              href="#"
+              data-animate="animate__zoomInUp"
+              class="
+                animate__animated
+                text-center p-8 
+                bg-white dark:bg-gray-800/50 rounded-lg shadow-sm hover:shadow-lg
+                border border-gray-200 dark:border-gray-700/50
+              "
+            >
+              <div
+                class="
+                  w-16 h-16 mx-auto mb-6
+                  flex items-center justify-center 
+                  rounded-full bg-primary/20 text-primary
+                "
+              >
+                <span class="material-symbols-outlined text-3xl"> code </span>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-900 dark:text-white mb-2"
+              >
+                Web Development
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Crafting responsive and dynamic websites using modern
+                technologies.
+              </p>
+            </a>
+            <a
+              href="#"
+              data-animate="animate__zoomInUp"
+              class="
+                p-8 animate__animated
+                text-center shadow-sm hover:shadow-lg
+                bg-white dark:bg-gray-800/50 rounded-lg  
+                border border-gray-200 dark:border-gray-700/50
+              "
+            >
+              <div
+                class="
+                  w-16 h-16 mx-auto mb-6 
+                  flex items-center justify-center 
+                  rounded-full bg-primary/20 text-primary
+                "
+              >
+                  <span class="material-symbols-outlined text-3xl">
+                    phone_iphone
+                  </span>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-900 dark:text-white mb-2"
+              >
+                App Development
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Building intuitive and engaging mobile applications for
+                various platforms.
+              </p>
+            </a>
+            <a
+              href="#"
+              data-animate="animate__zoomInUp"
+              class="
+                animate__animated
+                p-8 text-center shadow-sm hover:shadow-lg
+                bg-white dark:bg-gray-800/50 rounded-lg 
+                border border-gray-200 dark:border-gray-700/50
+              "
+            >
+              <div
+                class="
+                  flex items-center justify-center 
+                  w-16 h-16 mx-auto mb-6
+                  rounded-full bg-primary/20 text-primary
+                "
+              >
+                <span class="material-symbols-outlined text-3xl">
+                  design_services
+                </span>
+              </div>
+              <h3
+                class="text-xl font-bold text-gray-900 dark:text-white mb-2"
+              >
+                UI/UX Design
+              </h3>
+              <p class="text-gray-600 dark:text-gray-400">
+                Designing user-centered interfaces that enhance user
+                experience.
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Testimonials Section ========== -->
+    <section id="testimonials" class="py-16 sm:py-24 bg-white dark:bg-gray-900/50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2
+            data-animate="animate__flash"
+            class="
+              mb-8
+              animate__animated 
+              text-3xl sm:text-4xl
+              font-extrabold text-gray-900 dark:text-white
+            "
+          >
+            Testimonials
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              data-animate="animate__zoomInUp"
+              class="
+                animate__animated
+                bg-white dark:bg-gray-900/50 
+                p-6 rounded-lg 
+                shadow-md hover:shadow-xl transition-shadow duration-300
+              "
+            >
+              <div class="flex items-center mb-4">
+                <img
+                  alt="Sarah M."
+                  class="w-12 h-12 rounded-full object-cover mr-4"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBkF0FmLgMzNfj2xKOBnEgpvBG9Qg_G4OTh3L_70uK_3ACZARxWCvxOJFjprRo7BHc558yru9iEz0xz3vwPmblqjiG18c1DTYDmQ1u2Ax_h_bbJ6pPSbQ9QYLGfMjlH27fqm4HXwNgC2ELjLDULo7VbxHtNlfykRs8PEZf0izm-AUZ1MxsBe4xEHJMvskivLAn47AC_joljvcqwK60XbzfvaHpaUU9sI_YLBz67lO9cjzZXzrEnDz1dSpPS0kr-qYw4TZt5u7p8fPP"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-900 dark:text-white">
+                    Sarah M.
+                  </h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    2023-08-15
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center mb-4 text-primary">
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Alex is an exceptional frontend developer. His attention to
+                detail and ability to translate complex designs into functional
+                and user-friendly interfaces is remarkable.
+              </p>
+              <div
+                class="flex items-center text-gray-500 dark:text-gray-400 gap-4"
+              >
+                <button
+                  class="flex items-center gap-2 hover:text-primary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-lg">
+                    thumb_up
+                  </span>
+                  <span>12</span>
+                </button>
+                <button
+                  class="flex items-center gap-2 hover:text-primary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-lg">
+                    thumb_down
+                  </span>
+                  <span>1</span>
+                </button>
+              </div>
+            </div>
+            <div
+              data-animate="animate__zoomInUp"
+              class="
+                animate__animated
+                bg-white dark:bg-gray-900/50 
+                p-6 rounded-lg s
+                hadow-md hover:shadow-xl transition-shadow duration-300
+              "
+            >
+              <div class="flex items-center mb-4">
+                <img
+                  alt="David L."
+                  class="w-12 h-12 rounded-full object-cover mr-4"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcfs9lU9IZyuIXpNiygqa9QlAIpvodejsrkfv5HLTj-F7zF7VoAw-og28bPFfz-gdP4SBaxD8i0gqyr-BygmH4NgOBKR5qPdri7pDfayVO7wA_jYC99pO1G4Q_FQvHORkr_5bw12G_KV9Q_63gq417wRG__Rqg5JcqDg-xi5Lq_QwBoZKY-HuyCpyvmWcNQ-64xPR3U5yIrvluVhsBTp2QqHuBeI6IrmSIJvbvoK4NW9wSN3eWNWwxY8vXsx93lNlLU7J3hSqbaaRz"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-900 dark:text-white">
+                    David L.
+                  </h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    2023-09-22
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center mb-4 text-primary">
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                We hired Alex for a critical project, and he delivered
+                outstanding results. His technical skills are top-notch, and he
+                communicated effectively.
+              </p>
+              <div
+                class="flex items-center text-gray-500 dark:text-gray-400 gap-4"
+              >
+                <button
+                  class="flex items-center gap-2 hover:text-primary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-lg">
+                    thumb_up
+                  </span>
+                  <span>15</span>
+                </button>
+                <button
+                  class="flex items-center gap-2 hover:text-primary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-lg">
+                    thumb_down
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div
+              data-animate="animate__zoomInUp"
+              class="
+                animate__animated
+                bg-white dark:bg-gray-900/50 
+                p-6 rounded-lg 
+                shadow-md hover:shadow-xl transition-shadow duration-300
+              "
+            >
+              <div class="flex items-center mb-4">
+                <img
+                  alt="Emily R."
+                  class="w-12 h-12 rounded-full object-cover mr-4"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8h1FwIvuTSN19Hy9t1ClXwwwMLydAZCz99-uZQH9SRKftM12ykgSjDUvJA36qvfD-Nob60eGDSADriWKneXgwR4diZkwXJphUXKlzGPs0LLQGHMR0io_binAYfse47CiDCUB7u6gzqIP9A1QwywO9k2xUcEDzihbnIVBARjoLqsjknr_EwyAQsGCfsrqMW3M_iJbf_PKLeseraQJqcJ1-DkWECnlrwuWbvR2WFmI-a1IHF1C5evP6z4TPXmcTmas-1DayoDh9TkyO"
+                />
+                <div>
+                  <h3 class="font-bold text-gray-900 dark:text-white">
+                    Emily R.
+                  </h3>
+                  <p class="text-sm text-gray-500 dark:text-gray-400">
+                    2023-11-10
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center mb-4 text-primary">
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+                <span class="material-symbols-outlined">star</span>
+              </div>
+              <p class="text-gray-600 dark:text-gray-300 mb-4">
+                Alex's creativity and problem-solving skills are truly
+                impressive. He provided valuable insights that improved the
+                overall user experience.
+              </p>
+              <div
+                class="flex items-center text-gray-500 dark:text-gray-400 gap-4"
+              >
+                <button
+                  class="flex items-center gap-2 hover:text-primary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-lg">
+                    thumb_up
+                  </span>
+                  <span>10</span>
+                </button>
+                <button
+                  class="flex items-center gap-2 hover:text-primary transition-colors"
+                >
+                  <span class="material-symbols-outlined text-lg">
+                    thumb_down
+                  </span>
+                  <span>2</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Contact Section ========== -->
+    <section id="contact" class="py-16 sm:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <h2
+            data-animate="animate__flash"
+            class="
+              mb-8
+              animate__animated 
+              text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white
+            "
+          >
+            Contact
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <form
+              id="contact-form"
+              data-animate="animate__jackInTheBox"
+              class="animate__animated space-y-6"
+            >
+              <div>
+                <label class="sr-only" for="name">Your Name</label>
+                <input
+                  class="
+                    form-input 
+                    w-full 
+                    bg-white dark:bg-gray-900/50 
+                    border-gray-300 dark:border-gray-700 
+                    rounded focus:ring-primary focus:border-primary dark:text-white
+                  "
+                  id="name"
+                  name="name"
+                  placeholder="Your Name"
+                  type="text"
+                />
+              </div>
+              <div>
+                <label class="sr-only" for="email">Your Email</label>
+                <input
+                  class="
+                    form-input 
+                    w-full 
+                    bg-white dark:bg-gray-900/50 
+                    border-gray-300 dark:border-gray-700 rounded 
+                    focus:ring-primary focus:border-primary dark:text-white
+                  "
+                  id="email"
+                  name="email"
+                  placeholder="Your Email"
+                  type="email"
+                />
+              </div>
+              <div>
+                <label class="sr-only" for="message">Your Message</label>
+                <textarea
+                  class="
+                    form-textarea 
+                    w-full 
+                    bg-white dark:bg-gray-900/50 
+                    border-gray-300 dark:border-gray-700 rounded 
+                    focus:ring-primary focus:border-primary dark:text-white
+                  "
+                  id="message"
+                  name="message"
+                  placeholder="Your Message"
+                  rows="5"
+                ></textarea>
+              </div>
+              <div>
+                <button
+                  class="
+                    w-full py-3 px-6 rounded-lg
+                    text-white font-bold
+                    bg-primary hover:bg-primary/90 transition-colors
+                  "
+                  type="submit"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+            <div
+              data-animate="animate__jackInTheBox"
+              class="animate__animated space-y-6"
+            >
+              <p class="text-gray-600 dark:text-gray-300">
+                Connect with me on social media:
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a
+                  class="
+                    flex items-center 
+                    gap-2 p-2 rounded-lg transition-colors
+                    bg-white dark:bg-gray-900/50 hover:bg-gray-100 dark:hover:bg-gray-800 
+                  "
+                  href="#"
+                >
+                  <i class="fa-brands fa-square-x-twitter"></i>
+                  <span class="font-medium text-gray-700 dark:text-gray-200">
+                    X
+                  </span>
+                </a>
+                <a
+                  class="
+                    flex items-center 
+                    gap-2 p-2 rounded-lg transition-colors
+                    bg-white dark:bg-gray-900/50 hover:bg-gray-100 dark:hover:bg-gray-800
+                  "
+                  href="#"
+                >
+                  <i class="fa-brands fa-linkedin text-sky-900"></i>
+                  <span class="font-medium text-gray-700 dark:text-gray-200">
+                    LinkedIn
+                  </span>
+                </a>
+                <a
+                  class="
+                    flex items-center
+                    gap-2 p-2 
+                    bg-white dark:bg-gray-900/50 hover:bg-gray-100 dark:hover:bg-gray-800 
+                    rounded-lg transition-colors"
+                  href="#"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  <span class="font-medium text-gray-700 dark:text-gray-200">
+                    GitHub
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Footer ========== -->
+    <footer
+      class="
+        bg-background-light dark:bg-background-dark 
+        border-t border-gray-200 dark:border-gray-800
+      "
+    >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <a
+              class="
+                text-sm 
+                text-gray-600 dark:text-gray-300 hover:text-primary transition-colors
+              "
+              href="#hero"
+            >
+              Hero
+            </a>
+            <a
+              class="
+                text-sm 
+                text-gray-600 dark:text-gray-300 hover:text-primary transition-colors
+              "
+              href="#about"
+            >
+              About
+            </a>
+            <a
+              class="
+                text-sm 
+                text-gray-600 dark:text-gray-300 hover:text-primary transition-colors
+              "
+              href="#projects"
+            >
+              Projects
+            </a>
+            <a
+              class="
+                text-sm 
+                text-gray-600 dark:text-gray-300 hover:text-primary transition-colors
+              "
+              href="#testimonials"
+            >
+              Testimonials</a>
+            <a
+              class="
+                text-sm 
+                text-gray-600 dark:text-gray-300 hover:text-primary transition-colors
+              "
+              href="#contact"
+            >
+              Contact
+            </a>
+          </nav>
+          <div class="flex justify-center gap-4">
+            <a
+              class="
+                flex items-center 
+                gap-2 p-2 rounded-lg transition-colors
+                bg-white dark:bg-gray-900/50 hover:bg-gray-100 dark:hover:bg-gray-800
+              "
+              href="#"
+            >
+              <span class="font-medium text-gray-700 dark:text-gray-200">
+                X
+              </span>
+              <i class="fa-brands fa-square-x-twitter"></i>
+            </a>
+            <a
+              class="
+                flex items-center 
+                gap-2 p-2 rounded-lg transition-colors
+                bg-white dark:bg-gray-900/50 hover:bg-gray-100 dark:hover:bg-gray-800
+              "
+              href="#"
+            >
+              <span class="font-medium text-gray-700 dark:text-gray-200">
+                LinkedIn
+              </span>
+              <i class="fa-brands fa-linkedin text-sky-900"></i>
+            </a>
+            <a
+              class="
+                flex items-center 
+                gap-2 p-2 rounded-lg transition-colors
+                bg-white dark:bg-gray-900/50 hover:bg-gray-100 dark:hover:bg-gray-800
+              "
+              href="#"
+            >
+              <span class="font-medium text-gray-700 dark:text-gray-200">
+                GitHub
+              </span>
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+        <p class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
+          © 2024 Alex's Portfolio. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ========== javaScript ========== -->
+    <script src="./script.js"></script>
+  </body>
+</html>
