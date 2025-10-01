@@ -1,9 +1,17 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html class="dark scroll-smooth" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Stitch Design - Portfolio Landing Page</title>
+    <title>Personal Portfolio Version 4</title>
+        <!-- ============ Favicon ============ -->
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+    <!-- ============ Tailwind CSS ============ -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="./tailwind-config.js"></script>
+
+    <!-- ============ Fonts ============ -->
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
@@ -13,49 +21,34 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#1193d4",
-              "background-light": "#f6f7f8",
-              "background-dark": "#121212",
-              "card-light": "#FFFFFF",
-              "card-dark": "#1E1E1E",
-              "text-light-primary": "#121212",
-              "text-dark-primary": "#FFFFFF",
-              "text-light-secondary": "#5A5A5A",
-              "text-dark-secondary": "#A0A0A0",
-              "border-light": "#E0E0E0",
-              "border-dark": "#333333",
-            },
-            fontFamily: {
-              display: ["Inter", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.25rem",
-              lg: "0.5rem",
-              xl: "0.75rem",
-              full: "9999px",
-            },
-          },
-        },
-      };
-      function toggleTheme() {
-        document.documentElement.classList.toggle("dark");
-      }
-    </script>
-    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+
+    <!-- ============ Icons & Animations ============ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    >
   </head>
   <body
-    class="bg-background-light dark:bg-background-dark text-text-light-primary dark:text-text-dark-primary font-display"
+    class="
+      bg-background-light dark:bg-background-dark 
+      text-text-light-primary dark:text-text-dark-primary font-display
+    "
   >
-    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <div class="flex min-h-screen w-full flex-col">
+
+      <!-- ========== Header ========== -->
       <header
-        class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-border-light dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 px-4 py-3 backdrop-blur-sm sm:px-6 lg:px-8"
+        class="
+          sticky top-0 z-50 
+          flex items-center justify-between 
+          whitespace-nowrap backdrop-blur-sm
+          border-b border-border-light dark:border-border-dark 
+          bg-background-light/80 dark:bg-background-dark/80 
+          px-4 py-3 sm:px-6 lg:px-8"
       >
         <div class="flex items-center gap-4">
           <svg
@@ -77,93 +70,188 @@
             </defs>
           </svg>
           <h2
-            class="text-xl font-bold text-text-light-primary dark:text-text-dark-primary"
+            class="
+              text-xl font-bold 
+              text-text-light-primary dark:text-text-dark-primary
+            "
           >
-            Sarah Chen
+            Sarah
           </h2>
         </div>
+
         <div class="flex items-center gap-4">
           <nav
-            class="hidden items-center gap-6 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary md:flex"
+            class="
+              hidden md:flex items-center gap-6 
+              text-sm font-medium 
+              text-text-light-secondary dark:text-text-dark-secondary
+            "
           >
             <a
-              class="transition-colors hover:text-text-light-primary dark:hover:text-text-dark-primary"
-              href="#home"
-              >Home</a
+              class="
+                transition-colors hover:text-text-light-primary 
+                dark:hover:text-text-dark-primary
+              "
+              href="#hero"
             >
+              Home
+            </a>
             <a
-              class="transition-colors hover:text-text-light-primary dark:hover:text-text-dark-primary"
+              class="
+                transition-colors hover:text-text-light-primary 
+                dark:hover:text-text-dark-primary
+              "
               href="#about"
-              >About</a
             >
+              About
+            </a>
             <a
-              class="transition-colors hover:text-text-light-primary dark:hover:text-text-dark-primary"
+              class="
+                transition-colors hover:text-text-light-primary 
+                dark:hover:text-text-dark-primary
+              "
               href="#projects"
-              >Projects</a
             >
+              Projects
+            </a>
             <a
-              class="transition-colors hover:text-text-light-primary dark:hover:text-text-dark-primary"
+              class="
+                transition-colors hover:text-text-light-primary 
+                dark:hover:text-text-dark-primary
+              "
+              href="#testimonials"
+            >
+              Testimonials
+            </a>
+            <a
+              class="
+                transition-colors hover:text-text-light-primary 
+                dark:hover:text-text-dark-primary
+              "
               href="#contact"
-              >Contact</a
             >
+              Contact
+            </a>
           </nav>
-          <button
-            class="flex h-10 items-center justify-center rounded-lg bg-primary px-4 text-sm font-bold text-white transition-opacity hover:opacity-80"
-          >
-            Hire Me
-          </button>
-          <button
-            class="flex h-10 w-10 items-center justify-center rounded-lg bg-card-light dark:bg-card-dark text-text-light-primary dark:text-text-dark-primary border border-border-light dark:border-border-dark shadow-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
-            onclick="toggleTheme()"
-          >
-            <span class="material-symbols-outlined dark:hidden">dark_mode</span>
-            <span class="material-symbols-outlined hidden dark:inline"
-              >light_mode</span
+
+          <div class="flex items-center gap-4">
+            <button
+              id="theme-toggle"
+              class="
+                h-8 w-8
+                flex items-center justify-center
+                rounded-lg bg-gray-200/50 dark:bg-gray-700/50 
+                text-gray-800 dark:text-gray-200 
+                hover:bg-gray-200 dark:hover:bg-gray-700
+              "
             >
-          </button>
+              <!-- ===== Light Mode ===== -->
+              <span class="material-symbols-outlined text-base block dark:hidden">
+                light_mode
+              </span>
+  
+              <!-- ===== Dark Mode ===== -->
+              <span class="material-symbols-outlined text-base hidden dark:block">
+                dark_mode
+              </span>
+            </button>
+
+            <!-- ===== User Profile ===== -->
+            <img
+              class="h-10 w-10 rounded-full"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuZmZoPb1A7qPh7FBTuPC-Fa2zMf5-yiLB8SvUOGeVxP90RbP2A_qY4tCjZm9hsJceQejuIXsKgRlL4FOG9nhFK7DrAHvio0_dDHX7HeJhh9rkd3ghKziAdZiGisUuysVBeilrPGhit1RYuImdl0Ic5ZLatuwziDHf8x2w2ak01oDYZz4D7-MDsvWdrmNXDnPiV0elxtuwskTMfeJ2tT8pOZVffcWmGDX4CFF7hK1tfQ2FWBVD32cGExFAwsXIHLMng0FJIYUCJSaA"
+              alt="user profile"
+            >
+          </div>
         </div>
       </header>
+
       <main class="w-full flex-1">
+
+        <!-- ========== Hero Section ========== -->
         <section
-          class="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24"
-          id="home"
+          id="horo"
+          class="
+            flex flex flex-col justify-center
+            mx-auto max-w-6xl w-full min-h-[calc(100vh-75px)]
+            px-4 py-20 sm:px-6 lg:px-8 lg:py-24
+          "
         >
           <div
-            class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16"
+            class="
+              grid items-center gap-12 lg:gap-16
+              grid-cols-1 lg:grid-cols-2
+            "
           >
             <div
-              class="flex flex-col items-center text-center lg:items-start lg:text-left"
+              class="
+                flex flex-col items-center text-center 
+                lg:items-start lg:text-left
+              "
             >
               <h1
-                class="text-5xl font-black text-text-light-primary dark:text-text-dark-primary sm:text-6xl md:text-7xl"
+                class="
+                  animate__animated
+                  text-5xl font-black sm:text-6xl md:text-7xl
+                  text-text-light-primary dark:text-text-dark-primary
+                "
+                data-animate="animate__flash"
               >
                 Designer &amp; Developer
               </h1>
               <p
-                class="mt-6 max-w-xl text-lg text-text-light-secondary dark:text-text-dark-secondary"
+                class="
+                  animate__animated
+                  mt-6 max-w-xl text-lg 
+                  text-text-light-secondary dark:text-text-dark-secondary
+                "
+                data-animate="animate__fadeInUp"
               >
                 I create beautiful, functional, and user-centric digital
                 experiences. Let's build something amazing together.
               </p>
               <div
-                class="mt-8 flex flex-wrap justify-center gap-4 lg:justify-start"
+                class="
+                  animate__animated mt-8 gap-4 
+                  flex flex-wrap justify-center lg:justify-start
+                "
+                data-animate="animate__fadeInUp"
               >
-                <a
-                  class="flex h-12 items-center justify-center rounded-lg bg-primary px-6 text-base font-bold text-white transition-opacity hover:opacity-80"
-                  href="#projects"
+                <button
+                  class="
+                    h-12 px-6 
+                    flex items-center justify-center 
+                    rounded-lg bg-primary 
+                    text-base font-bold text-white 
+                    transition-opacity hover:opacity-80
+                  "
                 >
-                  View My Work
-                </a>
+                  Hire Me
+                </button>
                 <a
-                  class="flex h-12 items-center justify-center rounded-lg border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark px-6 text-base font-bold text-text-light-primary dark:text-text-dark-primary transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
-                  href="#contact"
+                  class="
+                    h-12 px-6 
+                    flex items-center justify-center 
+                    border border-border-light dark:border-border-dark 
+                    rounded-lg bg-card-light dark:bg-card-dark 
+                    text-base font-bold 
+                    text-text-light-primary dark:text-text-dark-primary
+                    hover:bg-gray-100 dark:hover:bg-gray-800
+                    transition-colors
+                  "
+                  href="./pdf/Brian-CV.pdf"
+                  target="_blank"
+                  download
                 >
-                  Get in Touch
+                  Download CV
                 </a>
               </div>
             </div>
             <div class="relative flex justify-center lg:justify-end">
-              <div class="relative h-80 w-80 sm:h-96 sm:w-96">
+              <div 
+                class="animate__animated relative h-80 w-80 sm:h-96 sm:w-96" 
+                data-animate="animate__jackInTheBox"
+              >
                 <div
                   class="absolute inset-0 rounded-full bg-primary/20 blur-2xl"
                 ></div>
@@ -176,16 +264,30 @@
             </div>
           </div>
         </section>
-        <section class="py-20 sm:py-24" id="about">
-          <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+
+        <!-- ========== About Section ========== -->
+        <section id="about" class="py-20 sm:py-24" >
+          <div 
+            class="
+              animate__animated 
+              mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8
+            " 
+            data-animate="animate__fadeInUp"
+          >
             <div class="mb-16 text-center">
               <h2
-                class="text-4xl font-bold text-text-light-primary dark:text-text-dark-primary sm:text-5xl"
+                class="
+                  text-4xl font-bold sm:text-5xl
+                  text-text-light-primary dark:text-text-dark-primary
+                "
               >
                 About Me
               </h2>
               <p
-                class="mx-auto mt-4 max-w-2xl text-lg text-text-light-secondary dark:text-text-dark-secondary"
+                class="
+                  mx-auto mt-4 max-w-2xl text-lg 
+                  text-text-light-secondary dark:text-text-dark-secondary
+                "
               >
                 Get to know the person behind the pixels.
               </p>
@@ -193,10 +295,17 @@
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
               <div class="flex flex-col gap-12">
                 <div
-                  class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-md"
+                  class="
+                    rounded-xl p-8
+                    border border-border-light dark:border-border-dark 
+                    bg-card-light dark:bg-card-dark shadow-md
+                  "
                 >
                   <h3
-                    class="text-2xl font-bold text-text-light-primary dark:text-text-dark-primary mb-4"
+                    class="
+                      text-2xl font-bold mb-4
+                      text-text-light-primary dark:text-text-dark-primary
+                    "
                   >
                     Introduction
                   </h3>
@@ -213,10 +322,17 @@
                   </p>
                 </div>
                 <div
-                  class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-md"
+                  class="
+                    p-8 rounded-xl shadow-md
+                    border border-border-light dark:border-border-dark 
+                    bg-card-light dark:bg-card-dark
+                  "
                 >
                   <h3
-                    class="text-2xl font-bold text-text-light-primary dark:text-text-dark-primary mb-4"
+                    class="
+                      mb-4 text-2xl font-bold 
+                      text-text-light-primary dark:text-text-dark-primary
+                    "
                   >
                     What I Do
                   </h3>
@@ -231,84 +347,148 @@
                   </p>
                 </div>
                 <div
-                  class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-md"
+                  class="
+                    p-8 shadow-md rounded-xl 
+                    border border-border-light dark:border-border-dark 
+                    bg-card-light dark:bg-card-dark
+                  "
                 >
                   <h3
-                    class="text-2xl font-bold text-text-light-primary dark:text-text-dark-primary mb-6"
+                    class="
+                      mb-6 text-2xl font-bold 
+                      text-text-light-primary dark:text-text-dark-primary 
+                    "
                   >
                     My Skills
                   </h3>
                   <div class="grid grid-cols-2 gap-y-6 gap-x-4 sm:grid-cols-3">
                     <div class="space-y-2">
                       <p
-                        class="font-medium text-text-light-secondary dark:text-text-dark-secondary"
+                        class="
+                          font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
                       >
                         UI/UX Design
                       </p>
                       <div
-                        class="h-2 w-full rounded-full bg-border-light dark:bg-border-dark"
+                        class="
+                          h-2 w-full 
+                          rounded-full bg-border-light dark:bg-border-dark
+                        "
                       >
-                        <div class="h-2 w-[90%] rounded-full bg-primary"></div>
+                        <div 
+                          class="progress-bar h-2 rounded-full bg-primary"
+                          data-width="95%"
+                          style="width: 0%"
+                        ></div>
                       </div>
                     </div>
                     <div class="space-y-2">
                       <p
-                        class="font-medium text-text-light-secondary dark:text-text-dark-secondary"
+                        class="
+                          font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
                       >
                         HTML &amp; CSS
                       </p>
                       <div
-                        class="h-2 w-full rounded-full bg-border-light dark:bg-border-dark"
+                        class="
+                          h-2 w-full rounded-full 
+                          bg-border-light dark:bg-border-dark
+                        "
                       >
-                        <div class="h-2 w-[95%] rounded-full bg-primary"></div>
+                        <div
+                          class="progress-bar h-2 rounded-full bg-primary"
+                          data-width="100%"
+                          style="width: 0%"
+                        ></div>
                       </div>
                     </div>
                     <div class="space-y-2">
                       <p
-                        class="font-medium text-text-light-secondary dark:text-text-dark-secondary"
+                        class="
+                          font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
                       >
                         JavaScript
                       </p>
                       <div
-                        class="h-2 w-full rounded-full bg-border-light dark:bg-border-dark"
+                        class="
+                          h-2 w-full 
+                          rounded-full bg-border-light dark:bg-border-dark
+                        "
                       >
-                        <div class="h-2 w-[85%] rounded-full bg-primary"></div>
+                        <div 
+                          class="progress-bar h-2 rounded-full bg-primary"
+                          data-width="85%"
+                          style="width: 0%"
+                        ></div>
                       </div>
                     </div>
                     <div class="space-y-2">
                       <p
-                        class="font-medium text-text-light-secondary dark:text-text-dark-secondary"
+                        class="
+                          font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
                       >
                         React
                       </p>
                       <div
-                        class="h-2 w-full rounded-full bg-border-light dark:bg-border-dark"
+                        class="
+                          h-2 w-full rounded-full 
+                          bg-border-light dark:bg-border-dark
+                        "
                       >
-                        <div class="h-2 w-[80%] rounded-full bg-primary"></div>
+                        <div 
+                          class="progress-bar h-2 rounded-full bg-primary"
+                          data-width="80%"
+                          style="width: 0%"
+                        ></div>
                       </div>
                     </div>
                     <div class="space-y-2">
                       <p
-                        class="font-medium text-text-light-secondary dark:text-text-dark-secondary"
+                        class="
+                          font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
                       >
                         Figma
                       </p>
                       <div
                         class="h-2 w-full rounded-full bg-border-light dark:bg-border-dark"
                       >
-                        <div class="h-2 w-[75%] rounded-full bg-primary"></div>
+                        <div 
+                          class="progress-bar h-2 rounded-full bg-primary"
+                          data-width="75%"
+                          style="width: 0%"
+                        ></div>
                       </div>
                     </div>
                     <div class="space-y-2">
                       <p
-                        class="font-medium text-text-light-secondary dark:text-text-dark-secondary"
+                        class="
+                          font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
                       >
                         Webflow
                       </p>
                       <div
-                        class="h-2 w-full rounded-full bg-border-light dark:bg-border-dark"
+                        class="
+                          h-2 w-full rounded-full 
+                          bg-border-light dark:bg-border-dark
+                        "
                       >
-                        <div class="h-2 w-[90%] rounded-full bg-primary"></div>
+                        <div 
+                          class="progress-bar h-2 rounded-full bg-primary"
+                          data-width="90%"
+                          style="width: 0%"
+                        ></div>
                       </div>
                     </div>
                   </div>
@@ -316,24 +496,38 @@
               </div>
               <div class="flex flex-col gap-12">
                 <div
-                  class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-md"
+                  class="
+                    p-8 shadow-md rounded-xl 
+                    border border-border-light dark:border-border-dark 
+                    bg-card-light dark:bg-card-dark 
+                  "
                 >
                   <h3
-                    class="text-2xl font-bold text-text-light-primary dark:text-text-dark-primary mb-6"
+                    class="
+                      mb-6 text-2xl font-bold 
+                      text-text-light-primary dark:text-text-dark-primary 
+                    "
                   >
                     Career Timeline
                   </h3>
                   <div class="space-y-8">
                     <div class="flex items-start gap-4">
                       <div
-                        class="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"
+                        class="
+                          mt-1 h-10 w-10
+                          flex flex-shrink-0 items-center justify-center
+                          rounded-full bg-primary/10 text-primary
+                        "
                       >
                         <span class="material-symbols-outlined">work</span>
                       </div>
                       <div>
                         <p class="font-bold text-primary">2020 - Present</p>
                         <h4
-                          class="font-bold text-text-light-primary dark:text-text-dark-primary mt-1"
+                          class="
+                            mt-1 font-bold 
+                            text-text-light-primary dark:text-text-dark-primary
+                          "
                         >
                           Lead Designer &amp; Developer, Tech Innovators
                         </h4>
@@ -348,19 +542,29 @@
                     </div>
                     <div class="flex items-start gap-4">
                       <div
-                        class="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"
+                        class="
+                          mt-1 h-10 w-10 
+                          flex flex-shrink-0 items-center justify-center 
+                          rounded-full bg-primary/10 text-primary
+                        "
                       >
                         <span class="material-symbols-outlined">palette</span>
                       </div>
                       <div>
                         <p class="font-bold text-primary/80">2018 - 2020</p>
                         <h4
-                          class="font-bold text-text-light-primary dark:text-text-dark-primary mt-1"
+                          class="
+                            mt-1 font-bold 
+                            text-text-light-primary dark:text-text-dark-primary
+                          "
                         >
                           UX/UI Designer, Creative Agency
                         </h4>
                         <p
-                          class="text-text-light-secondary dark:text-text-dark-secondary mt-2"
+                          class="
+                            mt-2
+                            text-text-light-secondary dark:text-text-dark-secondary
+                          "
                         >
                           Designed user interfaces for a variety of clients,
                           conducted user research, and created wireframes and
@@ -370,14 +574,21 @@
                     </div>
                     <div class="flex items-start gap-4">
                       <div
-                        class="mt-1 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary"
+                        class="
+                          mt-1 h-10 w-10 
+                          flex flex-shrink-0 items-center justify-center 
+                          rounded-full bg-primary/10 text-primary
+                        "
                       >
                         <span class="material-symbols-outlined">code</span>
                       </div>
                       <div>
                         <p class="font-bold text-primary/60">2017 - 2018</p>
                         <h4
-                          class="font-bold text-text-light-primary dark:text-text-dark-primary mt-1"
+                          class="
+                            mt-1 font-bold 
+                            text-text-light-primary dark:text-text-dark-primary 
+                          "
                         >
                           Junior Web Developer, Web Solutions
                         </h4>
@@ -392,10 +603,17 @@
                   </div>
                 </div>
                 <div
-                  class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-md"
+                  class="
+                    p-8 shadow-md rounded-xl 
+                    border border-border-light dark:border-border-dark 
+                    bg-card-light dark:bg-card-dark 
+                  "
                 >
                   <h3
-                    class="text-2xl font-bold text-text-light-primary dark:text-text-dark-primary mb-6"
+                    class="
+                      mb-6 text-2xl font-bold 
+                      text-text-light-primary dark:text-text-dark-primary
+                    "
                   >
                     Education &amp; Certificates
                   </h3>
@@ -407,12 +625,18 @@
                       >
                       <div>
                         <h4
-                          class="font-bold text-text-light-primary dark:text-text-dark-primary"
+                          class="
+                            font-bold 
+                            text-text-light-primary dark:text-text-dark-primary
+                          "
                         >
                           B.Sc. in Computer Science
                         </h4>
                         <p
-                          class="text-sm text-text-light-secondary dark:text-text-dark-secondary"
+                          class="
+                            text-sm 
+                            text-text-light-secondary dark:text-text-dark-secondary
+                          "
                         >
                           University of California, Berkeley (2013 - 2017)
                         </p>
@@ -421,16 +645,23 @@
                     <div class="flex items-start gap-4">
                       <span
                         class="material-symbols-outlined text-primary text-3xl mt-1"
-                        >workspace_premium</span
                       >
+                        workspace_premium
+                      </span>
                       <div>
                         <h4
-                          class="font-bold text-text-light-primary dark:text-text-dark-primary"
+                          class="
+                            font-bold 
+                            text-text-light-primary dark:text-text-dark-primary
+                          "
                         >
                           Certified UX Designer
                         </h4>
                         <p
-                          class="text-sm text-text-light-secondary dark:text-text-dark-secondary"
+                          class="
+                            text-sm 
+                            text-text-light-secondary dark:text-text-dark-secondary
+                          "
                         >
                           Nielsen Norman Group
                         </p>
@@ -438,17 +669,27 @@
                     </div>
                     <div class="flex items-start gap-4">
                       <span
-                        class="material-symbols-outlined text-primary text-3xl mt-1"
-                        >workspace_premium</span
+                        class="
+                          material-symbols-outlined 
+                          text-primary text-3xl mt-1
+                        "
                       >
+                        workspace_premium
+                      </span>
                       <div>
                         <h4
-                          class="font-bold text-text-light-primary dark:text-text-dark-primary"
+                          class="
+                            font-bold 
+                            text-text-light-primary dark:text-text-dark-primary
+                          "
                         >
                           Front-End Web Developer
                         </h4>
                         <p
-                          class="text-sm text-text-light-secondary dark:text-text-dark-secondary"
+                          class="
+                            text-sm 
+                            text-text-light-secondary dark:text-text-dark-secondary
+                          "
                         >
                           freeCodeCamp
                         </p>
@@ -460,125 +701,93 @@
             </div>
           </div>
         </section>
-        <section class="py-20 sm:py-24" id="projects">
-          <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+
+        <!-- ========== Project Section ========== -->
+        <section id="projects" class="py-20 sm:py-24" >
+          <div 
+            class="
+              animate__animated 
+              mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8
+            " 
+            data-animate="animate__fadeInUp"
+          >
             <div class="mb-12 text-center">
               <h2
-                class="text-4xl font-bold text-text-light-primary dark:text-text-dark-primary sm:text-5xl"
+                class="
+                  text-4xl sm:text-5xl font-bold 
+                  text-text-light-primary dark:text-text-dark-primary 
+                "
               >
                 My Projects
               </h2>
               <p
-                class="mx-auto mt-4 max-w-2xl text-lg text-text-light-secondary dark:text-text-dark-secondary"
+                class="
+                  mx-auto mt-4 max-w-2xl 
+                  text-lg text-text-light-secondary dark:text-text-dark-secondary
+                "
               >
                 A selection of my favorite projects. See the impact I've made.
               </p>
             </div>
+
+            <!-- ===== Project category list ===== -->
             <div
-              class="mb-10 flex flex-wrap items-center justify-center gap-2 rounded-full bg-background-light dark:bg-background-dark p-2 sm:gap-3"
+              class="
+                filter-button mb-10 p-2
+                flex flex-wrap items-center justify-center gap-2 sm:gap-3
+                rounded-full bg-background-light dark:bg-background-dark
+              "
             >
-              <button
-                class="rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white shadow-md transition-all duration-300"
-              >
-                All
-              </button>
-              <button
-                class="rounded-full px-4 py-2 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary transition-colors hover:text-primary"
-              >
-                UI/UX Design
-              </button>
-              <button
-                class="rounded-full px-4 py-2 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary transition-colors hover:text-primary"
-              >
-                Web Development
-              </button>
-              <button
-                class="rounded-full px-4 py-2 text-sm font-medium text-text-light-secondary dark:text-text-dark-secondary transition-colors hover:text-primary"
-              >
-                Branding
-              </button>
             </div>
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div
-                class="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl"
-              >
-                <img
-                  alt="Project 1"
-                  class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXn_fQSp_sEnV_rJkcsHFUm71KMHda9mLrVYwimgsiiPl3JyxF6lAnEJcsH3OMdIEVNsIuYyu1PKFWcbRxiFHM6ke2EW26MRzFSKjj5dLwliRN0Lcqr74UbYoW5hOa3aLU6ImaIcJLUP5zOGeNygwVHvGW8QHavq8snfG67XNjCyHeIx9iXvD_TED2yA3ALmApKewVKMRlj1SLpkmp0NBTg8vvHRQ3yNz4C8UFvFSkPkSsK4KUZaCsQ5WHjIUNkNlsU8oco-GzSg3E"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-                ></div>
-                <div class="absolute bottom-0 left-0 p-6 text-white">
-                  <h3 class="text-2xl font-bold">E-commerce Platform</h3>
-                  <p class="mt-1 text-white/80">
-                    A complete redesign and development of a modern e-commerce
-                    website.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl"
-              >
-                <img
-                  alt="Project 2"
-                  class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDobJbLd33MGB7BPuXxkYJbyfM17BuUJNkwg9xhQvckGkVKryKzXzggXdnJgXcrcQHeBf2FmIG4lnON_IsYJYrcYmznUUP-3N_FhI9LfNREohZWZQGkyI-f5MfesolPqcOgY7DUe5bAIM2VrRFX7ysaSYvrnHQcdl5hnt-Ry2hVtXhkUJb5U7tTjhl4vGkspn72fAC5Gmrt9lVCAC_Q1YQHbB5hmISEJoREiVGTr5IdjkDgZAMSmh4TXVs_4wOTPmYsXA19TvrxgL1F"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-                ></div>
-                <div class="absolute bottom-0 left-0 p-6 text-white">
-                  <h3 class="text-2xl font-bold">SaaS Dashboard</h3>
-                  <p class="mt-1 text-white/80">
-                    An intuitive and powerful dashboard for a data analytics
-                    SaaS.
-                  </p>
-                </div>
-              </div>
-              <div
-                class="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl"
-              >
-                <img
-                  alt="Project 3"
-                  class="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSWIe6BdNZldcRR4tWp5oSNAXuN09SzQOXPKUAYcZwfEcVOTnxPSlilrc_wDL6ADYdS3goWGmHSnpylfb15AJu4Zq4I6jhWOiyqogrE2pO1gl8xdbxaDStI8e9uLS3s_y_f3NYS_WgmCpKxGAK1TZVQEkngGuGM9fsFXZF9lmcZzCyrhMljCfmvWQ2IWKZfMb4mA8Z2pkYQTtplmOhQVViOhbF49ZzC5BXMiofkEq3EoHd5E8uD0_sJ9d9YdSbxQPCT3u9l0Egiq4P"
-                />
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-                ></div>
-                <div class="absolute bottom-0 left-0 p-6 text-white">
-                  <h3 class="text-2xl font-bold">Mobile Banking App</h3>
-                  <p class="mt-1 text-white/80">
-                    A secure and user-friendly mobile app for a new digital
-                    bank.
-                  </p>
-                </div>
-              </div>
+
+            <!-- ===== Project list ===== -->
+            <div 
+              class="
+                projects-grid 
+                grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3
+              "
+            >
             </div>
           </div>
         </section>
+
+        <!-- ========== Testimonials Section ========== -->
         <section
-          class="bg-card-light dark:bg-card-dark/50 py-20 sm:py-24"
           id="testimonials"
+          class="bg-card-light dark:bg-card-dark/50 py-20 sm:py-24"
         >
-          <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div
+            class="
+              animate__animated 
+              mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8
+            " 
+            data-animate="animate__fadeInUp"
+          >
             <div class="mb-12 text-center">
               <h2
-                class="text-4xl font-bold text-text-light-primary dark:text-text-dark-primary"
+                class="
+                  text-4xl font-bold 
+                  text-text-light-primary dark:text-text-dark-primary
+                "
               >
                 What My Clients Say
               </h2>
               <p
-                class="mx-auto mt-4 max-w-2xl text-lg text-text-light-secondary dark:text-text-dark-secondary"
+                class="
+                  mx-auto mt-4 max-w-2xl text-lg 
+                  text-text-light-secondary dark:text-text-dark-secondary
+                "
               >
                 I'm proud to have worked with some amazing clients.
               </p>
             </div>
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               <div
-                class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8"
+                class="
+                  rounded-xl p-8
+                  border border-border-light dark:border-border-dark 
+                  bg-card-light dark:bg-card-dark 
+                "
               >
                 <p
                   class="text-text-light-secondary dark:text-text-dark-secondary"
@@ -595,12 +804,18 @@
                   />
                   <div>
                     <p
-                      class="font-bold text-text-light-primary dark:text-text-dark-primary"
+                      class="
+                        font-bold 
+                        text-text-light-primary dark:text-text-dark-primary
+                      "
                     >
                       John Doe
                     </p>
                     <p
-                      class="text-sm text-text-light-secondary dark:text-text-dark-secondary"
+                      class="
+                        text-sm 
+                        text-text-light-secondary dark:text-text-dark-secondary
+                      "
                     >
                       CEO, Innovate Inc.
                     </p>
@@ -608,7 +823,11 @@
                 </div>
               </div>
               <div
-                class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8"
+                class="
+                  rounded-xl p-8
+                  border border-border-light dark:border-border-dark 
+                  bg-card-light dark:bg-card-dark
+                "
               >
                 <p
                   class="text-text-light-secondary dark:text-text-dark-secondary"
@@ -637,7 +856,11 @@
                 </div>
               </div>
               <div
-                class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8"
+                class="
+                  rounded-xl p-8
+                  border border-border-light dark:border-border-dark 
+                  bg-card-light dark:bg-card-dark
+                "
               >
                 <p
                   class="text-text-light-secondary dark:text-text-dark-secondary"
@@ -653,12 +876,18 @@
                   />
                   <div>
                     <p
-                      class="font-bold text-text-light-primary dark:text-text-dark-primary"
+                      class="
+                        font-bold 
+                        text-text-light-primary dark:text-text-dark-primary
+                      "
                     >
                       Mike Johnson
                     </p>
                     <p
-                      class="text-sm text-text-light-secondary dark:text-text-dark-secondary"
+                      class="
+                        text-sm 
+                        text-text-light-secondary dark:text-text-dark-secondary
+                      "
                     >
                       Founder, Tech Startup
                     </p>
@@ -668,17 +897,25 @@
             </div>
           </div>
         </section>
-        <section class="py-20 sm:py-24" id="contact">
+
+        <!-- ========== Contact Section ========== -->
+        <section id="contact" class="py-20 sm:py-24">
           <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
               <div class="space-y-6">
                 <h2
-                  class="text-4xl font-bold text-text-light-primary dark:text-text-dark-primary"
+                  class="
+                    text-4xl font-bold 
+                    text-text-light-primary dark:text-text-dark-primary
+                  "
                 >
                   Let's Work Together
                 </h2>
                 <p
-                  class="text-lg text-text-light-secondary dark:text-text-dark-secondary"
+                  class="
+                    text-lg 
+                    text-text-light-secondary dark:text-text-dark-secondary
+                  "
                 >
                   Have a project in mind? I'd love to hear about it. Fill out
                   the form or send me an email.
@@ -714,14 +951,25 @@
                 </div>
               </div>
               <div
-                class="rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-8 shadow-lg"
+                class="
+                  rounded-xl p-8 shadow-lg
+                  border border-border-light dark:border-border-dark 
+                  bg-card-light dark:bg-card-dark 
+                "
               >
                 <form class="space-y-6">
                   <div>
                     <label class="sr-only" for="name">Name</label>
                     <input
-                      class="block w-full rounded-md border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-3 text-text-light-primary dark:text-text-dark-primary shadow-sm focus:border-primary focus:ring-primary"
                       id="name"
+                      class="
+                        block 
+                        px-4 py-3 w-full rounded-md 
+                        border-border-light dark:border-border-dark 
+                        bg-background-light dark:bg-background-dark 
+                        text-text-light-primary dark:text-text-dark-primary 
+                        shadow-sm focus:border-primary focus:ring-primary
+                      "
                       name="name"
                       placeholder="Your Name"
                       type="text"
@@ -730,8 +978,15 @@
                   <div>
                     <label class="sr-only" for="email">Email</label>
                     <input
-                      class="block w-full rounded-md border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-3 text-text-light-primary dark:text-text-dark-primary shadow-sm focus:border-primary focus:ring-primary"
                       id="email"
+                      class="
+                        block 
+                        w-full rounded-md px-4 py-3 
+                        border-border-light dark:border-border-dark 
+                        bg-background-light dark:bg-background-dark 
+                        text-text-light-primary dark:text-text-dark-primary 
+                        shadow-sm focus:border-primary focus:ring-primary
+                      "
                       name="email"
                       placeholder="Your Email"
                       type="email"
@@ -740,15 +995,28 @@
                   <div>
                     <label class="sr-only" for="message">Message</label>
                     <textarea
-                      class="block w-full rounded-md border-border-light dark:border-border-dark bg-background-light dark:bg-background-dark px-4 py-3 text-text-light-primary dark:text-text-dark-primary shadow-sm focus:border-primary focus:ring-primary"
                       id="message"
+                      class="
+                        block 
+                        w-full rounded-md px-4 py-3 
+                        border-border-light dark:border-border-dark 
+                        bg-background-light dark:bg-background-dark 
+                        text-text-light-primary dark:text-text-dark-primary 
+                        shadow-sm focus:border-primary focus:ring-primary
+                      "
                       name="message"
                       placeholder="Your Message"
                       rows="4"
                     ></textarea>
                   </div>
                   <button
-                    class="w-full flex h-12 items-center justify-center rounded-lg bg-primary px-6 text-base font-bold text-white transition-opacity hover:opacity-80"
+                    class="
+                      w-full h-12 px-6
+                      flex items-center justify-center 
+                      rounded-lg bg-primary 
+                      text-base font-bold text-white 
+                      transition-opacity hover:opacity-80
+                    "
                     type="submit"
                   >
                     Send Message
@@ -759,72 +1027,68 @@
           </div>
         </section>
       </main>
+
+      <!-- ========== Footer ========== -->
       <footer
-        class="border-t border-border-light dark:border-border-dark bg-card-light/50 dark:bg-card-dark/50"
+        class="
+          border-t border-border-light dark:border-border-dark 
+          bg-card-light/50 dark:bg-card-dark/50
+        "
       >
-        <div class="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+        <div
+          class="
+            mx-auto w-full max-w-6xl 
+            px-4 py-8 sm:px-6 lg:px-8
+          "
+        >
           <div
-            class="flex flex-col items-center justify-between gap-4 sm:flex-row"
+            class="
+              flex flex-col sm:flex-row gap-4
+              items-center justify-between
+            "
           >
             <p
-              class="text-sm text-text-light-secondary dark:text-text-dark-secondary"
+              class="
+                text-sm 
+                text-text-light-secondary dark:text-text-dark-secondary
+              "
             >
               © 2024 Sarah Chen. All rights reserved.
             </p>
             <div class="flex items-center gap-4">
               <a
-                class="text-text-light-secondary dark:text-text-dark-secondary transition-colors hover:text-primary"
+                class="
+                  text-text-light-secondary dark:text-text-dark-secondary 
+                  transition-colors hover:text-primary
+                "
                 href="#"
               >
-                <svg
-                  aria-hidden="true"
-                  class="h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M12 2C6.477 2 2 6.477 2 12c0 4.286 2.863 7.91 6.793 9.176.5.093.682-.217.682-.482 0-.237-.009-.865-.014-1.698-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.03-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.82c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.002 10.002 0 0022 12c0-5.523-4.477-10-10-10z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
+                <i class="fa-brands fa-square-x-twitter"></i>
               </a>
               <a
-                class="text-text-light-secondary dark:text-text-dark-secondary transition-colors hover:text-primary"
+                class="
+                  text-text-light-secondary dark:text-text-dark-secondary 
+                  transition-colors hover:text-primary
+                "
                 href="#"
               >
-                <svg
-                  aria-hidden="true"
-                  class="h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
-                  ></path>
-                </svg>
+                <i class="fa-brands fa-linkedin text-sky-900"></i>
               </a>
               <a
-                class="text-text-light-secondary dark:text-text-dark-secondary transition-colors hover:text-primary"
+                class="
+                  text-text-light-secondary dark:text-text-dark-secondary 
+                  transition-colors hover:text-primary
+                "
                 href="#"
               >
-                <svg
-                  aria-hidden="true"
-                  class="h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    clip-rule="evenodd"
-                    d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.389 0-1.601 1.086-1.601 2.206v4.248H8.014V8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.337 7.433c-.81 0-1.466-.656-1.466-1.466s.656-1.466 1.466-1.466c.81 0 1.465.656 1.465 1.466s-.655 1.466-1.465 1.466zM6.613 16.338H4.061V8.59h2.552v7.748zM18.618 2H5.381A3.38 3.38 0 002 5.382v13.236A3.38 3.38 0 005.381 22h13.237A3.38 3.38 0 0022 18.618V5.382A3.38 3.38 0 0018.618 2z"
-                    fill-rule="evenodd"
-                  ></path>
-                </svg>
+                <i class="fa-brands fa-github"></i>
               </a>
             </div>
           </div>
         </div>
       </footer>
     </div>
+
+    <script src="./script.js"></script>
   </body>
 </html>

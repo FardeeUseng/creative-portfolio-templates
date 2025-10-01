@@ -18,23 +18,6 @@ if (localStorage.getItem("theme") === "dark") {
 } else {
   html.classList.remove("dark");
 }
-// ---------------------------------
-// Menu list for display in mobile's screen
-// ---------------------------------
-const toggleBtn = document.getElementById("menu-toggle");
-const sidebar = document.getElementById("sidebar");
-const closeBtn = document.getElementById("close-btn");
-const menuIcon = document.getElementById("menu-icon");
-
-toggleBtn.addEventListener("click", () => {
-  sidebar.classList.toggle("translate-x-full");
-  menuIcon.textContent = sidebar.classList.contains("translate-x-full") ? "menu" : "close";
-});
-
-closeBtn.addEventListener("click", () => {
-  sidebar.classList.add("translate-x-full");
-  menuIcon.textContent = "menu";
-});
 
 // ---------------------------------
 // Animate On Scroll (One-time play)
@@ -167,10 +150,17 @@ projectsContainer.innerHTML = projectsData
         border border-gray-200 dark:border-gray-700/50
       "
     >
-      <div class="aspect-video w-full bg-cover bg-center" style="background-image: ${project.image};"></div>
+      <div
+        class="aspect-video w-full bg-cover bg-center"
+        style="background-image: ${project.image};"
+      ></div>
         <div class="p-4 flex flex-col flex-grow">
-        <h3 class="text-base font-bold text-gray-900 dark:text-white">${project.title}</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400">${project.description}</p>
+        <h3 class="text-base font-bold text-gray-900 dark:text-white">
+          ${project.title}
+        </h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          ${project.description}
+        </p>
       </div>
     </a>
   `).join("");
