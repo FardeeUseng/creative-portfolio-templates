@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>DevPortfolio - Professional Portfolio Template</title>
+    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <script src="./tailwind-config.js"></script>
+  </head>
+  <body
+    class="bg-background-light dark:bg-background-dark font-sans text-text-light dark:text-text-dark antialiased"
+  >
+    <div class="flex min-h-screen w-full flex-col">
+      <header
+        class="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-700/50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-lg"
+      >
+        <div
+          class="container mx-auto flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8"
+        >
+          <a class="flex items-center gap-2" href="#">
+            <span class="material-symbols-outlined text-primary text-3xl"
+              >terminal</span
+            >
+            <h1 class="text-2xl font-bold text-text-light dark:text-text-dark">
+              DevFolio
+            </h1>
+          </a>
+          <nav class="hidden items-center gap-6 md:flex">
+            <a
+              class="text-sm font-medium text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="#about"
+              >About</a
+            >
+            <a
+              class="text-sm font-medium text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="#projects"
+              >Projects</a
+            >
+            <a
+              class="text-sm font-medium text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="#testimonials"
+              >Testimonials</a
+            >
+            <a
+              class="text-sm font-medium text-subtext-light dark:text-subtext-dark hover:text-primary dark:hover:text-primary transition-colors"
+              href="#contact"
+              >Contact</a
+            >
+          </nav>
+          <div class="flex items-center gap-4">
+            <button
+              class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200/50 dark:bg-card-dark text-text-light dark:text-text-dark hover:bg-gray-200 dark:hover:bg-opacity-70 transition-colors"
+              id="theme-toggle"
+            >
+              <span class="material-symbols-outlined dark:hidden"
+                >light_mode</span
+              >
+              <span class="material-symbols-outlined hidden dark:block"
+                >dark_mode</span
+              >
+            </button>
+            <button class="md:hidden">
+              <span
+                class="material-symbols-outlined text-2xl text-text-light dark:text-text-dark"
+                >menu</span
+              >
+            </button>
+          </div>
+        </div>
+      </header>
+      <main class="flex-grow">
+        <section class="container mx-auto px-4 py-24 sm:px-6 lg:px-8" id="hero">
+          <div class="grid items-center gap-12 lg:grid-cols-5 lg:gap-16">
+            <div
+              class="order-2 lg:order-1 lg:col-span-3 text-center lg:text-left"
+            >
+              <h1
+                class="text-4xl font-extrabold tracking-tight text-text-light dark:text-text-dark sm:text-5xl lg:text-6xl"
+              >
+                Creative Frontend Developer
+              </h1>
+              <p
+                class="mt-6 text-lg text-subtext-light dark:text-subtext-dark max-w-2xl mx-auto lg:mx-0"
+              >
+                I design and build beautiful, responsive, and user-centric
+                websites and applications. Let's turn your vision into reality.
+              </p>
+              <div
+                class="mt-10 flex flex-wrap justify-center lg:justify-start gap-4"
+              >
+                <a
+                  class="flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-semibold text-white shadow-lg shadow-primary/30 transition-transform-shadow duration-300 hover:scale-105 hover:shadow-primary/50"
+                  href="#contact"
+                  >Get in Touch</a
+                >
+                <a
+                  class="flex h-12 items-center justify-center rounded-lg bg-card-light dark:bg-card-dark px-8 text-base font-semibold text-text-light dark:text-text-dark shadow-md transition-transform-shadow duration-300 hover:scale-105 hover:shadow-lg dark:shadow-black/20"
+                  href="#projects"
+                  >View My Work</a
+                >
+              </div>
+            </div>
+            <div class="order-1 lg:order-2 lg:col-span-2">
+              <div class="relative w-full max-w-sm mx-auto">
+                <div
+                  class="aspect-square rounded-full bg-cover bg-center shadow-2xl"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuZmZoPb1A7qPh7FBTuPC-Fa2zMf5-yiLB8SvUOGeVxP90RbP2A_qY4tCjZm9hsJceQejuIXsKgRlL4FOG9nhFK7DrAHvio0_dDHX7HeJhh9rkd3ghKziAdZiGisUuysVBeilrPGhit1RYuImdl0Ic5ZLatuwziDHf8x2w2ak01oDYZz4D7-MDsvWdrmNXDnPiV0elxtuwskTMfeJ2tT8pOZVffcWmGDX4CFF7hK1tfQ2FWBVD32cGExFAwsXIHLMng0FJIYUCJSaA');
+                  "
+                ></div>
+                <div
+                  class="absolute -bottom-4 -right-4 bg-white dark:bg-card-dark p-3 rounded-full shadow-lg"
+                >
+                  <div class="bg-green-400/20 text-green-500 rounded-full p-2">
+                    <div
+                      class="w-2 h-2 bg-green-500 rounded-full animate-ping absolute inset-1/2 -translate-x-1/2 -translate-y-1/2"
+                    ></div>
+                    <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                  </div>
+                </div>
+                <span
+                  class="absolute top-8 left-0 bg-card-light dark:bg-card-dark p-3 rounded-lg shadow-lg flex items-center gap-2 animate-[bounce_3s_ease-in-out_infinite]"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >brush</span
+                  >
+                  <span class="font-semibold text-sm">UI/UX Design</span>
+                </span>
+                <span
+                  class="absolute bottom-16 -left-8 bg-card-light dark:bg-card-dark p-3 rounded-lg shadow-lg flex items-center gap-2 animate-[bounce_3s_ease-in-out_infinite_500ms]"
+                >
+                  <span class="material-symbols-outlined text-primary"
+                    >code</span
+                  >
+                  <span class="font-semibold text-sm">Development</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="bg-background-light dark:bg-background-dark py-24"
+          id="about"
+        >
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+              <h2
+                class="text-3xl font-bold text-text-light dark:text-text-dark sm:text-4xl"
+              >
+                About Me
+              </h2>
+              <p
+                class="mt-4 text-lg text-subtext-light dark:text-subtext-dark max-w-3xl mx-auto"
+              >
+                A brief introduction to who I am, what I do, and my professional
+                journey.
+              </p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
+              <div>
+                <h3
+                  class="text-2xl font-semibold text-text-light dark:text-text-dark mb-4"
+                >
+                  Who I Am
+                </h3>
+                <p class="text-subtext-light dark:text-subtext-dark mb-8">
+                  Hello! I'm a dedicated and results-driven Frontend Developer
+                  with a passion for creating intuitive, dynamic user
+                  experiences. I thrive on turning complex problems into simple,
+                  beautiful, and functional designs. When I'm not coding, you
+                  can find me exploring new technologies or contributing to
+                  open-source projects.
+                </p>
+                <h3
+                  class="text-2xl font-semibold text-text-light dark:text-text-dark mb-4"
+                >
+                  What I Do
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div
+                    class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-4xl mb-3"
+                      >web</span
+                    >
+                    <h4 class="font-semibold text-lg mb-2">Web Development</h4>
+                    <p
+                      class="text-sm text-subtext-light dark:text-subtext-dark"
+                    >
+                      Building responsive and optimized websites from scratch.
+                    </p>
+                  </div>
+                  <div
+                    class="bg-card-light dark:bg-card-dark p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+                  >
+                    <span
+                      class="material-symbols-outlined text-primary text-4xl mb-3"
+                      >palette</span
+                    >
+                    <h4 class="font-semibold text-lg mb-2">UI/UX Design</h4>
+                    <p
+                      class="text-sm text-subtext-light dark:text-subtext-dark"
+                    >
+                      Crafting user-friendly interfaces with a focus on
+                      usability.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3
+                  class="text-2xl font-semibold text-text-light dark:text-text-dark mb-6"
+                >
+                  Skills &amp; Experience
+                </h3>
+                <div class="space-y-6">
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span
+                        class="text-base font-medium text-text-light dark:text-text-dark"
+                        >HTML &amp; CSS</span
+                      >
+                      <span
+                        class="text-sm font-medium text-subtext-light dark:text-subtext-dark"
+                        >95%</span
+                      >
+                    </div>
+                    <div
+                      class="w-full bg-gray-200 dark:bg-card-dark rounded-full h-2.5"
+                    >
+                      <div
+                        class="bg-primary h-2.5 rounded-full"
+                        style="width: 95%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span
+                        class="text-base font-medium text-text-light dark:text-text-dark"
+                        >JavaScript &amp; TypeScript</span
+                      >
+                      <span
+                        class="text-sm font-medium text-subtext-light dark:text-subtext-dark"
+                        >90%</span
+                      >
+                    </div>
+                    <div
+                      class="w-full bg-gray-200 dark:bg-card-dark rounded-full h-2.5"
+                    >
+                      <div
+                        class="bg-primary h-2.5 rounded-full"
+                        style="width: 90%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex justify-between mb-1">
+                      <span
+                        class="text-base font-medium text-text-light dark:text-text-dark"
+                        >React &amp; Next.js</span
+                      >
+                      <span
+                        class="text-sm font-medium text-subtext-light dark:text-subtext-dark"
+                        >85%</span
+                      >
+                    </div>
+                    <div
+                      class="w-full bg-gray-200 dark:bg-card-dark rounded-full h-2.5"
+                    >
+                      <div
+                        class="bg-primary h-2.5 rounded-full"
+                        style="width: 85%"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+                <h3
+                  class="text-xl font-semibold text-text-light dark:text-text-dark mt-10 mb-4"
+                >
+                  Career &amp; Education
+                </h3>
+                <div
+                  class="relative border-l-2 border-primary/20 dark:border-primary/30"
+                >
+                  <div class="mb-8 ml-6">
+                    <span
+                      class="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-background-light dark:ring-background-dark"
+                    >
+                      <span
+                        class="material-symbols-outlined text-white text-base"
+                        >school</span
+                      >
+                    </span>
+                    <h4
+                      class="font-semibold text-text-light dark:text-text-dark"
+                    >
+                      B.Sc. in Computer Science
+                    </h4>
+                    <p
+                      class="text-sm text-subtext-light dark:text-subtext-dark"
+                    >
+                      University of Technology (2012-2016)
+                    </p>
+                  </div>
+                  <div class="mb-8 ml-6">
+                    <span
+                      class="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-background-light dark:ring-background-dark"
+                    >
+                      <span
+                        class="material-symbols-outlined text-white text-base"
+                        >work</span
+                      >
+                    </span>
+                    <h4
+                      class="font-semibold text-text-light dark:text-text-dark"
+                    >
+                      Senior Frontend Developer
+                    </h4>
+                    <p
+                      class="text-sm text-subtext-light dark:text-subtext-dark"
+                    >
+                      Innovate Solutions (2020-Present)
+                    </p>
+                  </div>
+                  <div class="ml-6">
+                    <span
+                      class="absolute flex items-center justify-center w-6 h-6 bg-primary rounded-full -left-3 ring-8 ring-background-light dark:ring-background-dark"
+                    >
+                      <span
+                        class="material-symbols-outlined text-white text-base"
+                        >military_tech</span
+                      >
+                    </span>
+                    <h4
+                      class="font-semibold text-text-light dark:text-text-dark"
+                    >
+                      Certified JavaScript Developer
+                    </h4>
+                    <p
+                      class="text-sm text-subtext-light dark:text-subtext-dark"
+                    >
+                      Professional Dev Institute (2019)
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-24 bg-card-light dark:bg-card-dark" id="projects">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+              <h2
+                class="text-3xl font-bold text-text-light dark:text-text-dark sm:text-4xl"
+              >
+                My Projects
+              </h2>
+              <p
+                class="mt-4 text-lg text-subtext-light dark:text-subtext-dark max-w-3xl mx-auto"
+              >
+                A selection of my recent work. Each project is a unique piece of
+                development.
+              </p>
+              <div class="mt-8 flex justify-center gap-2 flex-wrap">
+                <button
+                  class="px-4 py-2 text-sm font-semibold rounded-full bg-primary text-white"
+                >
+                  All
+                </button>
+                <button
+                  class="px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 dark:bg-background-dark text-subtext-light dark:text-subtext-dark hover:bg-primary/20 dark:hover:bg-primary/20"
+                >
+                  Web Apps
+                </button>
+                <button
+                  class="px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 dark:bg-background-dark text-subtext-light dark:text-subtext-dark hover:bg-primary/20 dark:hover:bg-primary/20"
+                >
+                  UI/UX Design
+                </button>
+                <button
+                  class="px-4 py-2 text-sm font-semibold rounded-full bg-gray-200 dark:bg-background-dark text-subtext-light dark:text-subtext-dark hover:bg-primary/20 dark:hover:bg-primary/20"
+                >
+                  E-commerce
+                </button>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div
+                class="bg-background-light dark:bg-background-dark rounded-xl shadow-lg overflow-hidden group"
+              >
+                <div class="overflow-hidden">
+                  <img
+                    alt="Project 1"
+                    class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrPPYIzBtO-w1vWcCDEYqVSYHvmbiMkD7MpwbHg_GpWBGAWFm2rRkEze_T3egVptbjTmTlLF4jvA2f93MxiJ-1go2BKnVuLE-VQi8yjiEJVWNDdEXwg5IR-Ja1afPM5G7Cf8zX-D8P3H7JQDrULglWF9AkoYGV4jl3Ng4zCA6eAK2R9yn-1__TcLJDlzA9CSbGZFKrFrkxUY518YeWz3hpbDXKanG4VUpeVOYX4vUid7hlZmbQosHe-dUqohzoqzvBzhkIwwEXn84a"
+                  />
+                </div>
+                <div class="p-6">
+                  <h3
+                    class="text-xl font-semibold mb-2 text-text-light dark:text-text-dark"
+                  >
+                    E-commerce Platform
+                  </h3>
+                  <p class="text-subtext-light dark:text-subtext-dark mb-4">
+                    A full-featured e-commerce site with a custom CMS.
+                  </p>
+                  <a class="font-semibold text-primary hover:underline" href="#"
+                    >View Project
+                    <span
+                      class="material-symbols-outlined text-base align-middle"
+                      >arrow_forward</span
+                    ></a
+                  >
+                </div>
+              </div>
+              <div
+                class="bg-background-light dark:bg-background-dark rounded-xl shadow-lg overflow-hidden group"
+              >
+                <div class="overflow-hidden">
+                  <img
+                    alt="Project 2"
+                    class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2h4oIUY3QVvKg7EseuhS4uq7y33U4CJBLCYs3BH-hcQ2L2E186Uw1BMwpoz81r0sXY8tiF1W0JNgpUviOT-aHJxizxJn1y2SDV25GNd_3a0Q3evhYtSqiBT-mBA38kCZ4pdLPcHyFH5yDru4XD4SKTcXufsed2ETNcW315df7SO1DfL02W4n9ByFQey2cUgLzYcb9ToI7bVpa_rhQFSpwfwC1UwvLh-3kxLAayjehZvYV83HO8vgw1_N38IVNQpCGcGK1uMdBeWdv"
+                  />
+                </div>
+                <div class="p-6">
+                  <h3
+                    class="text-xl font-semibold mb-2 text-text-light dark:text-text-dark"
+                  >
+                    Analytics Dashboard
+                  </h3>
+                  <p class="text-subtext-light dark:text-subtext-dark mb-4">
+                    Data visualization and analytics dashboard for a SaaS
+                    product.
+                  </p>
+                  <a class="font-semibold text-primary hover:underline" href="#"
+                    >View Project
+                    <span
+                      class="material-symbols-outlined text-base align-middle"
+                      >arrow_forward</span
+                    ></a
+                  >
+                </div>
+              </div>
+              <div
+                class="bg-background-light dark:bg-background-dark rounded-xl shadow-lg overflow-hidden group"
+              >
+                <div class="overflow-hidden">
+                  <img
+                    alt="Project 3"
+                    class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsUpFbUbSpUFZQfuWzfGnL9exRAoMyMHdKAlvvHIgGOGbMZALVBobKwIVn3TTyrsw54SIetKAsNlMUUv42gTm9iQsAERf4Ahtmoy6W45GbysKWevnns-bhVUSgfo_ifVNbBDU8LdarjUAaloBwqrvnZnsV0RfyDUFbc1MD3xumFj6J82B9lDRhcd6EAB3VQ4c7jiwExVR5ROKG2VMRaScuWb6isNe8A8pDjJYPS25iQq1yFpVndZVYR1xqtW00Br2iVBiWCdeb6Ox-"
+                  />
+                </div>
+                <div class="p-6">
+                  <h3
+                    class="text-xl font-semibold mb-2 text-text-light dark:text-text-dark"
+                  >
+                    Portfolio Website
+                  </h3>
+                  <p class="text-subtext-light dark:text-subtext-dark mb-4">
+                    A personal portfolio for a professional photographer.
+                  </p>
+                  <a class="font-semibold text-primary hover:underline" href="#"
+                    >View Project
+                    <span
+                      class="material-symbols-outlined text-base align-middle"
+                      >arrow_forward</span
+                    ></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-24" id="testimonials">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+              <h2
+                class="text-3xl font-bold text-text-light dark:text-text-dark sm:text-4xl"
+              >
+                What My Clients Say
+              </h2>
+              <p
+                class="mt-4 text-lg text-subtext-light dark:text-subtext-dark max-w-3xl mx-auto"
+              >
+                I take pride in the relationships I build and the positive
+                feedback I receive.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div
+                class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-md"
+              >
+                <p class="text-subtext-light dark:text-subtext-dark mb-6">
+                  "Working with them was a game-changer. The attention to detail
+                  and creative solutions were outstanding. Our user engagement
+                  has skyrocketed since the redesign!"
+                </p>
+                <div class="flex items-center">
+                  <img
+                    alt="Client 1"
+                    class="w-12 h-12 rounded-full mr-4 object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDex31K54C_9P4hCqYpgaaU5ac8jiiXF86NjnnUgc9LZK_yxcOFns4HCwUnu5WFk4tyMAw4ajHMypcmsYIWgzocBQGBtBMAf_1FTyA4nZiS6wxFrJn4LWwuKNm13LNT2P5JFAJLf-0LT98DBxd7LwDKtrw3MDCIwTQkEHx_NG8UrOp9Plzf0sAa8YVzTJbWv0iE4MtP1sAz6hQrWvZiSoKFB1Sd9te9URLMpSMNgPMRMpLeFwul7kftXh9Z4fLm0gx6ngb1Zmei9D5d"
+                  />
+                  <div>
+                    <h4
+                      class="font-semibold text-text-light dark:text-text-dark"
+                    >
+                      Jane Doe
+                    </h4>
+                    <p
+                      class="text-sm text-subtext-light dark:text-subtext-dark"
+                    >
+                      CEO, TechForward
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-md"
+              >
+                <p class="text-subtext-light dark:text-subtext-dark mb-6">
+                  "An incredibly talented developer. They delivered a
+                  high-quality product on time and on budget. I couldn't be
+                  happier with the results."
+                </p>
+                <div class="flex items-center">
+                  <img
+                    alt="Client 2"
+                    class="w-12 h-12 rounded-full mr-4 object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwLGjiEWIx-3ODHkSsSh9IDbZSxBjf459OEISTeMvfQCEOM72QSHkrHmsNyRI3bo7KOPnt5d3mgZVnhHL3Zu3ayVNU4VMe_XGxvbfs2bJIuMzpfMvm_bxD9THvFLDwq_TOAXy4mBMOA--6UQZopKyKFlwLILULBWtpKr7XmzKuX1TIG7LBVuD7qOHtLVvJvR8YG8DVYh5G0ifojJ4xvvRZjbVnH3bUc4h4NB0M2n1AE9-kGxWmVHu5dAg0-1YFwVCaMArXHBju1wUq"
+                  />
+                  <div>
+                    <h4
+                      class="font-semibold text-text-light dark:text-text-dark"
+                    >
+                      John Smith
+                    </h4>
+                    <p
+                      class="text-sm text-subtext-light dark:text-subtext-dark"
+                    >
+                      Founder, Creative Minds
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="bg-card-light dark:bg-card-dark p-8 rounded-xl shadow-md"
+              >
+                <p class="text-subtext-light dark:text-subtext-dark mb-6">
+                  "The communication was excellent throughout the project. They
+                  understood our vision perfectly and brought it to life with
+                  precision and flair."
+                </p>
+                <div class="flex items-center">
+                  <img
+                    alt="Client 3"
+                    class="w-12 h-12 rounded-full mr-4 object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCbamOdOPVNZowc_1kTaFCdEUyOru66y3mmAHhd9keZZ5YkQ_9YJ8GjC9GpsKvudmE4CNaKRb4k_7ZbeRw1CEAGwkYe0rT4ipu6EEghCwo4Q9hV11pAOB-gSi3c4ZwUDJGqbLE2tNB7IjKR4uVJlFfUt-B-R0uMOWHp_O6jlz91W69Kh5rslG8SmcpmHcRnnmM5X9y2hg7Bm0bS57h_eXRhffXoDCjomOv3UWt3zDQK9cYn4eS6WnuZWcf_tA9BLAEPkZIjPeComra"
+                  />
+                  <div>
+                    <h4
+                      class="font-semibold text-text-light dark:text-text-dark"
+                    >
+                      Emily Johnson
+                    </h4>
+                    <p
+                      class="text-sm text-subtext-light dark:text-subtext-dark"
+                    >
+                      Marketing Director, DataCorp
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="py-24 bg-card-light dark:bg-card-dark" id="contact">
+          <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+              <h2
+                class="text-3xl font-bold text-text-light dark:text-text-dark sm:text-4xl"
+              >
+                Contact Me
+              </h2>
+              <p
+                class="mt-4 text-lg text-subtext-light dark:text-subtext-dark max-w-3xl mx-auto"
+              >
+                Have a project in mind or just want to say hi? I'd love to hear
+                from you.
+              </p>
+            </div>
+            <div class="max-w-4xl mx-auto grid lg:grid-cols-2 gap-12">
+              <div>
+                <div class="flex items-start gap-4 mb-6">
+                  <div
+                    class="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center"
+                  >
+                    <span class="material-symbols-outlined">email</span>
+                  </div>
+                  <div>
+                    <h4
+                      class="font-semibold text-lg text-text-light dark:text-text-dark"
+                    >
+                      Email
+                    </h4>
+                    <p class="text-subtext-light dark:text-subtext-dark">
+                      hello@devfolio.com
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4 mb-6">
+                  <div
+                    class="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center"
+                  >
+                    <span class="material-symbols-outlined">call</span>
+                  </div>
+                  <div>
+                    <h4
+                      class="font-semibold text-lg text-text-light dark:text-text-dark"
+                    >
+                      Phone
+                    </h4>
+                    <p class="text-subtext-light dark:text-subtext-dark">
+                      +1 (555) 123-4567
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="mt-1 flex-shrink-0 w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center"
+                  >
+                    <span class="material-symbols-outlined">location_on</span>
+                  </div>
+                  <div>
+                    <h4
+                      class="font-semibold text-lg text-text-light dark:text-text-dark"
+                    >
+                      Location
+                    </h4>
+                    <p class="text-subtext-light dark:text-subtext-dark">
+                      San Francisco, CA
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <form action="#" class="space-y-6" method="POST">
+                <div>
+                  <label class="sr-only" for="name">Name</label>
+                  <input
+                    class="w-full bg-background-light dark:bg-background-dark border-gray-300 dark:border-gray-600 rounded-lg py-3 px-4 focus:ring-2 focus:ring-primary focus:border-primary transition"
+                    id="name"
+                    name="name"
+                    placeholder="Your Name"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <label class="sr-only" for="email">Email</label>
+                  <input
+                    class="w-full bg-background-light dark:bg-background-dark border-gray-300 dark:border-gray-600 rounded-lg py-3 px-4 focus:ring-2 focus:ring-primary focus:border-primary transition"
+                    id="email"
+                    name="email"
+                    placeholder="Your Email"
+                    type="email"
+                  />
+                </div>
+                <div>
+                  <label class="sr-only" for="message">Message</label>
+                  <textarea
+                    class="w-full bg-background-light dark:bg-background-dark border-gray-300 dark:border-gray-600 rounded-lg py-3 px-4 focus:ring-2 focus:ring-primary focus:border-primary transition"
+                    id="message"
+                    name="message"
+                    placeholder="Your Message"
+                    rows="4"
+                  ></textarea>
+                </div>
+                <div>
+                  <button
+                    class="w-full flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-base font-semibold text-white shadow-lg shadow-primary/30 transition-transform-shadow duration-300 hover:scale-105 hover:shadow-primary/50"
+                    type="submit"
+                  >
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="bg-background-dark text-subtext-dark">
+        <div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center gap-6"
+          >
+            <p class="text-sm">© 2024 DevFolio. All Rights Reserved.</p>
+            <div class="flex gap-4">
+              <a
+                class="text-subtext-dark hover:text-primary transition-colors"
+                href="#"
+                ><svg
+                  aria-hidden="true"
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg></a>
+              <a
+                class="text-subtext-dark hover:text-primary transition-colors"
+                href="#"
+                ><svg
+                  aria-hidden="true"
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  ></path>
+                </svg></a>
+              <a
+                class="text-subtext-dark hover:text-primary transition-colors"
+                href="#"
+                ><svg
+                  aria-hidden="true"
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M12 2C6.477 2 2 6.477 2 12.011c0 4.887 3.322 9.014 7.828 9.873-.118-.497-.17-1.12-.14-1.822.032-.734.46-2.222.46-2.222s-.124-.248-.124-.616c0-.578.34-.997.757-.997.358 0 .53.27.53.595 0 .362-.23.9-.345 1.4-.095.425.21.77.625.77.745 0 1.325-.79 1.325-1.932 0-1.022-.727-1.745-1.634-1.745-.692 0-1.15.52-1.15 1.15 0 .21.075.43.17.574.032.049.032.062.024.103-.016.082-.047.19-.062.247-.024.082-.095.11-.157.04-.37-.217-.604-.637-.604-1.122 0-.85.637-1.652 1.8-1.652 1.25 0 2.222.9 2.222 2.15 0 1.25-.79 2.23-1.89 2.23-.37 0-.72-.187-.835-.403 0 0-.17.682-.22.873-.075.285-.285.645-.425.862-1.168 1.4-2.883 2.65-2.883 4.226 0 2.213 1.583 3.93 3.738 3.93 2.162 0 3.766-1.954 3.766-4.664 0-3.69-2.23-6.42-5.46-6.42-3.85 0-6.115 2.94-6.115 5.817 0 .9.285 1.56.885 1.954.095.062.203.024.23-.082.025-.098.075-.293.1-.383.024-.11.016-.148-.047-.23-.21-.32-.34-.637-.34-.98 0-.5.285-1.022.862-1.022.46 0 .82.23.82.72 0 .425-.132.862-.203 1.22-.062.31.255.575.562.575.637 0 1.095-.645 1.095-1.57 0-.908-.652-1.62-1.5-1.62-.765 0-1.342.6-1.342 1.31 0 .285.11.488.247.645.024.024.032.049.008.14-.075.285-.255 1.05-.285 1.17-.024.148-.124.132-.17.062C8.36 19.12 8.25 18.067 8.25 17.06c0-1.785.835-3.322 2.456-3.322 1.358 0 2.41 1.01 2.41 2.518 0 1.5-.94 2.69-2.26 2.69-.47 0-.915-.24-.105-.51s.21-.425.285-.637.157-.383.21-.574c.148-.488.293-1 .425-1.46.18-.62.915-2.65 1.15-3.44.255-.86.148-1.58-.23-2.12-.497-.7-1.3-.835-1.8-.46-.075.056-.132.14-.157.23-.05.14-.032.32.024.5.062.18.15.38.15.38s.165.67.247.98c.11.425.12.885-.11.98-.22.095-.36-.165-.53-.32-.23-.21-.383-.43-.595-.734-.35-.508-.432-1.08-.255-1.67.293-.97.997-1.57 1.89-1.57 1.12 0 2.015.82 2.015 2.026 0 .81-.32 1.634-1.032 2.148-.15.11-.37.285-.37.52 0 .195.124.37.37.37.47 0 .862-.574.862-1.38 0-1.15-.425-2.12-1.2-2.82C13.29 4.29 14.88 4 16.5 4c2.825 0 5.176 1.785 5.862 4.195.05.157.025.34-.062.47-.11.165-.293.24-.488.21-.18-.024-.31-.157-.34-.32-.575-1.89-2.45-3.23-4.47-3.23-1.332 0-2.52.488-3.418 1.325-1.12.98-1.652 2.39-1.366 4.022.062.362.165.734.285 1.12.024.062.062.11.1.18.187.31.39.61.62.908.26.34.545.67.854.98.31.31.645.595.997.854.41.293.85.54 1.302.734.98.425 2.03.662 3.12.662 3.325 0 6-2.69 6-6.012C22 6.477 17.523 2 12 2z"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script src="./script.js"></script>
+  </body>
+</html>
