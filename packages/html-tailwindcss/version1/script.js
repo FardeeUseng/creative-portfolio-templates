@@ -1,25 +1,23 @@
 // ---------------------------------
 // Theme Toggle (Dark / Light Mode)
 // ---------------------------------
+const themeToggle = document.getElementById("theme-toggle");
 const html = document.documentElement;
-const btn = document.getElementById("theme-toggle");
-
+themeToggle.addEventListener("click", () => {
+  html.classList.toggle("dark");
+  // Optionally, save the theme preference to localStorage
+  if (html.classList.contains("dark")) {
+    localStorage.setItem("theme", "dark");
+  } else {
+    localStorage.setItem("theme", "light");
+  }
+});
+// Check for saved theme preference on page load
 if (localStorage.getItem("theme") === "dark") {
   html.classList.add("dark");
 } else {
   html.classList.remove("dark");
 }
-
-btn.addEventListener("click", () => {
-  if (html.classList.contains("dark")) {
-    html.classList.remove("dark");
-    localStorage.setItem("theme", "light");
-  } else {
-    html.classList.add("dark");
-    localStorage.setItem("theme", "dark");
-  }
-});
-
 // ---------------------------------
 // Menu list for display in mobile's screen
 // ---------------------------------
