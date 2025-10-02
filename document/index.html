@@ -3,9 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>DevFolio Docs - Portfolio Template</title>
-    <link href="data:image/x-icon;base64," rel="icon" type="image/x-icon" />
+    <title>Portfolio Docs - Portfolio Template</title>
+    <!-- ============ Favicon ============ -->
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+    <!-- ============ Tailwind CSS ============ -->
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="./tailwind-config.js"></script>
+
+    <!-- ============ Fonts ============ -->
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -16,18 +22,13 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./style.css" />
-    <script src="./tailwind-config.js"></script>
+
+    <!-- ============ Style ============ -->
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body class="bg-background font-sans text-text-primary antialiased">
     <div class="relative min-h-screen w-full">
-      <div
-        class="
-          absolute top-0 left-0 -z-10
-          w-full h-[60vh] 
-          bg-gradient-to-br from-[var(--gradient-start)] to-[var(--gradient-end)]
-        "
-      ></div>
+
       <header class="sticky top-0 z-50 w-full backdrop-blur-lg">
         <div
           class="
@@ -38,68 +39,80 @@
         >
           <a class="flex items-center gap-2" href="#">
             <span 
-              class="material-symbols-outlined text-primary text-3xl"
+              class="
+                material-symbols-outlined 
+                text-primary text-3xl
+              "
             >
               menu_book
             </span>
-            <h1 class="text-2xl font-bold text-text-primary">DevFolio Docs</h1>
+            <h1 class="text-2xl font-bold text-text-primary">
+              Portfolio Docs
+            </h1>
           </a>
           <div class="flex items-center gap-4">
             <a
               class="
-                hidden sm:inline-block 
-                text-sm font-medium text-text-secondary hover:text-primary transition-colors
+                hidden sm:inline-block transition-colors
+                text-sm font-medium text-text-secondary hover:text-primary 
               "
               href="#demo"
-              >Demos</a
             >
+              Demos
+            </a>
             <a
               class="
-                hidden sm:inline-block 
-                text-sm font-medium text-text-secondary hover:text-primary transition-colors
+                hidden sm:inline-block transition-colors
+                text-sm font-medium text-text-secondary hover:text-primary 
               "
               href="#credits"
-              >Credits</a
             >
-            <a
-              class="
-                h-10 px-6
-                flex items-center justify-center 
-                rounded-full bg-primary shadow-lg shadow-primary/30
-                text-sm font-semibold text-white 
-                transition-transform hover:scale-105
-              "
-              href="#"
-              >Download</a
-            >
+              Credits
+            </a>
             <button
-              class="
-                h-10 w-10 
-                flex items-center justify-center 
-                rounded-full bg-card/50 hover:bg-card transition-colors
-                text-text-primary 
-              "
               id="theme-toggle"
+              class="
+                flex items-center justify-center
+                h-10 w-10 rounded-full transition-colors
+                bg-card/50 text-text-primary hover:bg-card 
+              "
             >
-              <span class="material-symbols-outlined dark:hidden"
-                >light_mode</span
+              <span 
+                class="
+                  dark:hidden
+                  material-symbols-outlined 
+                "
               >
-              <span class="material-symbols-outlined hidden dark:block"
-                >dark_mode</span
+                light_mode
+              </span>
+              <span 
+                class="
+                  material-symbols-outlined 
+                  hidden dark:block
+                "
               >
+                dark_mode
+              </span>
             </button>
           </div>
         </div>
       </header>
-      <main class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
-        <section class="text-center py-16" id="hero">
+
+      <main>
+        <section
+          id="hero"
+          class="
+            text-center py-20 bg-gradient-to-br 
+            from-[var(--gradient-start)] to-[var(--gradient-end)]
+          "
+        >
           <h1
             class="
               text-5xl md:text-7xl 
               font-extrabold text-text-primary tracking-tight
             "
           >
-            DevFolio Template
+            Portfolio Template
           </h1>
           <p class="mt-4 text-xl text-text-secondary">
             Your modern, developer-focused portfolio solution.
@@ -114,426 +127,690 @@
                 h-12 px-8 
                 flex items-center justify-center 
                 rounded-full bg-primary 
+                text-base font-semibold text-white 
                 shadow-lg shadow-primary/30 transition-transform hover:scale-105
-                text-base font-semibold text-white
               "
               href="#demo"
             >
               View Demo
             </a>
-            <a
-              class="
-                h-12 px-8 
-                flex items-center justify-center 
-                rounded-full bg-card 
-                text-base font-semibold text-text-primary 
-                shadow-md transition-transform hover:scale-105
-              "
-              href="#"
-              >Download Files</a
-            >
           </div>
         </section>
 
-        <section class="py-16" id="features">
-          <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-text-primary">Core Features</h2>
-            <p class="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
-              Built with modern needs in mind.
-            </p>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div
-              class="
-                p-8 
-                bg-card rounded-xl shadow-lg 
-                text-center transition-transform hover:-translate-y-2
-              "
-            >
-              <span
-                class="material-symbols-outlined text-secondary text-5xl mb-4"
-                >devices</span
-              >
-              <h3 class="text-xl font-semibold mb-2">Fully Responsive</h3>
-              <p class="text-text-secondary">
-                Looks great on any device, from mobile to desktop.
+        <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+          <section id="features" class="py-16">
+            <div class="text-center mb-12">
+              <h2 class="text-4xl font-bold text-text-primary">Core Features</h2>
+              <p class="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
+                Built with modern needs in mind.
               </p>
             </div>
-            <div
-              class="
-                p-8 
-                bg-card rounded-xl shadow-lg 
-                text-center transition-transform hover:-translate-y-2
-              "
-            >
-              <span
-                class="material-symbols-outlined text-secondary text-5xl mb-4"
-                >dark_mode</span
-              >
-              <h3 class="text-xl font-semibold mb-2">Dark Mode</h3>
-              <p class="text-text-secondary">
-                A beautiful, eye-friendly dark theme is included.
-              </p>
-            </div>
-            <div
-              class="
-                p-8 
-                bg-card rounded-xl shadow-lg 
-                text-center transition-transform hover:-translate-y-2
-              "
-            >
-              <span
-                class="material-symbols-outlined text-secondary text-5xl mb-4"
-                >layers</span
-              >
-              <h3 class="text-xl font-semibold mb-2">Multiple Packages</h3>
-              <p class="text-text-secondary">
-                Choose from CSS, SCSS, or Tailwind CSS versions.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="py-16" id="sections">
-          <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-text-primary">
-              Sections Overview
-            </h2>
-            <p class="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
-              Everything you need to build a compelling portfolio.
-            </p>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
-              <div class="flex items-center gap-4 mb-3">
-                <span class="material-symbols-outlined text-primary text-3xl"
-                  >home</span
-                >
-                <h4 class="font-semibold text-lg">Hero Section</h4>
-              </div>
-              <p class="text-sm text-text-secondary flex-grow">
-                A visually striking introduction with a clear headline,
-                subheading, and prominent call-to-action buttons to guide
-                visitors.
-              </p>
-            </div>
-            <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
-              <div class="flex items-center gap-4 mb-3">
-                <span class="material-symbols-outlined text-primary text-3xl"
-                  >person</span
-                >
-                <h4 class="font-semibold text-lg">About Me</h4>
-              </div>
-              <p class="text-sm text-text-secondary flex-grow">
-                Detail your professional background, skills, and passion for
-                development. Includes a space for a professional headshot.
-              </p>
-            </div>
-            <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
-              <div class="flex items-center gap-4 mb-3">
-                <span class="material-symbols-outlined text-primary text-3xl"
-                  >work</span
-                >
-                <h4 class="font-semibold text-lg">My Projects</h4>
-              </div>
-              <p class="text-sm text-text-secondary flex-grow">
-                A filterable gallery to display your projects. Each project can
-                have a title, description, technology stack, and links to live
-                demos or code repositories.
-              </p>
-            </div>
-            <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
-              <div class="flex items-center gap-4 mb-3">
-                <span class="material-symbols-outlined text-primary text-3xl"
-                  >reviews</span
-                >
-                <h4 class="font-semibold text-lg">Testimonials</h4>
-              </div>
-              <p class="text-sm text-text-secondary flex-grow">
-                Build credibility by showcasing positive feedback from clients
-                or colleagues in a clean, easy-to-read slider format.
-              </p>
-            </div>
-            <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
-              <div class="flex items-center gap-4 mb-3">
-                <span class="material-symbols-outlined text-primary text-3xl"
-                  >email</span
-                >
-                <h4 class="font-semibold text-lg">Contact</h4>
-              </div>
-              <p class="text-sm text-text-secondary flex-grow">
-                A simple and effective contact form for potential clients or
-                employers to get in touch, complete with validation.
-              </p>
-            </div>
-            <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
-              <div class="flex items-center gap-4 mb-3">
-                <span class="material-symbols-outlined text-primary text-3xl"
-                  >horizontal_rule</span
-                >
-                <h4 class="font-semibold text-lg">Footer</h4>
-              </div>
-              <p class="text-sm text-text-secondary flex-grow">
-                Contains your social media links, a copyright notice, and quick
-                navigation links to important sections of your portfolio.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section class="py-16" id="packages">
-          <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-text-primary">
-              Available Packages
-            </h2>
-            <p class="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
-              Get started with your preferred styling method.
-            </p>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div
-              class="bg-card p-8 rounded-xl shadow-lg flex flex-col text-center"
-            >
-              <h3 class="text-2xl font-bold mb-2 text-primary">CSS</h3>
-              <p class="text-text-secondary flex-grow mb-6">
-                Plain CSS for a simple, straightforward setup. No pre-processors
-                needed.
-              </p>
-              <a
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div
                 class="
-                  mt-auto px-6 py-2 inline-block 
-                  rounded-full bg-primary/10 hover:bg-primary/20
-                  text-sm font-semibold text-primary 
+                  bg-card p-8 rounded-xl shadow-lg 
+                  text-center transition-transform hover:-translate-y-2
                 "
-                href="#"
-                >Preview CSS Package</a
               >
-            </div>
-            <div
-              class="bg-card p-8 rounded-xl shadow-lg flex flex-col text-center"
-            >
-              <h3 class="text-2xl font-bold mb-2 text-primary">SCSS</h3>
-              <p class="text-text-secondary flex-grow mb-6">
-                Leverage the power of Sass with variables, mixins, and nested
-                rules.
-              </p>
-              <a
-                class="
-                  mt-auto px-6 py-2 inline-block 
-                  rounded-full bg-primary/10 hover:bg-primary/20
-                  text-sm font-semibold text-primary
-                "
-                href="#"
-              >
-                Preview SCSS Package
-              </a>
-            </div>
-            <div
-              class="bg-card p-8 rounded-xl shadow-lg flex flex-col text-center"
-            >
-              <h3 class="text-2xl font-bold mb-2 text-primary">Tailwind</h3>
-              <p class="text-text-secondary flex-grow mb-6">
-                A utility-first framework for rapid UI development and easy
-                customization.
-              </p>
-              <a
-                class="
-                  mt-auto px-6 py-2 
-                  inline-block rounded-full 
-                  bg-primary/10 hover:bg-primary/20
-                  text-sm font-semibold text-primary
-                "
-                href="#"
-              >
-                Preview Tailwind Package
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="py-16" id="demo">
-          <div class="text-center mb-12">
-            <h2 class="text-4xl font-bold text-text-primary">Live Demo</h2>
-            <p class="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
-              See the template in action.
-            </p>
-          </div>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-card rounded-xl shadow-lg overflow-hidden group">
-              <img
-                alt="Light Mode Preview"
-                class="w-full h-auto object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrPPYIzBtO-w1vWcCDEYqVSYHvmbiMkD7MpwbHg_GpWBGAWFm2rRkEze_T3egVptbjTmTlLF4jvA2f93MxiJ-1go2BKnVuLE-VQi8yjiEJVWNDdEXwg5IR-Ja1afPM5G7Cf8zX-D8P3H7JQDrULglWF9AkoYGV4jl3Ng4zCA6eAK2R9yn-1__TcLJDlzA9CSbGZFKrFrkxUY518YeWz3hpbDXKanG4VUpeVOYX4vUid7hlZmbQosHe-dUqohzoqzvBzhkIwwEXn84a"
-              />
-              <div class="p-6 text-center">
-                <a
-                  class="
-                    h-12 px-8 
-                    inline-flex items-center justify-center 
-                    rounded-full bg-primary 
-                    text-base font-semibold text-white 
-                    shadow-lg shadow-primary/30 transition-transform hover:scale-105
-                  "
-                  href="#"
+                <span
+                  class="material-symbols-outlined text-secondary text-5xl mb-4"
                 >
-                  Live Demo (Light)
-                </a>
-              </div>
-            </div>
-            <div class="bg-card rounded-xl shadow-lg overflow-hidden group">
-              <img
-                alt="Dark Mode Preview"
-                class="w-full h-auto object-cover"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2h4oIUY3QVvKg7EseuhS4uq7y33U4CJBLCYs3BH-hcQ2L2E186Uw1BMwpoz81r0sXY8tiF1W0JNgpUviOT-aHJxizxJn1y2SDV25GNd_3a0Q3evhYtSqiBT-mBA38kCZ4pdLPcHyFH5yDru4XD4SKTcXufsed2ETNcW315df7SO1DfL02W4n9ByFQey2cUgLzYcb9ToI7bVpa_rhQFSpwfwC1UwvLh-3kxLAayjehZvYV83HO8vgw1_N38IVNQpCGcGK1uMdBeWdv"
-              />
-              <div class="p-6 text-center">
-                <a
-                  class="
-                    h-12 px-8
-                    inline-flex items-center justify-center 
-                    rounded-full bg-primary 
-                    text-base font-semibold text-white 
-                    shadow-lg shadow-primary/30 transition-transform hover:scale-105
-                  "
-                  href="#"
-                >
-                  Live Demo (Dark)
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="py-16" id="credits">
-          <div class="bg-card rounded-2xl shadow-lg p-8 md:p-12">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div class="md:col-span-1 text-center md:text-left">
-                <h2 class="text-3xl font-bold text-text-primary mb-2">
-                  Credits &amp; Resources
-                </h2>
+                  devices
+                </span>
+                <h3 class="text-xl font-semibold mb-2">Fully Responsive</h3>
                 <p class="text-text-secondary">
-                  This template was made possible by these amazing resources.
+                  Looks great on any device, from mobile to desktop.
                 </p>
               </div>
-              <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div class="bg-background p-6 rounded-lg">
-                  <div class="flex items-center gap-4 mb-2">
-                    <span
-                      class="material-symbols-outlined text-secondary text-3xl"
-                      >font_download</span
+              <div
+                class="
+                  bg-card p-8 rounded-xl shadow-lg 
+                  text-center transition-transform hover:-translate-y-2
+                "
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-5xl mb-4"
+                >
+                  dark_mode
+                </span>
+                <h3 class="text-xl font-semibold mb-2">Dark Mode</h3>
+                <p class="text-text-secondary">
+                  A beautiful, eye-friendly dark theme is included.
+                </p>
+              </div>
+              <div
+                class="
+                  bg-card p-8 rounded-xl shadow-lg 
+                  text-center transition-transform hover:-translate-y-2
+                "
+              >
+                <span
+                  class="material-symbols-outlined text-secondary text-5xl mb-4"
+                >
+                  layers
+                </span>
+                <h3 class="text-xl font-semibold mb-2">Multiple Versions</h3>
+                <p class="text-text-secondary">
+                  Choose from several distinct template versions for different
+                  needs.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="sections" class="py-16" >
+            <div class="text-center mb-12">
+              <h2 class="text-4xl font-bold text-text-primary">
+                Sections Overview
+              </h2>
+              <p class="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
+                Everything you need to build a compelling portfolio.
+              </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
+                <div class="flex items-center gap-4 mb-3">
+                  <span class="material-symbols-outlined text-primary text-3xl">
+                    home
+                  </span>
+                  <h4 class="font-semibold text-lg">Hero Section</h4>
+                </div>
+                <p class="text-sm text-text-secondary flex-grow">
+                  A visually striking introduction with a clear headline,
+                  subheading, and prominent call-to-action buttons to guide
+                  visitors.
+                </p>
+              </div>
+              <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
+                <div class="flex items-center gap-4 mb-3">
+                  <span class="material-symbols-outlined text-primary text-3xl">
+                    person
+                  </span>
+                  <h4 class="font-semibold text-lg">About Me</h4>
+                </div>
+                <p class="text-sm text-text-secondary flex-grow">
+                  Detail your professional background, skills, and passion for
+                  development. Includes a space for a professional headshot.
+                </p>
+              </div>
+              <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
+                <div class="flex items-center gap-4 mb-3">
+                  <span class="material-symbols-outlined text-primary text-3xl">
+                    work
+                  </span>
+                  <h4 class="font-semibold text-lg">My Projects</h4>
+                </div>
+                <p class="text-sm text-text-secondary flex-grow">
+                  A filterable gallery to display your projects. Each project can
+                  have a title, description, technology stack, and links to live
+                  demos or code repositories.
+                </p>
+              </div>
+              <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
+                <div class="flex items-center gap-4 mb-3">
+                  <span class="material-symbols-outlined text-primary text-3xl">
+                    reviews
+                  </span>
+                  <h4 class="font-semibold text-lg">Testimonials</h4>
+                </div>
+                <p class="text-sm text-text-secondary flex-grow">
+                  Build credibility by showcasing positive feedback from clients
+                  or colleagues in a clean, easy-to-read slider format.
+                </p>
+              </div>
+              <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
+                <div class="flex items-center gap-4 mb-3">
+                  <span class="material-symbols-outlined text-primary text-3xl">
+                    email
+                  </span>
+                  <h4 class="font-semibold text-lg">Contact</h4>
+                </div>
+                <p class="text-sm text-text-secondary flex-grow">
+                  A simple and effective contact form for potential clients or
+                  employers to get in touch, complete with validation.
+                </p>
+              </div>
+              <div class="bg-card p-6 rounded-xl shadow-lg flex flex-col">
+                <div class="flex items-center gap-4 mb-3">
+                  <span class="material-symbols-outlined text-primary text-3xl">
+                    horizontal_rule
+                  </span>
+                  <h4 class="font-semibold text-lg">Footer</h4>
+                </div>
+                <p class="text-sm text-text-secondary flex-grow">
+                  Contains your social media links, a copyright notice, and quick
+                  navigation links to important sections of your portfolio.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="demo" class="py-16" >
+            <div class="text-center mb-12">
+              <h2 class="text-4xl font-bold text-text-primary">Live Demo</h2>
+              <p class="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
+                See the different versions of the template in action.
+              </p>
+            </div>
+            <div class="bg-card rounded-2xl shadow-lg p-8">
+
+              <div
+                id="demo-tabs"
+                class="
+                  mb-8 
+                  border-b border-text-primary/10 
+                  flex justify-center flex-wrap
+                "
+              >
+                <button
+                  data-filter="version-1"
+                  class="
+                    filter-btn px-6 py-3 
+                    font-semibold text-text-primary 
+                    border-b-2 border-primary 
+                    transition-colors duration-300
+                  "
+                >
+                  Version 1
+                </button>
+                <button
+                  data-filter="version-2"
+                  class="
+                    filter-btn px-6 py-3 
+                    font-semibold text-text-secondary hover:text-text-primary 
+                    border-b-2 border-transparent transition-colors duration-300
+                  "
+                >
+                  Version 2
+                </button>
+                <button
+                  data-filter="version-3"
+                  class="
+                    filter-btn px-6 py-3 
+                    font-semibold text-text-secondary hover:text-text-primary 
+                    border-b-2 border-transparent transition-colors duration-300
+                  "
+                >
+                  Version 3
+                </button>
+                <button
+                  data-filter="version-4"
+                  class="
+                    filter-btn px-6 py-3 
+                    font-semibold text-text-secondary hover:text-text-primary 
+                    border-b-2 border-transparent transition-colors duration-300
+                  "
+                >
+                  Version 4
+                </button>
+              </div>
+
+              <div id="demo-content">
+                <div id="version-1" class="tab-content">
+                  <div class="group shadow-md relative overflow-hidden rounded-xl mb-8">
+                    <img
+                      alt="Standard Version Demo Preview"
+                      class="
+                        w-full h-full 
+                        object-fit rounded-xl 
+                        group-hover:scale-105 transition-transform duration-500
+                      "
+                      src="./assets/screenshots/template-version-1-light.webp"
+                    />
+
+                    <!-- Overlay มืด -->
+                    <div
+                      class="
+                        absolute inset-0 bg-black/50 
+                        opacity-0 group-hover:opacity-100 
+                        transition-opacity duration-500
+                      "
+                    ></div>
+
+                    <!-- ปุ่ม Preview -->
+                    <div
+                      class="
+                        absolute inset-0 flex items-center justify-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                      "
                     >
-                    <h3 class="text-lg font-semibold">Fonts</h3>
+                      <a
+                        href="/packages/version1/index.html"
+                        target="_blank"
+                        class="
+                          h-12 px-8
+                          flex items-center justify-center 
+                          rounded-lg bg-primary
+                          text-base font-semibold text-white 
+                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                        "
+                      >
+                        Preview
+                      </a>
+                    </div>
                   </div>
-                  <p class="text-sm text-text-secondary">
-                    The template uses the 'Poppins' font family from
-                    <a
-                      class="text-primary hover:underline"
-                      href="https://fonts.google.com/"
-                      target="_blank"
-                      >Google Fonts</a
-                    >.
+                  
+                  <div class="group shadow-md relative overflow-hidden rounded-xl">
+                    <img
+                      alt="Standard Version Demo Preview"
+                      class="
+                        w-full h-full 
+                        object-fit mb-8 rounded-xl 
+                        group-hover:scale-105 transition-transform duration-500
+                      "
+                      src="./assets/screenshots/template-version-1-dark.webp"
+                    />
+
+                    <!-- ปุ่ม Preview -->
+                    <div
+                      class="
+                        absolute inset-0 flex items-center justify-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                      "
+                    >
+                      <a
+                        href="/packages/version1/index.html"
+                        target="_blank"
+                        class="
+                          h-12 px-8
+                          flex items-center justify-center 
+                          rounded-lg bg-primary
+                          text-base font-semibold text-white 
+                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                        "
+                      >
+                        Preview
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="version-2" class="tab-content hidden">
+                  <div class="group shadow-md relative overflow-hidden rounded-xl mb-8">
+                    <img
+                      alt="Standard Version Demo Preview"
+                      class="
+                        w-full h-full 
+                        object-fit rounded-xl 
+                        group-hover:scale-105 transition-transform duration-500
+                      "
+                      src="./assets/screenshots/template-version-2-light.webp"
+                    />
+
+                    <!-- Overlay มืด -->
+                    <div
+                      class="
+                        absolute inset-0 bg-black/50 
+                        opacity-0 group-hover:opacity-100 
+                        transition-opacity duration-500
+                      "
+                    ></div>
+
+                    <!-- ปุ่ม Preview -->
+                    <div
+                      class="
+                        absolute inset-0 flex items-center justify-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                      "
+                    >
+                      <a
+                        href="/packages/version2/index.html"
+                        target="_blank"
+                        class="
+                          h-12 px-8
+                          flex items-center justify-center 
+                          rounded-lg bg-primary
+                          text-base font-semibold text-white 
+                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                        "
+                      >
+                        Preview
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="group shadow-md relative overflow-hidden rounded-xl">
+                    <img
+                      alt="Standard Version Demo Preview"
+                      class="
+                        w-full h-full 
+                        object-fit mb-8 rounded-xl 
+                        group-hover:scale-105 transition-transform duration-500
+                      "
+                      src="./assets/screenshots/template-version-2-dark.webp"
+                    />
+
+                    <!-- ปุ่ม Preview -->
+                    <div
+                      class="
+                        absolute inset-0 flex items-center justify-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                      "
+                    >
+                      <a
+                        href="/packages/version2/index.html"
+                        target="_blank"
+                        class="
+                          h-12 px-8
+                          flex items-center justify-center 
+                          rounded-lg bg-primary
+                          text-base font-semibold text-white 
+                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                        "
+                      >
+                        Preview
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="version-3" class="tab-content hidden">
+                  <div class="group shadow-md relative overflow-hidden rounded-xl mb-8">
+                    <img
+                      alt="Standard Version Demo Preview"
+                      class="
+                        w-full h-full 
+                        object-fit rounded-xl 
+                        group-hover:scale-105 transition-transform duration-500
+                      "
+                      src="./assets/screenshots/template-version-3-light.webp"
+                    />
+
+                    <!-- Overlay มืด -->
+                    <div
+                      class="
+                        absolute inset-0 bg-black/50 
+                        opacity-0 group-hover:opacity-100 
+                        transition-opacity duration-500
+                      "
+                    ></div>
+
+                    <!-- ปุ่ม Preview -->
+                    <div
+                      class="
+                        absolute inset-0 flex items-center justify-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                      "
+                    >
+                      <a
+                        href="/packages/version3/index.html"
+                        target="_blank"
+                        class="
+                          h-12 px-8
+                          flex items-center justify-center 
+                          rounded-lg bg-primary
+                          text-base font-semibold text-white 
+                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                        "
+                      >
+                        Preview
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="group shadow-md relative overflow-hidden rounded-xl">
+                    <img
+                      alt="Standard Version Demo Preview"
+                      class="
+                        w-full h-full 
+                        object-fit mb-8 rounded-xl 
+                        group-hover:scale-105 transition-transform duration-500
+                      "
+                      src="./assets/screenshots/template-version-3-dark.webp"
+                    />
+
+                    <!-- ปุ่ม Preview -->
+                    <div
+                      class="
+                        absolute inset-0 flex items-center justify-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                      "
+                    >
+                      <a
+                        href="/packages/version3/index.html"
+                        target="_blank"
+                        class="
+                          h-12 px-8
+                          flex items-center justify-center 
+                          rounded-lg bg-primary
+                          text-base font-semibold text-white 
+                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                        "
+                      >
+                        Preview
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="version-4" class="tab-content hidden">
+                  <div class="group shadow-md relative overflow-hidden rounded-xl mb-8">
+                    <img
+                      alt="Standard Version Demo Preview"
+                      class="
+                        w-full h-full 
+                        object-fit rounded-xl 
+                        group-hover:scale-105 transition-transform duration-500
+                      "
+                      src="./assets/screenshots/template-version-4-light.webp"
+                    />
+
+                    <!-- Overlay มืด -->
+                    <div
+                      class="
+                        absolute inset-0 bg-black/50 
+                        opacity-0 group-hover:opacity-100 
+                        transition-opacity duration-500
+                      "
+                    ></div>
+
+                    <!-- ปุ่ม Preview -->
+                    <div
+                      class="
+                        absolute inset-0 flex items-center justify-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                      "
+                    >
+                      <a
+                        href="/packages/version4/index.html"
+                        target="_blank"
+                        class="
+                          h-12 px-8
+                          flex items-center justify-center 
+                          rounded-lg bg-primary
+                          text-base font-semibold text-white 
+                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                        "
+                      >
+                        Preview
+                      </a>
+                    </div>
+                  </div>
+                  
+                  <div class="group shadow-md relative overflow-hidden rounded-xl">
+                    <img
+                      alt="Standard Version Demo Preview"
+                      class="
+                        w-full h-full 
+                        object-fit mb-8 rounded-xl 
+                        group-hover:scale-105 transition-transform duration-500
+                      "
+                      src="./assets/screenshots/template-version-4-dark.webp"
+                    />
+
+                    <div
+                      class="
+                        absolute inset-0 flex items-center justify-center 
+                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                      "
+                    >
+                      <a
+                        href="/packages/version4/index.html"
+                        target="_blank"
+                        class="
+                          h-12 px-8
+                          flex items-center justify-center 
+                          rounded-lg bg-primary
+                          text-base font-semibold text-white 
+                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                        "
+                      >
+                        Preview
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <section id="credits" class="py-16" >
+            <div class="bg-card rounded-2xl shadow-lg p-8 md:p-12">
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-1 text-center md:text-left">
+                  <h2 class="text-3xl font-bold text-text-primary mb-2">
+                    Credits &amp; Resources
+                  </h2>
+                  <p class="text-text-secondary">
+                    This template was made possible by these amazing resources.
                   </p>
                 </div>
-                <div class="bg-background p-6 rounded-lg">
-                  <div class="flex items-center gap-4 mb-2">
-                    <span
-                      class="material-symbols-outlined text-secondary text-3xl"
-                      >palette</span
-                    >
-                    <h3 class="text-lg font-semibold">Icons</h3>
+                <div class="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div class="bg-background p-6 rounded-lg">
+                    <div class="flex items-center gap-4 mb-2">
+                      <span
+                        class="material-symbols-outlined text-secondary text-3xl"
+                      >
+                        font_download
+                      </span>
+                      <h3 class="text-lg font-semibold">Fonts</h3>
+                    </div>
+                    <p class="text-sm text-text-secondary">
+                      The template uses fonts from
+                      <a
+                        class="text-primary hover:underline"
+                        href="https://fonts.google.com/"
+                        target="_blank"
+                      >
+                        Google Fonts
+                      </a>.
+                    </p>
                   </div>
-                  <p class="text-sm text-text-secondary">
-                    All icons are from the
-                    <a
-                      class="text-primary hover:underline"
-                      href="https://fonts.google.com/icons"
-                      target="_blank"
-                      >Material Symbols</a
-                    >
-                    library by Google.
-                  </p>
-                </div>
-                <div class="bg-background p-6 rounded-lg">
-                  <div class="flex items-center gap-4 mb-2">
-                    <span
-                      class="material-symbols-outlined text-secondary text-3xl"
-                      >image</span
-                    >
-                    <h3 class="text-lg font-semibold">Images</h3>
+
+                  <div class="bg-background p-6 rounded-lg">
+                    <div class="flex items-center gap-4 mb-2">
+                      <span class="material-symbols-outlined text-secondary text-3xl">
+                        palette
+                      </span>
+                      <h3 class="text-lg font-semibold">Icons</h3>
+                    </div>
+                    <p class="text-sm text-text-secondary">
+                      The template uses icons from
+                      <a
+                        class="text-primary hover:underline"
+                        href="https://fonts.google.com/icons"
+                        target="_blank"
+                      >
+                        Google Material Symbols
+                      </a>
+                      and
+                      <a
+                        class="text-primary hover:underline"
+                        href="https://fontawesome.com/"
+                        target="_blank"
+                      >
+                        Font Awesome
+                      </a>.
+                    </p>
                   </div>
-                  <p class="text-sm text-text-secondary">
-                    Placeholder images provided by
-                    <a
-                      class="text-primary hover:underline"
-                      href="https://unsplash.com/"
-                      target="_blank"
-                      >Unsplash</a
-                    >
-                    and
-                    <a
-                      class="text-primary hover:underline"
-                      href="https://www.pexels.com/"
-                      target="_blank"
-                      >Pexels</a
-                    >.
-                  </p>
-                </div>
-                <div class="bg-background p-6 rounded-lg">
-                  <div class="flex items-center gap-4 mb-2">
-                    <span
-                      class="material-symbols-outlined text-secondary text-3xl"
-                      >code</span
-                    >
-                    <h3 class="text-lg font-semibold">Frameworks</h3>
+
+                  <div class="bg-background p-6 rounded-lg">
+                    <div class="flex items-center gap-4 mb-2">
+                      <span class="material-symbols-outlined text-secondary text-3xl">
+                        animation
+                      </span>
+                      <h3 class="text-lg font-semibold">Animations</h3>
+                    </div>
+                    <p class="text-sm text-text-secondary">
+                      The template uses
+                      <a
+                        class="text-primary hover:underline"
+                        href="https://animate.style/"
+                        target="_blank"
+                      >
+                        Animate.css
+                      </a>
+                      for animation effects.
+                    </p>
                   </div>
-                  <p class="text-sm text-text-secondary">
-                    Built with the awesome
-                    <a
-                      class="text-primary hover:underline"
-                      href="https://tailwindcss.com/"
-                      target="_blank"
-                      >Tailwind CSS</a
-                    >
-                    utility-first framework.
-                  </p>
+                  
+                  <div class="bg-background p-6 rounded-lg">
+                    <div class="flex items-center gap-4 mb-2">
+                      <span
+                        class="material-symbols-outlined text-secondary text-3xl"
+                      >
+                        code
+                      </span>
+                      <h3 class="text-lg font-semibold">Frameworks</h3>
+                    </div>
+                    <p class="text-sm text-text-secondary">
+                      Built with the awesome
+                      <a
+                        class="text-primary hover:underline"
+                        href="https://tailwindcss.com/"
+                        target="_blank"
+                      >
+                        Tailwind CSS
+                      </a>
+                      utility-first framework.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </main>
 
       <footer
-        class="bg-card text-text-secondary border-t border-text-primary/10"
+        class="
+          text-text-secondary 
+          bg-card border-t border-text-primary/10
+        "
       >
-        <div class="container mx-auto px-4 py-8 sm:px-6 lg:px-8">
+        <div 
+          class="
+            container mx-auto 
+            px-4 py-8 sm:px-6 lg:px-8
+          "
+        >
           <div
             class="
-              flex flex-col md:flex-row justify-between items-center gap-4 
+              flex flex-col md:flex-row gap-4 
+              justify-between items-center 
               text-center md:text-left
             "
           >
             <p class="text-sm">
-              © 2024 DevFolio by
-              <a class="font-semibold text-primary hover:underline" href="#"
-                >YourName</a
-              >
+              © 2024 Portfolio by
+              <a class="font-semibold text-primary hover:underline" href="#">
+                Fardee Useng
+              </a>
             </p>
             <div class="flex gap-6">
-              <a class="text-sm hover:text-primary transition-colors" href="#"
-                >Support</a
-              >
               <a
                 class="text-sm hover:text-primary transition-colors"
                 href="#hero"
-                >Back to Top</a
               >
+                Back to Top
+              </a>
             </div>
           </div>
         </div>
       </footer>
     </div>
-
+    
     <script src="./script.js"></script>
   </body>
 </html>

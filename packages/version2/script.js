@@ -158,7 +158,7 @@ projectsContainer.innerHTML = projectsData
         <h3 class="text-xl font-semibold mb-2 text-text-light dark:text-text-dark">
           ${project.title}
         </h3>
-        <p class="text-subtext-light dark:text-subtext-dark mb-4">
+        <p class="text-subtext-light dark:text-subtext-dark mb-4 line-clamp-2">
           ${project.description}
         </p>
         <a class="font-semibold text-primary hover:underline" href="${project.link}">
