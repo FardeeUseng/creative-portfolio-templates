@@ -48,6 +48,36 @@ animatedElements.forEach((el) => {
 });
 
 // ---------------------------------
+// Progress Bars Animation
+// ---------------------------------
+const progressBars = document.querySelectorAll(".progress-bar");
+
+const progressObserver = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const bar = entry.target;
+        const targetWidth = bar.dataset.width;
+        let width = 0;
+        const interval = setInterval(() => {
+          if (width >= parseInt(targetWidth)) {
+            clearInterval(interval);
+          } else {
+            width++;
+            bar.style.width = width + "%";
+          }
+        }, 10);
+        obs.unobserve(bar);
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+progressBars.forEach((bar) => progressObserver.observe(bar));
+
+
+// ---------------------------------
 // Project Data
 // ---------------------------------
 const categoriesData = [
@@ -138,23 +168,31 @@ projectsContainer.innerHTML = projectsData
 // Render Filter Buttons
 // ---------------------------------
 
+// ---------------------------------
+// Render Filter Buttons
+// ---------------------------------
 const filterContainer = document.querySelector(".filter-button");
+
 filterContainer.innerHTML = categoriesData
   .map((cate) => `
     <button
       data-filter="${cate.type}"
       class="
-        filter-btn px-4 py-2 
-        text-sm font-semibold 
-        ${cate.type === "all" ? "bg-primary text-white" : "bg-gray-200"}
-        rounded-full bg-gray-200 dark:bg-background-dark 
-        hover:bg-primary/20 dark:hover:bg-primary/20
-        text-subtext-light dark:text-subtext-dark 
+        filter-btn
+        text-sm font-medium 
+        px-4 py-2 rounded-full
+        ${cate.type === "all" ? 
+          "bg-primary dark:bg-primary/50 text-white" : 
+          "bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+        }
+        hover:bg-primary/20 dark:hover:bg-primary/30
+        transition-colors
       "
     >
       ${cate.name}
     </button>
-  `).join("");
+  `)
+  .join("");
 
 // ---------------------------------
 // Filter Projects by Category
@@ -164,23 +202,26 @@ const projects = document.querySelectorAll("[data-category]");
 
 filterButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const filter = btn.getAttribute("data-filter");
+    const filter = btn.getAttribute("data-filter") ?? "all";
 
+    // show/hide projects
     projects.forEach((project) => {
       const category = project.getAttribute("data-category");
-
-      if (filter === "all" || category === filter) {
-        project.classList.remove("hidden");
-      } else {
-        project.classList.add("hidden");
-      }
+      project.classList.toggle("hidden", !(filter === "all" || category === filter));
     });
 
-    // toggle active style
-    filterButtons.forEach((b) =>
-      b.classList.remove("bg-primary", "text-white")
-    );
-    btn.classList.add("bg-primary", "text-white");
+    // toggle active button style
+    filterButtons.forEach((b) => {
+      const isActive = b.getAttribute("data-filter") === filter;
+
+      if (isActive) {
+        b.classList.add("bg-primary", "dark:bg-primary/50", "text-white");
+        b.classList.remove("bg-gray-200", "text-gray-800", "dark:bg-gray-800", "dark:text-gray-200");
+      } else {
+        b.classList.remove("bg-primary", "dark:bg-primary/50", "text-white");
+        b.classList.add("bg-gray-200", "text-gray-800", "dark:bg-gray-800", "dark:text-gray-200");
+      }
+    });
   });
 });
 

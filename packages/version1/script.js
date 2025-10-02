@@ -174,20 +174,23 @@ const filterContainer = document.querySelector(".filter-button");
 filterContainer.innerHTML = categories
   .map((cate) => `
     <button
-      data-animate="animate__zoomIn"
       data-filter="${cate}"
       class="
-        filter-btn animate__animated
+        filter-btn
         text-sm font-medium 
         px-4 py-2 rounded-full
-        ${cate === "all" ? "bg-primary text-white" : "bg-gray-200"}
-        dark:bg-gray-800 hover:bg-primary/20 dark:hover:bg-primary/30 
-        text-gray-800 dark:text-gray-200 transition-colors
+        ${cate === "all" ? 
+          "bg-primary dark:bg-primary/50 text-white" : 
+          "bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+        }
+        hover:bg-primary/20 dark:hover:bg-primary/30
+        transition-colors
       "
     >
       ${cate}
     </button>
-  `).join("");
+  `)
+  .join("");
 
 
 // ---------------------------------
@@ -198,23 +201,26 @@ const projects = document.querySelectorAll("[data-category]");
 
 filterButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const filter = btn.getAttribute("data-filter");
+    const filter = btn.getAttribute("data-filter") ?? "all";
 
+    // show/hide projects
     projects.forEach((project) => {
       const category = project.getAttribute("data-category");
-
-      if (filter === "all" || category === filter) {
-        project.classList.remove("hidden");
-      } else {
-        project.classList.add("hidden");
-      }
+      project.classList.toggle("hidden", !(filter === "all" || category === filter));
     });
 
-    // toggle active style
-    filterButtons.forEach((b) =>
-      b.classList.remove("bg-primary", "text-white")
-    );
-    btn.classList.add("bg-primary", "text-white");
+    // toggle active button style
+    filterButtons.forEach((b) => {
+      const isActive = b.getAttribute("data-filter") === filter;
+
+      if (isActive) {
+        b.classList.add("bg-primary", "dark:bg-primary/50", "text-white");
+        b.classList.remove("bg-gray-200", "text-gray-800", "dark:bg-gray-800", "dark:text-gray-200");
+      } else {
+        b.classList.remove("bg-primary", "dark:bg-primary/50", "text-white");
+        b.classList.add("bg-gray-200", "text-gray-800", "dark:bg-gray-800", "dark:text-gray-200");
+      }
+    });
   });
 });
 

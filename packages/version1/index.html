@@ -59,7 +59,9 @@
             flex items-center justify-between
           "
         >
-          <div class="flex items-center gap-3">
+
+          <!-- ===== Logo ===== -->
+          <a href="#" class="flex items-center gap-3">
             <svg
               class="h-8 w-8 text-primary"
               fill="none"
@@ -102,7 +104,7 @@
             <h1 class="text-xl font-bold text-gray-900 dark:text-white">
               Sarah
             </h1>
-          </div>
+          </a>
   
           <!-- ===== Navigator ===== -->
           <nav class="hidden items-center gap-8 md:flex">
@@ -113,7 +115,7 @@
               "
               href="#hero"
             >
-              Hero
+              Heme
             </a>
             <a
               class="
@@ -153,7 +155,10 @@
             </a>
           </nav>
   
+          <!-- ===== Actions ===== -->
           <div class="flex items-center gap-4">
+
+            <!-- ===== Theme Toggle ===== -->
             <button
               id="theme-toggle"
               class="
@@ -186,6 +191,7 @@
       </header>
   
       <main class="flex-grow">
+
       <!-- ========== Hero Section ========== -->
         <section
           id="hero"
@@ -222,6 +228,7 @@
                   I craft intuitive and engaging web experiences using modern
                   technologies. Let's build something amazing together.
                 </p>
+
                 <div
                   class="
                     animate__animated
@@ -256,23 +263,22 @@
                   </a>
                 </div>
               </div>
-    
+
               <!-- ===== User Profile ===== -->
               <div
                 class="order-1 lg:order-2 animate__animated"
                 data-animate="animate__jackInTheBox"
               >
-                <div
+                <img
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAANiC0s3uEAXP8aPsn8E09kVi2bubM9arKM4OUpSao1u6FsTxhFZKaM1yxUg79aAO6RqUaE0A2owRIsTghjX63Mdqjobeifbx6lrbWiEuzUP6E1rPKM9nSPCuUq6tSphorJzk3s95Vrz-AQu8UKFMYyCW9nmrujpSwFuoxkN4weU0j7BSmgmZHNPozEcV5TxbEkBdcxtLtN28__asZq-cJMlRGGEvPBRkNu7arqWBIcBXUyDj0hdTL1D57Y22HH6IqYKUW9WO29iGH"
+                  alt="user profile"
                   class="
                     aspect-square
                     w-full max-w-md mx-auto lg:max-w-none
-                    rounded-xl shadow-lg 
-                    bg-cover bg-center 
+                    rounded-xl shadow-lg
+                    object-cover object-center
                   "
-                  style="
-                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAANiC0s3uEAXP8aPsn8E09kVi2bubM9arKM4OUpSao1u6FsTxhFZKaM1yxUg79aAO6RqUaE0A2owRIsTghjX63Mdqjobeifbx6lrbWiEuzUP6E1rPKM9nSPCuUq6tSphorJzk3s95Vrz-AQu8UKFMYyCW9nmrujpSwFuoxkN4weU0j7BSmgmZHNPozEcV5TxbEkBdcxtLtN28__asZq-cJMlRGGEvPBRkNu7arqWBIcBXUyDj0hdTL1D57Y22HH6IqYKUW9WO29iGH');
-                  "
-                ></div>
+                />
               </div>
             </div>
           </div>
@@ -403,6 +409,7 @@
                         95%
                       </span>
                     </div>
+
                     <div
                       class="
                         h-2.5 w-full
@@ -416,6 +423,7 @@
                       ></div>
                     </div>
                   </div>
+
                   <div class="space-y-4">
                     <div class="flex items-center justify-between">
                       <h4 class="font-bold text-gray-900 dark:text-white">
@@ -427,6 +435,7 @@
                         90%
                       </span>
                     </div>
+
                     <div
                       class="h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-700"
                     >
@@ -437,6 +446,7 @@
                       ></div>
                     </div>
                   </div>
+
                   <div class="space-y-4">
                     <div class="flex items-center justify-between">
                       <h4 class="font-bold text-gray-900 dark:text-white">
@@ -458,6 +468,7 @@
                       ></div>
                     </div>
                   </div>
+
                   <div class="space-y-4">
                     <div class="flex items-center justify-between">
                       <h4 class="font-bold text-gray-900 dark:text-white">
@@ -505,20 +516,18 @@
                           "
                         ></span>
                         <div class="relative flex items-start space-x-3">
-                          <div>
-                            <div class="relative px-1">
-                              <div
-                                class="
-                                  h-10 w-10 
-                                  flex items-center justify-center 
-                                  rounded-full ring-8 
-                                  bg-primary ring-background-light dark:ring-gray-800/50
-                                "
-                              >
-                                <span class="material-symbols-outlined text-white"
-                                  >work</span
-                                >
-                              </div>
+                          <div class="relative px-1">
+                            <div
+                              class="
+                                h-10 w-10 
+                                flex items-center justify-center 
+                                rounded-full ring-8 
+                                bg-primary ring-background-light dark:ring-gray-800/50
+                              "
+                            >
+                              <span class="material-symbols-outlined text-white">
+                                work
+                              </span>
                             </div>
                           </div>
                           <div class="min-w-0 flex-1 py-1.5">
@@ -534,6 +543,7 @@
                         </div>
                       </div>
                     </li>
+
                     <li>
                       <div class="relative pb-8">
                         <span
@@ -545,20 +555,18 @@
                           "
                         ></span>
                         <div class="relative flex items-start space-x-3">
-                          <div>
-                            <div class="relative px-1">
-                              <div
-                                class="
-                                  h-10 w-10
-                                  flex items-center justify-center 
-                                  rounded-full bg-primary 
-                                  ring-8 ring-background-light dark:ring-gray-800/50
-                                "
-                              >
-                                <span class="material-symbols-outlined text-white">
-                                  work
-                                </span>
-                              </div>
+                          <div class="relative px-1">
+                            <div
+                              class="
+                                h-10 w-10
+                                flex items-center justify-center 
+                                rounded-full bg-primary 
+                                ring-8 ring-background-light dark:ring-gray-800/50
+                              "
+                            >
+                              <span class="material-symbols-outlined text-white">
+                                work
+                              </span>
                             </div>
                           </div>
                           <div class="min-w-0 flex-1 py-1.5">
@@ -574,25 +582,25 @@
                         </div>
                       </div>
                     </li>
+
                     <li>
                       <div class="relative">
                         <div class="relative flex items-start space-x-3">
-                          <div>
-                            <div class="relative px-1">
-                              <div
-                                class="
-                                  h-10 w-10 
-                                  flex items-center justify-center
-                                  rounded-full bg-primary 
-                                  ring-8 ring-background-light dark:ring-gray-800/50
-                                "
-                              >
-                                <span class="material-symbols-outlined text-white">
-                                  work
-                                </span>
-                              </div>
+                          <div class="relative px-1">
+                            <div
+                              class="
+                                h-10 w-10 
+                                flex items-center justify-center
+                                rounded-full bg-primary 
+                                ring-8 ring-background-light dark:ring-gray-800/50
+                              "
+                            >
+                              <span class="material-symbols-outlined text-white">
+                                work
+                              </span>
                             </div>
                           </div>
+
                           <div class="min-w-0 flex-1 py-1.5">
                             <div
                               class="text-sm font-medium text-gray-900 dark:text-white"
@@ -632,20 +640,18 @@
                         "
                       ></span>
                       <div class="relative flex items-start space-x-3">
-                        <div>
-                          <div class="relative px-1">
-                            <div
-                              class="
-                                h-10 w-10 
-                                flex items-center justify-center 
-                                rounded-full bg-primary 
-                                ring-8 ring-background-light dark:ring-gray-800/50
-                              "
-                            >
-                              <span class="material-symbols-outlined text-white">
-                                school
-                              </span>
-                            </div>
+                        <div class="relative px-1">
+                          <div
+                            class="
+                              h-10 w-10 
+                              flex items-center justify-center 
+                              rounded-full bg-primary 
+                              ring-8 ring-background-light dark:ring-gray-800/50
+                            "
+                          >
+                            <span class="material-symbols-outlined text-white">
+                              school
+                            </span>
                           </div>
                         </div>
                         <div class="min-w-0 flex-1 py-1.5">
@@ -661,20 +667,18 @@
     
                     <li class="relative pb-8">
                       <div class="relative flex items-start space-x-3">
-                        <div>
-                          <div class="relative px-1">
-                            <div
-                              class="
-                                h-10 w-10 
-                                flex items-center justify-center 
-                                rounded-full bg-primary 
-                                ring-8 ring-background-light dark:ring-gray-800/50
-                              "
-                            >
-                              <span class="material-symbols-outlined text-white">
-                                school
-                              </span>
-                            </div>
+                        <div class="relative px-1">
+                          <div
+                            class="
+                              h-10 w-10 
+                              flex items-center justify-center 
+                              rounded-full bg-primary 
+                              ring-8 ring-background-light dark:ring-gray-800/50
+                            "
+                          >
+                            <span class="material-symbols-outlined text-white">
+                              school
+                            </span>
                           </div>
                         </div>
                         <div class="min-w-0 flex-1 py-1.5">
@@ -770,6 +774,8 @@
             class="animate__animated max-w-4xl mx-auto" 
             data-animate="animate__fadeInUp"
           >
+
+            <!-- ===== Project Header ===== -->
             <div class="text-center mb-12">
               <h1
                 class="
@@ -785,7 +791,7 @@
               </p>
             </div>
     
-            <!-- ===== Project category list ===== -->
+            <!-- ===== Filter project category tabs ===== -->
             <div
               class="
                 mb-10 filter-button
@@ -805,6 +811,8 @@
     
             <!-- ===== My services ===== -->
             <div class="mt-20">
+
+              <!-- ===== My Service Header ===== -->
               <div class="text-center mb-12">
                 <h2
                   class="
@@ -818,12 +826,15 @@
                   I offer a range of services to bring your digital ideas to life.
                 </p>
               </div>
+
+              <!-- ===== My service list ===== -->
               <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <a
-                  href="#"
+
+                <!-- ===== My service 1 ===== -->
+                <article
                   class="
-                    text-center p-8 
-                    bg-white dark:bg-gray-800/50 rounded-lg shadow-sm hover:shadow-lg
+                    text-center p-8 shadow-sm hover:shadow-lg
+                    bg-white dark:bg-gray-800/50 rounded-lg 
                     border border-gray-200 dark:border-gray-700/50
                   "
                 >
@@ -834,7 +845,7 @@
                       rounded-full bg-primary/20 text-primary
                     "
                   >
-                    <span class="material-symbols-outlined text-3xl"> code </span>
+                    <span class="material-symbols-outlined text-3xl">code</span>
                   </div>
                   <h3
                     class="text-xl font-bold text-gray-900 dark:text-white mb-2"
@@ -845,9 +856,10 @@
                     Crafting responsive and dynamic websites using modern
                     technologies.
                   </p>
-                </a>
-                <a
-                  href="#"
+                </article>
+
+                <!-- ===== My service 2 ===== -->
+                <article
                   class="
                     p-8 text-center shadow-sm hover:shadow-lg
                     bg-white dark:bg-gray-800/50 rounded-lg  
@@ -861,9 +873,9 @@
                       rounded-full bg-primary/20 text-primary
                     "
                   >
-                      <span class="material-symbols-outlined text-3xl">
-                        phone_iphone
-                      </span>
+                    <span class="material-symbols-outlined text-3xl">
+                      phone_iphone
+                    </span>
                   </div>
                   <h3
                     class="text-xl font-bold text-gray-900 dark:text-white mb-2"
@@ -874,9 +886,10 @@
                     Building intuitive and engaging mobile applications for
                     various platforms.
                   </p>
-                </a>
-                <a
-                  href="#"
+                </article>
+
+                <!-- ===== My service 3 ===== -->
+                <article
                   class="
                     p-8 text-center shadow-sm hover:shadow-lg
                     bg-white dark:bg-gray-800/50 rounded-lg 
@@ -903,7 +916,7 @@
                     Designing user-centered interfaces that enhance user
                     experience.
                   </p>
-                </a>
+                </article>
               </div>
             </div>
           </div>
@@ -919,6 +932,8 @@
             data-animate="animate__fadeInUp"
           >
             <div class="max-w-4xl mx-auto">
+
+              <!-- ===== Testimonials Header ===== -->
               <h2
                 class="
                   mb-8 text-3xl sm:text-4xl
@@ -927,46 +942,67 @@
               >
                 Testimonials
               </h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div
+
+              <!-- ===== Testimonials list ===== -->
+              <div 
+                class="
+                  grid gap-8
+                  grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+                "
+              >
+
+                <!-- ===== Testimonials 1 ===== -->
+                <article
                   class="
+                    flex flex-col justify-between
                     bg-white dark:bg-gray-900/50 
-                    p-6 rounded-lg 
-                    shadow-md hover:shadow-xl transition-shadow duration-300
+                    p-6 rounded-lg duration-300
+                    shadow-md hover:shadow-xl transition-shadow 
                   "
                 >
-                  <div class="flex items-center mb-4">
-                    <img
-                      alt="Sarah M."
-                      class="w-12 h-12 rounded-full object-cover mr-4"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBkF0FmLgMzNfj2xKOBnEgpvBG9Qg_G4OTh3L_70uK_3ACZARxWCvxOJFjprRo7BHc558yru9iEz0xz3vwPmblqjiG18c1DTYDmQ1u2Ax_h_bbJ6pPSbQ9QYLGfMjlH27fqm4HXwNgC2ELjLDULo7VbxHtNlfykRs8PEZf0izm-AUZ1MxsBe4xEHJMvskivLAn47AC_joljvcqwK60XbzfvaHpaUU9sI_YLBz67lO9cjzZXzrEnDz1dSpPS0kr-qYw4TZt5u7p8fPP"
-                    />
-                    <div>
-                      <h3 class="font-bold text-gray-900 dark:text-white">
-                        Sarah M.
-                      </h3>
-                      <p class="text-sm text-gray-500 dark:text-gray-400">
-                        2023-08-15
-                      </p>
+                  <div>
+                    <div class="flex items-center mb-4">
+                      <img
+                        alt="Sarah M."
+                        class="w-12 h-12 rounded-full object-cover mr-4"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBkF0FmLgMzNfj2xKOBnEgpvBG9Qg_G4OTh3L_70uK_3ACZARxWCvxOJFjprRo7BHc558yru9iEz0xz3vwPmblqjiG18c1DTYDmQ1u2Ax_h_bbJ6pPSbQ9QYLGfMjlH27fqm4HXwNgC2ELjLDULo7VbxHtNlfykRs8PEZf0izm-AUZ1MxsBe4xEHJMvskivLAn47AC_joljvcqwK60XbzfvaHpaUU9sI_YLBz67lO9cjzZXzrEnDz1dSpPS0kr-qYw4TZt5u7p8fPP"
+                      />
+                      <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white">
+                          Sarah M.
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          2023-08-15
+                        </p>
+                      </div>
                     </div>
+  
+                    <div class="flex items-center mb-4 text-primary">
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                    </div>
+  
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                      Alex is an exceptional frontend developer. His attention to
+                      detail and ability to translate complex designs into functional
+                      and user-friendly interfaces is remarkable.
+                    </p>
                   </div>
-                  <div class="flex items-center mb-4 text-primary">
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                  </div>
-                  <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    Alex is an exceptional frontend developer. His attention to
-                    detail and ability to translate complex designs into functional
-                    and user-friendly interfaces is remarkable.
-                  </p>
+
                   <div
-                    class="flex items-center text-gray-500 dark:text-gray-400 gap-4"
+                    class="
+                      flex items-center gap-4
+                      text-gray-500 dark:text-gray-400
+                    "
                   >
                     <button
-                      class="flex items-center gap-2 hover:text-primary transition-colors"
+                      class="
+                        flex items-center gap-2 
+                        hover:text-primary transition-colors
+                      "
                     >
                       <span class="material-symbols-outlined text-lg">
                         thumb_up
@@ -974,7 +1010,10 @@
                       <span>12</span>
                     </button>
                     <button
-                      class="flex items-center gap-2 hover:text-primary transition-colors"
+                      class="
+                        flex items-center gap-2 
+                        hover:text-primary transition-colors
+                      "
                     >
                       <span class="material-symbols-outlined text-lg">
                         thumb_down
@@ -982,46 +1021,60 @@
                       <span>1</span>
                     </button>
                   </div>
-                </div>
-                <div
+                </article>
+
+                <!-- ===== Testimonials 2 ===== -->
+                <article
                   class="
+                    flex flex-col justify-between
                     bg-white dark:bg-gray-900/50 
-                    p-6 rounded-lg s
-                    hadow-md hover:shadow-xl transition-shadow duration-300
+                    p-6 rounded-lg duration-300
+                    shadow-md hover:shadow-xl transition-shadow 
                   "
                 >
-                  <div class="flex items-center mb-4">
-                    <img
-                      alt="David L."
-                      class="w-12 h-12 rounded-full object-cover mr-4"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcfs9lU9IZyuIXpNiygqa9QlAIpvodejsrkfv5HLTj-F7zF7VoAw-og28bPFfz-gdP4SBaxD8i0gqyr-BygmH4NgOBKR5qPdri7pDfayVO7wA_jYC99pO1G4Q_FQvHORkr_5bw12G_KV9Q_63gq417wRG__Rqg5JcqDg-xi5Lq_QwBoZKY-HuyCpyvmWcNQ-64xPR3U5yIrvluVhsBTp2QqHuBeI6IrmSIJvbvoK4NW9wSN3eWNWwxY8vXsx93lNlLU7J3hSqbaaRz"
-                    />
-                    <div>
-                      <h3 class="font-bold text-gray-900 dark:text-white">
-                        David L.
-                      </h3>
-                      <p class="text-sm text-gray-500 dark:text-gray-400">
-                        2023-09-22
-                      </p>
+                  <div>
+                    <div class="flex items-center mb-4">
+                      <img
+                        alt="David L."
+                        class="w-12 h-12 rounded-full object-cover mr-4"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcfs9lU9IZyuIXpNiygqa9QlAIpvodejsrkfv5HLTj-F7zF7VoAw-og28bPFfz-gdP4SBaxD8i0gqyr-BygmH4NgOBKR5qPdri7pDfayVO7wA_jYC99pO1G4Q_FQvHORkr_5bw12G_KV9Q_63gq417wRG__Rqg5JcqDg-xi5Lq_QwBoZKY-HuyCpyvmWcNQ-64xPR3U5yIrvluVhsBTp2QqHuBeI6IrmSIJvbvoK4NW9wSN3eWNWwxY8vXsx93lNlLU7J3hSqbaaRz"
+                      />
+                      <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white">
+                          David L.
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          2023-09-22
+                        </p>
+                      </div>
                     </div>
+  
+                    <div class="flex items-center mb-4 text-primary">
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                    </div>
+  
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                      We hired Alex for a critical project, and he delivered
+                      outstanding results. His technical skills are top-notch, and he
+                      communicated effectively.
+                    </p>
                   </div>
-                  <div class="flex items-center mb-4 text-primary">
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                  </div>
-                  <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    We hired Alex for a critical project, and he delivered
-                    outstanding results. His technical skills are top-notch, and he
-                    communicated effectively.
-                  </p>
+
                   <div
-                    class="flex items-center text-gray-500 dark:text-gray-400 gap-4"
+                    class="
+                      flex items-center gap-4
+                      text-gray-500 dark:text-gray-400
+                    "
                   >
                     <button
-                      class="flex items-center gap-2 hover:text-primary transition-colors"
+                      class="
+                        flex items-center gap-2 
+                        hover:text-primary transition-colors
+                      "
                     >
                       <span class="material-symbols-outlined text-lg">
                         thumb_up
@@ -1029,53 +1082,70 @@
                       <span>15</span>
                     </button>
                     <button
-                      class="flex items-center gap-2 hover:text-primary transition-colors"
+                      class="
+                        flex items-center gap-2 
+                        hover:text-primary transition-colors
+                      "
                     >
                       <span class="material-symbols-outlined text-lg">
                         thumb_down
                       </span>
                     </button>
                   </div>
-                </div>
-                <div
+                </article>
+
+                <!-- ===== Testimonials 3 ===== -->
+                <article
                   class="
+                    flex flex-col justify-between
                     bg-white dark:bg-gray-900/50 
-                    p-6 rounded-lg 
-                    shadow-md hover:shadow-xl transition-shadow duration-300
+                    p-6 rounded-lg duration-300
+                    shadow-md hover:shadow-xl transition-shadow 
                   "
                 >
-                  <div class="flex items-center mb-4">
-                    <img
-                      alt="Emily R."
-                      class="w-12 h-12 rounded-full object-cover mr-4"
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8h1FwIvuTSN19Hy9t1ClXwwwMLydAZCz99-uZQH9SRKftM12ykgSjDUvJA36qvfD-Nob60eGDSADriWKneXgwR4diZkwXJphUXKlzGPs0LLQGHMR0io_binAYfse47CiDCUB7u6gzqIP9A1QwywO9k2xUcEDzihbnIVBARjoLqsjknr_EwyAQsGCfsrqMW3M_iJbf_PKLeseraQJqcJ1-DkWECnlrwuWbvR2WFmI-a1IHF1C5evP6z4TPXmcTmas-1DayoDh9TkyO"
-                    />
-                    <div>
-                      <h3 class="font-bold text-gray-900 dark:text-white">
-                        Emily R.
-                      </h3>
-                      <p class="text-sm text-gray-500 dark:text-gray-400">
-                        2023-11-10
-                      </p>
+                  <div>
+                    <div class="flex items-center mb-4">
+                      <img
+                        alt="Emily R."
+                        class="w-12 h-12 rounded-full object-cover mr-4"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8h1FwIvuTSN19Hy9t1ClXwwwMLydAZCz99-uZQH9SRKftM12ykgSjDUvJA36qvfD-Nob60eGDSADriWKneXgwR4diZkwXJphUXKlzGPs0LLQGHMR0io_binAYfse47CiDCUB7u6gzqIP9A1QwywO9k2xUcEDzihbnIVBARjoLqsjknr_EwyAQsGCfsrqMW3M_iJbf_PKLeseraQJqcJ1-DkWECnlrwuWbvR2WFmI-a1IHF1C5evP6z4TPXmcTmas-1DayoDh9TkyO"
+                      />
+                      <div>
+                        <h3 class="font-bold text-gray-900 dark:text-white">
+                          Emily R.
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                          2023-11-10
+                        </p>
+                      </div>
                     </div>
+  
+                    <div class="flex items-center mb-4 text-primary">
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                      <span class="material-symbols-outlined">star</span>
+                    </div>
+  
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">
+                      Alex's creativity and problem-solving skills are truly
+                      impressive. He provided valuable insights that improved the
+                      overall user experience.
+                    </p>
                   </div>
-                  <div class="flex items-center mb-4 text-primary">
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                    <span class="material-symbols-outlined">star</span>
-                  </div>
-                  <p class="text-gray-600 dark:text-gray-300 mb-4">
-                    Alex's creativity and problem-solving skills are truly
-                    impressive. He provided valuable insights that improved the
-                    overall user experience.
-                  </p>
+
                   <div
-                    class="flex items-center text-gray-500 dark:text-gray-400 gap-4"
+                    class="
+                      flex items-center gap-4
+                      text-gray-500 dark:text-gray-400
+                    "
                   >
                     <button
-                      class="flex items-center gap-2 hover:text-primary transition-colors"
+                      class="
+                        flex items-center gap-2 
+                        hover:text-primary transition-colors
+                      "
                     >
                       <span class="material-symbols-outlined text-lg">
                         thumb_up
@@ -1083,7 +1153,10 @@
                       <span>10</span>
                     </button>
                     <button
-                      class="flex items-center gap-2 hover:text-primary transition-colors"
+                      class="
+                        flex items-center gap-2 
+                        hover:text-primary transition-colors
+                      "
                     >
                       <span class="material-symbols-outlined text-lg">
                         thumb_down
@@ -1091,7 +1164,7 @@
                       <span>2</span>
                     </button>
                   </div>
-                </div>
+                </article>
               </div>
             </div>
           </div>
@@ -1101,6 +1174,8 @@
         <section id="contact" class="py-16 sm:py-24">
           <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto">
+
+              <!-- ===== Contact Header ===== -->
               <h2
                 class="
                   mb-8 text-3xl sm:text-4xl 
@@ -1109,7 +1184,10 @@
               >
                 Contact
               </h2>
+
               <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- ===== Contact Form ===== -->
                 <form
                   id="contact-form"
                   class="space-y-6"
@@ -1130,6 +1208,7 @@
                       type="text"
                     />
                   </div>
+                  
                   <div>
                     <label class="sr-only" for="email">Your Email</label>
                     <input
@@ -1146,6 +1225,7 @@
                       type="email"
                     />
                   </div>
+
                   <div>
                     <label class="sr-only" for="message">Your Message</label>
                     <textarea
@@ -1162,6 +1242,7 @@
                       rows="5"
                     ></textarea>
                   </div>
+
                   <div>
                     <button
                       class="
@@ -1175,6 +1256,8 @@
                     </button>
                   </div>
                 </form>
+
+                <!-- ===== Contact Information ===== -->
                 <div class="space-y-6">
                   <p class="text-gray-600 dark:text-gray-300">
                     Connect with me on social media:
@@ -1188,7 +1271,7 @@
                       "
                       href="#"
                     >
-                      <i class="fa-brands fa-square-x-twitter"></i>
+                      <i class="fa-brands fa-x-twitter"></i>
                       <span class="font-medium text-gray-700 dark:text-gray-200">
                         X
                       </span>
@@ -1201,7 +1284,7 @@
                       "
                       href="#"
                     >
-                      <i class="fa-brands fa-linkedin text-sky-900"></i>
+                      <i class="fa-brands fa-linkedin-in"></i>
                       <span class="font-medium text-gray-700 dark:text-gray-200">
                         LinkedIn
                       </span>
@@ -1236,54 +1319,66 @@
       >
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div
-            class="flex flex-col md:flex-row justify-between items-center gap-6"
+            class="
+              flex flex-col md:flex-row gap-6
+              justify-between items-center 
+            "
           >
+            
+            <!-- ===== Navigator ===== -->
             <nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
               <a
                 class="
-                  text-sm 
-                  text-gray-600 dark:text-gray-300 hover:text-primary transition-colors
+                  text-sm transition-colors
+                  text-gray-600 dark:text-gray-300 hover:text-primary 
                 "
                 href="#hero"
               >
                 Hero
               </a>
+
               <a
                 class="
-                  text-sm 
-                  text-gray-600 dark:text-gray-300 hover:text-primary transition-colors
+                  text-sm transition-colors
+                  text-gray-600 dark:text-gray-300 hover:text-primary 
                 "
                 href="#about"
               >
                 About
               </a>
+
               <a
                 class="
-                  text-sm 
-                  text-gray-600 dark:text-gray-300 hover:text-primary transition-colors
+                  text-sm transition-colors
+                  text-gray-600 dark:text-gray-300 hover:text-primary 
                 "
                 href="#projects"
               >
                 Projects
               </a>
+
               <a
                 class="
-                  text-sm 
-                  text-gray-600 dark:text-gray-300 hover:text-primary transition-colors
+                  text-sm transition-colors
+                  text-gray-600 dark:text-gray-300 hover:text-primary 
                 "
                 href="#testimonials"
               >
-                Testimonials</a>
+                Testimonials
+              </a>
+
               <a
                 class="
-                  text-sm 
-                  text-gray-600 dark:text-gray-300 hover:text-primary transition-colors
+                  text-sm transition-colors
+                  text-gray-600 dark:text-gray-300 hover:text-primary 
                 "
                 href="#contact"
               >
                 Contact
               </a>
             </nav>
+
+            <!-- ===== Contact ===== -->
             <div class="flex justify-center gap-4">
               <a
                 class="
@@ -1296,8 +1391,9 @@
                 <span class="font-medium text-gray-700 dark:text-gray-200">
                   X
                 </span>
-                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-x-twitter"></i>
               </a>
+
               <a
                 class="
                   flex items-center 
@@ -1309,8 +1405,9 @@
                 <span class="font-medium text-gray-700 dark:text-gray-200">
                   LinkedIn
                 </span>
-                <i class="fa-brands fa-linkedin text-sky-900"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
               </a>
+
               <a
                 class="
                   flex items-center 
@@ -1326,8 +1423,10 @@
               </a>
             </div>
           </div>
+
+          <!-- ===== Copyright ===== -->
           <p class="mt-8 text-center text-sm text-gray-500 dark:text-gray-400">
-            © 2024 Alex's Portfolio. All rights reserved.
+            © 2024 Sarah's Portfolio. All rights reserved.
           </p>
         </div>
       </footer>

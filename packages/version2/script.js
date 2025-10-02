@@ -94,8 +94,8 @@ const categoriesData = [
     type: "ux-ui"
   },
   {
-    name: "Branding",
-    type: "banding"
+    name: "Web App",
+    type: "web"
   },
 ]
 
@@ -106,26 +106,26 @@ const projectsData = [
   {
     title: "E-commerce Platform",
     category: "e-commerce",
-    description: "A complete redesign and development of a modern e-commerce website.",
+    description: "A full-featured e-commerce site with a custom CMS.",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCXn_fQSp_sEnV_rJkcsHFUm71KMHda9mLrVYwimgsiiPl3JyxF6lAnEJcsH3OMdIEVNsIuYyu1PKFWcbRxiFHM6ke2EW26MRzFSKjj5dLwliRN0Lcqr74UbYoW5hOa3aLU6ImaIcJLUP5zOGeNygwVHvGW8QHavq8snfG67XNjCyHeIx9iXvD_TED2yA3ALmApKewVKMRlj1SLpkmp0NBTg8vvHRQ3yNz4C8UFvFSkPkSsK4KUZaCsQ5WHjIUNkNlsU8oco-GzSg3E",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuBrPPYIzBtO-w1vWcCDEYqVSYHvmbiMkD7MpwbHg_GpWBGAWFm2rRkEze_T3egVptbjTmTlLF4jvA2f93MxiJ-1go2BKnVuLE-VQi8yjiEJVWNDdEXwg5IR-Ja1afPM5G7Cf8zX-D8P3H7JQDrULglWF9AkoYGV4jl3Ng4zCA6eAK2R9yn-1__TcLJDlzA9CSbGZFKrFrkxUY518YeWz3hpbDXKanG4VUpeVOYX4vUid7hlZmbQosHe-dUqohzoqzvBzhkIwwEXn84a",
     link: "#",
   },
   {
-    title: "SaaS Dashboard",
+    title: "Analytics Dashboard",
     category: "ux-ui",
     description:
-      "An intuitive and powerful dashboard for a data analytics SaaS.",
+      "Data visualization and analytics dashboard for a SaaS product.",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDobJbLd33MGB7BPuXxkYJbyfM17BuUJNkwg9xhQvckGkVKryKzXzggXdnJgXcrcQHeBf2FmIG4lnON_IsYJYrcYmznUUP-3N_FhI9LfNREohZWZQGkyI-f5MfesolPqcOgY7DUe5bAIM2VrRFX7ysaSYvrnHQcdl5hnt-Ry2hVtXhkUJb5U7tTjhl4vGkspn72fAC5Gmrt9lVCAC_Q1YQHbB5hmISEJoREiVGTr5IdjkDgZAMSmh4TXVs_4wOTPmYsXA19TvrxgL1F",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA2h4oIUY3QVvKg7EseuhS4uq7y33U4CJBLCYs3BH-hcQ2L2E186Uw1BMwpoz81r0sXY8tiF1W0JNgpUviOT-aHJxizxJn1y2SDV25GNd_3a0Q3evhYtSqiBT-mBA38kCZ4pdLPcHyFH5yDru4XD4SKTcXufsed2ETNcW315df7SO1DfL02W4n9ByFQey2cUgLzYcb9ToI7bVpa_rhQFSpwfwC1UwvLh-3kxLAayjehZvYV83HO8vgw1_N38IVNQpCGcGK1uMdBeWdv",
     link: "#",
   },
   {
-    title: "Mobile Banking App",
-    category: "banding",
-    description: "A secure and user-friendly mobile app for a new digital bank.",
+    title: "Portfolio Website",
+    category: "web",
+    description: "A personal portfolio for a professional photographer.",
     image:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuBSWIe6BdNZldcRR4tWp5oSNAXuN09SzQOXPKUAYcZwfEcVOTnxPSlilrc_wDL6ADYdS3goWGmHSnpylfb15AJu4Zq4I6jhWOiyqogrE2pO1gl8xdbxaDStI8e9uLS3s_y_f3NYS_WgmCpKxGAK1TZVQEkngGuGM9fsFXZF9lmcZzCyrhMljCfmvWQ2IWKZfMb4mA8Z2pkYQTtplmOhQVViOhbF49ZzC5BXMiofkEq3EoHd5E8uD0_sJ9d9YdSbxQPCT3u9l0Egiq4P",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAsUpFbUbSpUFZQfuWzfGnL9exRAoMyMHdKAlvvHIgGOGbMZALVBobKwIVn3TTyrsw54SIetKAsNlMUUv42gTm9iQsAERf4Ahtmoy6W45GbysKWevnns-bhVUSgfo_ifVNbBDU8LdarjUAaloBwqrvnZnsV0RfyDUFbc1MD3xumFj6J82B9lDRhcd6EAB3VQ4c7jiwExVR5ROKG2VMRaScuWb6isNe8A8pDjJYPS25iQq1yFpVndZVYR1xqtW00Br2iVBiWCdeb6Ox-",
     link: "#",
   },
 ];
@@ -139,27 +139,34 @@ projectsContainer.innerHTML = projectsData
     <div
       data-category="${project.category}"
       class="
-        group relative overflow-hidden 
-        rounded-xl shadow-lg hover:shadow-2xl
-        transition-all duration-300
+        group
+        bg-background-light dark:bg-background-dark 
+        rounded-xl shadow-lg overflow-hidden
       "
     >
-      <img
-        alt="${project.title}"
-        class="
-          h-64 w-full object-cover 
-          transition-transform duration-500 group-hover:scale-110
-        "
-        src="${project.image}"
-      />
-      <div
-        class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"
-      ></div>
-      <div class="absolute bottom-0 left-0 p-6 text-white">
-        <h3 class="text-2xl font-bold">${project.title}</h3>
-        <p class="mt-1 text-white/80">
+      <div class="overflow-hidden">
+        <img
+          alt="${project.title}"
+          class="
+            w-full h-56 object-cover 
+            group-hover:scale-110 transition-transform duration-500
+          "
+          src="${project.image}"
+        />
+      </div>
+      <div class="p-6">
+        <h3 class="text-xl font-semibold mb-2 text-text-light dark:text-text-dark">
+          ${project.title}
+        </h3>
+        <p class="text-subtext-light dark:text-subtext-dark mb-4">
           ${project.description}
         </p>
+        <a class="font-semibold text-primary hover:underline" href="${project.link}">
+          View Project
+          <span class="material-symbols-outlined text-base align-middle">
+            arrow_forward
+          </span>
+        </a>
       </div>
     </div>
   `).join("");
@@ -168,23 +175,31 @@ projectsContainer.innerHTML = projectsData
 // Render Filter Buttons
 // ---------------------------------
 
+// ---------------------------------
+// Render Filter Buttons
+// ---------------------------------
 const filterContainer = document.querySelector(".filter-button");
+
 filterContainer.innerHTML = categoriesData
   .map((cate) => `
     <button
       data-filter="${cate.type}"
       class="
-        filter-btn px-4 py-2 
-        text-sm font-semibold 
-        ${cate.type === "all" ? "bg-primary text-white" : "bg-gray-200"}
-        rounded-full dark:bg-background-dark
-        hover:bg-primary/20 dark:hover:bg-primary/20
-        text-subtext-light dark:text-subtext-dark 
+        filter-btn
+        text-sm font-medium 
+        px-4 py-2 rounded-full
+        ${cate.type === "all" ? 
+          "bg-primary dark:bg-primary/50 text-white" : 
+          "bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+        }
+        hover:bg-primary/20 dark:hover:bg-primary/30
+        transition-colors
       "
     >
       ${cate.name}
     </button>
-  `).join("");
+  `)
+  .join("");
 
 // ---------------------------------
 // Filter Projects by Category
@@ -194,23 +209,26 @@ const projects = document.querySelectorAll("[data-category]");
 
 filterButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
-    const filter = btn.getAttribute("data-filter");
+    const filter = btn.getAttribute("data-filter") ?? "all";
 
+    // show/hide projects
     projects.forEach((project) => {
       const category = project.getAttribute("data-category");
-
-      if (filter === "all" || category === filter) {
-        project.classList.remove("hidden");
-      } else {
-        project.classList.add("hidden");
-      }
+      project.classList.toggle("hidden", !(filter === "all" || category === filter));
     });
 
-    // toggle active style
-    filterButtons.forEach((b) =>
-      b.classList.remove("bg-primary", "text-white")
-    );
-    btn.classList.add("bg-primary", "text-white");
+    // toggle active button style
+    filterButtons.forEach((b) => {
+      const isActive = b.getAttribute("data-filter") === filter;
+
+      if (isActive) {
+        b.classList.add("bg-primary", "dark:bg-primary/50", "text-white");
+        b.classList.remove("bg-gray-200", "text-gray-800", "dark:bg-gray-800", "dark:text-gray-200");
+      } else {
+        b.classList.remove("bg-primary", "dark:bg-primary/50", "text-white");
+        b.classList.add("bg-gray-200", "text-gray-800", "dark:bg-gray-800", "dark:text-gray-200");
+      }
+    });
   });
 });
 

@@ -48,9 +48,12 @@
           whitespace-nowrap backdrop-blur-sm
           border-b border-border-light dark:border-border-dark 
           bg-background-light/80 dark:bg-background-dark/80 
-          px-4 py-3 sm:px-6 lg:px-8"
+          px-4 py-3 sm:px-6 lg:px-8
+        "
       >
-        <div class="flex items-center gap-4">
+
+        <!-- ===== Logo ===== -->
+        <a href="#" class="flex items-center gap-4">
           <svg
             class="h-8 w-8 text-primary"
             fill="none"
@@ -59,7 +62,18 @@
           >
             <g clip-path="url(#clip0_6_319)">
               <path
-                d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z"
+                d="
+                  M8.57829 8.57829C5.52816 11.6284 3.451 
+                  15.5145 2.60947 19.7452C1.76794 23.9758 
+                  2.19984 28.361 3.85056 32.3462C5.50128 
+                  36.3314 8.29667 39.7376 11.8832 42.134C15.4698 
+                  44.5305 19.6865 45.8096 24 45.8096C28.3135 
+                  45.8096 32.5302 44.5305 36.1168 42.134C39.7033 
+                  39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 
+                  28.361 46.2321 23.9758 45.3905 19.7452C44.549 
+                  15.5145 42.4718 11.6284 39.4217 8.57829L24 
+                  24L8.57829 8.57829Z
+                "
                 fill="currentColor"
               ></path>
             </g>
@@ -77,9 +91,11 @@
           >
             Sarah
           </h2>
-        </div>
+        </a>
 
         <div class="flex items-center gap-4">
+
+          <!-- ===== Navigator ===== -->
           <nav
             class="
               hidden md:flex items-center gap-6 
@@ -134,7 +150,10 @@
             </a>
           </nav>
 
+          <!-- ===== Actions ===== -->
           <div class="flex items-center gap-4">
+
+            <!-- ===== Theme Toggle ===== -->
             <button
               id="theme-toggle"
               class="
@@ -170,7 +189,7 @@
 
         <!-- ========== Hero Section ========== -->
         <section
-          id="horo"
+          id="hero"
           class="
             flex flex flex-col justify-center
             mx-auto max-w-6xl w-full min-h-[calc(100vh-75px)]
@@ -183,6 +202,8 @@
               grid-cols-1 lg:grid-cols-2
             "
           >
+
+            <!-- ===== Introduction ===== -->
             <div
               class="
                 flex flex-col items-center text-center 
@@ -247,6 +268,8 @@
                 </a>
               </div>
             </div>
+
+            <!-- ===== User Profile ===== -->
             <div class="relative flex justify-center lg:justify-end">
               <div 
                 class="animate__animated relative h-80 w-80 sm:h-96 sm:w-96" 
@@ -274,6 +297,8 @@
             " 
             data-animate="animate__fadeInUp"
           >
+
+            <!-- ===== About me ===== -->
             <div class="mb-16 text-center">
               <h2
                 class="
@@ -292,8 +317,11 @@
                 Get to know the person behind the pixels.
               </p>
             </div>
+
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
               <div class="flex flex-col gap-12">
+
+                <!-- ===== Introduction ===== -->
                 <div
                   class="
                     rounded-xl p-8
@@ -321,6 +349,8 @@
                     problems with elegant solutions.
                   </p>
                 </div>
+
+                <!-- ===== What i do ===== -->
                 <div
                   class="
                     p-8 rounded-xl shadow-md
@@ -346,6 +376,8 @@
                     lifecycle.
                   </p>
                 </div>
+
+                <!-- ===== Skills ===== -->
                 <div
                   class="
                     p-8 shadow-md rounded-xl 
@@ -494,7 +526,10 @@
                   </div>
                 </div>
               </div>
+
               <div class="flex flex-col gap-12">
+
+                <!-- ===== Career Timeline ===== -->
                 <div
                   class="
                     p-8 shadow-md rounded-xl 
@@ -602,6 +637,8 @@
                     </div>
                   </div>
                 </div>
+
+                <!-- ===== Education and Certificates ===== -->
                 <div
                   class="
                     p-8 shadow-md rounded-xl 
@@ -711,6 +748,8 @@
             " 
             data-animate="animate__fadeInUp"
           >
+
+            <!-- ===== Project Header ===== -->
             <div class="mb-12 text-center">
               <h2
                 class="
@@ -730,7 +769,7 @@
               </p>
             </div>
 
-            <!-- ===== Project category list ===== -->
+            <!-- ===== Filter project category tabs ===== -->
             <div
               class="
                 filter-button mb-10 p-2
@@ -763,6 +802,8 @@
             " 
             data-animate="animate__fadeInUp"
           >
+
+            <!-- ===== Testimonials Header ===== -->
             <div class="mb-12 text-center">
               <h2
                 class="
@@ -781,10 +822,14 @@
                 I'm proud to have worked with some amazing clients.
               </p>
             </div>
+
+            <!-- ===== Testimonials list ===== -->
             <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-              <div
+
+              <!-- ===== Testimonials 1 ===== -->
+              <article
                 class="
-                  rounded-xl p-8
+                  rounded-xl p-8 flex flex-col justify-between
                   border border-border-light dark:border-border-dark 
                   bg-card-light dark:bg-card-dark 
                 "
@@ -821,10 +866,12 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div
+              </article>
+
+              <!-- ===== Testimonials 2 ===== -->
+              <article
                 class="
-                  rounded-xl p-8
+                  rounded-xl p-8 flex flex-col justify-between
                   border border-border-light dark:border-border-dark 
                   bg-card-light dark:bg-card-dark
                 "
@@ -854,10 +901,12 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div
+              </article>
+
+              <!-- ===== Testimonials 3 ===== -->
+              <article
                 class="
-                  rounded-xl p-8
+                  rounded-xl p-8 flex flex-col justify-between
                   border border-border-light dark:border-border-dark 
                   bg-card-light dark:bg-card-dark
                 "
@@ -893,7 +942,7 @@
                     </p>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
           </div>
         </section>
@@ -903,29 +952,36 @@
           <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
               <div class="space-y-6">
-                <h2
-                  class="
-                    text-4xl font-bold 
-                    text-text-light-primary dark:text-text-dark-primary
-                  "
-                >
-                  Let's Work Together
-                </h2>
-                <p
-                  class="
-                    text-lg 
-                    text-text-light-secondary dark:text-text-dark-secondary
-                  "
-                >
-                  Have a project in mind? I'd love to hear about it. Fill out
-                  the form or send me an email.
-                </p>
+
+                <!-- ===== Contact Header ===== -->
+                <div>
+                  <h2
+                    class="
+                      text-4xl font-bold 
+                      text-text-light-primary dark:text-text-dark-primary
+                    "
+                  >
+                    Let's Work Together
+                  </h2>
+                  <p
+                    class="
+                      text-lg 
+                      text-text-light-secondary dark:text-text-dark-secondary
+                    "
+                  >
+                    Have a project in mind? I'd love to hear about it. Fill out
+                    the form or send me an email.
+                  </p>
+                </div>
+
+                <!-- ===== Contact Information ===== -->
                 <div class="space-y-4">
                   <div class="flex items-center gap-4">
                     <span
                       class="material-symbols-outlined text-primary text-2xl"
-                      >email</span
-                    >
+                    > 
+                      email
+                    </span>
                     <a
                       class="hover:text-primary"
                       href="mailto:hello@sarahchen.design"
@@ -935,21 +991,25 @@
                   <div class="flex items-center gap-4">
                     <span
                       class="material-symbols-outlined text-primary text-2xl"
-                      >phone</span
                     >
-                    <a class="hover:text-primary" href="tel:+1234567890"
-                      >+1 (234) 567-890</a
-                    >
+                      phone
+                    </span>
+                    <a class="hover:text-primary" href="tel:+1234567890">
+                      +1 (234) 567-890
+                    </a>
                   </div>
                   <div class="flex items-center gap-4">
                     <span
                       class="material-symbols-outlined text-primary text-2xl"
-                      >location_on</span
                     >
+                      location_on
+                    </span>
                     <p>San Francisco, California</p>
                   </div>
                 </div>
               </div>
+
+              <!-- ===== Contact Form ===== -->
               <div
                 class="
                   rounded-xl p-8 shadow-lg
@@ -1047,14 +1107,18 @@
               items-center justify-between
             "
           >
+
+            <!-- ===== Copyright ===== -->
             <p
               class="
                 text-sm 
                 text-text-light-secondary dark:text-text-dark-secondary
               "
             >
-              © 2024 Sarah Chen. All rights reserved.
+              © 2024 Sarah's Portfolio. All rights reserved.
             </p>
+
+            <!-- ===== Contact ===== -->
             <div class="flex items-center gap-4">
               <a
                 class="
@@ -1063,7 +1127,7 @@
                 "
                 href="#"
               >
-                <i class="fa-brands fa-square-x-twitter"></i>
+                <i class="fa-brands fa-x-twitter"></i>
               </a>
               <a
                 class="
@@ -1072,7 +1136,7 @@
                 "
                 href="#"
               >
-                <i class="fa-brands fa-linkedin text-sky-900"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
               </a>
               <a
                 class="
@@ -1089,6 +1153,7 @@
       </footer>
     </div>
 
+    <!-- ========== javaScript ========== -->
     <script src="./script.js"></script>
   </body>
 </html>
