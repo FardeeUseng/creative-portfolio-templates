@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Portfolio Docs - Portfolio Template</title>
+    
     <!-- ============ Favicon ============ -->
     <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
 
@@ -189,9 +190,9 @@
                 >
                   layers
                 </span>
-                <h3 class="text-xl font-semibold mb-2">Multiple Versions</h3>
+                <h3 class="text-xl font-semibold mb-2">Multiple Variants</h3>
                 <p class="text-text-secondary">
-                  Choose from several distinct template versions for different
+                  Choose from several distinct template variants for different
                   needs.
                 </p>
               </div>
@@ -289,7 +290,7 @@
             <div class="text-center mb-12">
               <h2 class="text-4xl font-bold text-text-primary">Live Demo</h2>
               <p class="mt-4 text-lg text-text-secondary max-w-2xl mx-auto">
-                See the different versions of the template in action.
+                See the different variants of the template in action.
               </p>
             </div>
             <div class="bg-card rounded-2xl shadow-lg p-8">
@@ -303,7 +304,7 @@
                 "
               >
                 <button
-                  data-filter="version-1"
+                  data-filter="variant-1"
                   class="
                     filter-btn px-6 py-3 
                     font-semibold text-text-primary 
@@ -311,357 +312,437 @@
                     transition-colors duration-300
                   "
                 >
-                  Version 1
+                  Variant 1
                 </button>
                 <button
-                  data-filter="version-2"
+                  data-filter="variant-2"
                   class="
                     filter-btn px-6 py-3 
                     font-semibold text-text-secondary hover:text-text-primary 
                     border-b-2 border-transparent transition-colors duration-300
                   "
                 >
-                  Version 2
+                  Variant 2
                 </button>
                 <button
-                  data-filter="version-3"
+                  data-filter="variant-3"
                   class="
                     filter-btn px-6 py-3 
                     font-semibold text-text-secondary hover:text-text-primary 
                     border-b-2 border-transparent transition-colors duration-300
                   "
                 >
-                  Version 3
+                  Variant 3
                 </button>
                 <button
-                  data-filter="version-4"
+                  data-filter="variant-4"
                   class="
                     filter-btn px-6 py-3 
                     font-semibold text-text-secondary hover:text-text-primary 
                     border-b-2 border-transparent transition-colors duration-300
                   "
                 >
-                  Version 4
+                  Variant 4
                 </button>
               </div>
 
               <div id="demo-content">
-                <div id="version-1" class="tab-content">
-                  <div class="group shadow-md relative overflow-hidden rounded-xl mb-8">
-                    <img
-                      alt="Standard Version Demo Preview"
-                      class="
-                        w-full h-full 
-                        object-fit rounded-xl 
-                        group-hover:scale-105 transition-transform duration-500
-                      "
-                      src="./assets/screenshots/template-version-1-light.webp"
-                    />
+                <div
+                  id="variant-1"
+                  class="tab-content grid grid-cols-1 md:grid-cols-2 gap-8"
+                >
 
-                    <!-- Overlay มืด -->
+                  <!-- Static -->
+                  <div class="group">
+                    <h4 class="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
+                      Static Version
+                    </h4>
                     <div
                       class="
-                        absolute inset-0 bg-black/50 
-                        opacity-0 group-hover:opacity-100 
-                        transition-opacity duration-500
-                      "
-                    ></div>
-
-                    <!-- ปุ่ม Preview -->
-                    <div
-                      class="
-                        absolute inset-0 flex items-center justify-center 
-                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                        relative aspect-[16/10] 
+                        rounded-xl overflow-hidden shadow-lg
                       "
                     >
-                      <a
-                        href="/portfolio-templates/packages/version1/index.html"
-                        target="_blank"
+                      <img 
+                        src="./assets/screenshots/template-version-1-light.webp" 
+                        alt="Demo 1 Static Screenshot" 
+                        class="w-full h-full object-cover"
+                      />
+
+                      <!-- Overlay button -->
+                      <div
                         class="
-                          h-12 px-8
-                          flex items-center justify-center 
-                          rounded-lg bg-primary
-                          text-base font-semibold text-white 
-                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                          absolute inset-0 flex items-center justify-center 
+                          bg-black/50 opacity-0 group-hover:opacity-100 
+                          transition-opacity duration-300
                         "
                       >
-                        Preview
-                      </a>
+                        <a 
+                          href="/creative-portfolio-templates/personal-portfolio/template/demo-1/standard" 
+                          target="_blank" 
+                          class="
+                            px-4 py-2 bg-primary text-white rounded-md 
+                            text-sm font-medium hover:bg-primary-dark
+                          "
+                        >
+                          Preview as Static
+                        </a>
+                      </div>
                     </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                      A clean and straightforward version without animations, 
+                      focusing on content.
+                    </p>
                   </div>
-                  
-                  <div class="group shadow-md relative overflow-hidden rounded-xl">
-                    <img
-                      alt="Standard Version Demo Preview"
-                      class="
-                        w-full h-full 
-                        object-fit mb-8 rounded-xl 
-                        group-hover:scale-105 transition-transform duration-500
-                      "
-                      src="./assets/screenshots/template-version-1-dark.webp"
-                    />
 
-                    <!-- ปุ่ม Preview -->
-                    <div
+                  <!-- Animated -->
+                  <div class="group">
+                    <h4 
                       class="
-                        absolute inset-0 flex items-center justify-center 
-                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                        mb-2 text-lg font-semibold 
+                        text-gray-800 dark:text-gray-200
                       "
                     >
-                      <a
-                        href="/portfolio-templates/packages/version1/index.html"
-                        target="_blank"
-                        class="
-                          h-12 px-8
-                          flex items-center justify-center 
-                          rounded-lg bg-primary
-                          text-base font-semibold text-white 
-                          shadow-lg shadow-primary/30 hover:shadow-primary/50
-                        "
-                      >
-                        Preview
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                <div id="version-2" class="tab-content hidden">
-                  <div class="group shadow-md relative overflow-hidden rounded-xl mb-8">
-                    <img
-                      alt="Standard Version Demo Preview"
+                      Animated Version
+                    </h4>
+                    <div 
                       class="
-                        w-full h-full 
-                        object-fit rounded-xl 
-                        group-hover:scale-105 transition-transform duration-500
-                      "
-                      src="./assets/screenshots/template-version-2-light.webp"
-                    />
-
-                    <!-- Overlay มืด -->
-                    <div
-                      class="
-                        absolute inset-0 bg-black/50 
-                        opacity-0 group-hover:opacity-100 
-                        transition-opacity duration-500
-                      "
-                    ></div>
-
-                    <!-- ปุ่ม Preview -->
-                    <div
-                      class="
-                        absolute inset-0 flex items-center justify-center 
-                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                        relative
+                        aspect-[16/10] rounded-xl overflow-hidden 
+                        shadow-lg transform group-hover:scale-105 
+                        transition-transform duration-300 ease-in-out
                       "
                     >
-                      <a
-                        href="/portfolio-templates/packages/version2/index.html"
-                        target="_blank"
-                        class="
-                          h-12 px-8
-                          flex items-center justify-center 
-                          rounded-lg bg-primary
-                          text-base font-semibold text-white 
-                          shadow-lg shadow-primary/30 hover:shadow-primary/50
-                        "
-                      >
-                        Preview
-                      </a>
-                    </div>
-                  </div>
-                  
-                  <div class="group shadow-md relative overflow-hidden rounded-xl">
-                    <img
-                      alt="Standard Version Demo Preview"
-                      class="
-                        w-full h-full 
-                        object-fit mb-8 rounded-xl 
-                        group-hover:scale-105 transition-transform duration-500
-                      "
-                      src="./assets/screenshots/template-version-2-dark.webp"
-                    />
+                      <img 
+                        src="./assets/screenshots/template-version-1-dark.webp" 
+                        alt="Demo 1 Animated Screenshot" 
+                        class="w-full h-full object-cover"
+                      />
 
-                    <!-- ปุ่ม Preview -->
-                    <div
-                      class="
-                        absolute inset-0 flex items-center justify-center 
-                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
-                      "
-                    >
-                      <a
-                        href="/portfolio-templates/packages/version2/index.html"
-                        target="_blank"
+                      <!-- Overlay button -->
+                      <div
                         class="
-                          h-12 px-8
-                          flex items-center justify-center 
-                          rounded-lg bg-primary
-                          text-base font-semibold text-white 
-                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                          absolute inset-0 flex items-center justify-center 
+                          bg-black/50 opacity-0 group-hover:opacity-100 
+                          transition-opacity duration-300
                         "
                       >
-                        Preview
-                      </a>
+                        <a 
+                          href="/creative-portfolio-templates/personal-portfolio/template/demo-1/animate" 
+                          target="_blank" 
+                          class="
+                            px-4 py-2 bg-primary text-white rounded-md 
+                            text-sm font-medium hover:bg-primary-dark
+                          "
+                        >
+                          Preview as Animate
+                        </a>
+                      </div>
                     </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                      A versatile layout with smooth animations for a 
+                      dynamic user experience.
+                    </p>
                   </div>
                 </div>
 
-                <div id="version-3" class="tab-content hidden">
-                  <div class="group shadow-md relative overflow-hidden rounded-xl mb-8">
-                    <img
-                      alt="Standard Version Demo Preview"
-                      class="
-                        w-full h-full 
-                        object-fit rounded-xl 
-                        group-hover:scale-105 transition-transform duration-500
-                      "
-                      src="./assets/screenshots/template-version-3-light.webp"
-                    />
+                <div
+                  id="variant-2"
+                  class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-8"
+                >
 
-                    <!-- Overlay มืด -->
+                  <!-- Static -->
+                  <div class="group">
+                    <h4 class="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
+                      Static Version
+                    </h4>
                     <div
                       class="
-                        absolute inset-0 bg-black/50 
-                        opacity-0 group-hover:opacity-100 
-                        transition-opacity duration-500
-                      "
-                    ></div>
-
-                    <!-- ปุ่ม Preview -->
-                    <div
-                      class="
-                        absolute inset-0 flex items-center justify-center 
-                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                        relative aspect-[16/10] 
+                        rounded-xl overflow-hidden shadow-lg
                       "
                     >
-                      <a
-                        href="/portfolio-templates/packages/version3/index.html"
-                        target="_blank"
+                      <img 
+                        src="./assets/screenshots/template-version-2-light.webp" 
+                        alt="Demo 1 Static Screenshot" 
+                        class="w-full h-full object-cover"
+                      />
+
+                      <!-- Overlay button -->
+                      <div
                         class="
-                          h-12 px-8
-                          flex items-center justify-center 
-                          rounded-lg bg-primary
-                          text-base font-semibold text-white 
-                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                          absolute inset-0 flex items-center justify-center 
+                          bg-black/50 opacity-0 group-hover:opacity-100 
+                          transition-opacity duration-300
                         "
                       >
-                        Preview
-                      </a>
+                        <a 
+                          href="/creative-portfolio-templates/personal-portfolio/template/demo-2/standard" 
+                          target="_blank" 
+                          class="
+                            px-4 py-2 bg-primary text-white rounded-md 
+                            text-sm font-medium hover:bg-primary-dark
+                          "
+                        >
+                          Preview as Static
+                        </a>
+                      </div>
                     </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                      A clean and straightforward version without animations, 
+                      focusing on content.
+                    </p>
                   </div>
-                  
-                  <div class="group shadow-md relative overflow-hidden rounded-xl">
-                    <img
-                      alt="Standard Version Demo Preview"
-                      class="
-                        w-full h-full 
-                        object-fit mb-8 rounded-xl 
-                        group-hover:scale-105 transition-transform duration-500
-                      "
-                      src="./assets/screenshots/template-version-3-dark.webp"
-                    />
 
-                    <!-- ปุ่ม Preview -->
-                    <div
+                  <!-- Animated -->
+                  <div class="group">
+                    <h4 
                       class="
-                        absolute inset-0 flex items-center justify-center 
-                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                        mb-2 text-lg font-semibold 
+                        text-gray-800 dark:text-gray-200
                       "
                     >
-                      <a
-                        href="/portfolio-templates/packages/version3/index.html"
-                        target="_blank"
+                      Animated Version
+                    </h4>
+                    <div 
+                      class="
+                        relative
+                        aspect-[16/10] rounded-xl overflow-hidden 
+                        shadow-lg transform group-hover:scale-105 
+                        transition-transform duration-300 ease-in-out
+                      "
+                    >
+                      <img 
+                        src="./assets/screenshots/template-version-2-dark.webp" 
+                        alt="Demo 1 Animated Screenshot" 
+                        class="w-full h-full object-cover"
+                      />
+
+                      <!-- Overlay button -->
+                      <div
                         class="
-                          h-12 px-8
-                          flex items-center justify-center 
-                          rounded-lg bg-primary
-                          text-base font-semibold text-white 
-                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                          absolute inset-0 flex items-center justify-center 
+                          bg-black/50 opacity-0 group-hover:opacity-100 
+                          transition-opacity duration-300
                         "
                       >
-                        Preview
-                      </a>
+                        <a 
+                          href="/creative-portfolio-templates/personal-portfolio/template/demo-2/animate" 
+                          target="_blank" 
+                          class="
+                            px-4 py-2 bg-primary text-white rounded-md 
+                            text-sm font-medium hover:bg-primary-dark
+                          "
+                        >
+                          Preview as Animate
+                        </a>
+                      </div>
                     </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                      A versatile layout with smooth animations for a 
+                      dynamic user experience.
+                    </p>
                   </div>
                 </div>
 
-                <div id="version-4" class="tab-content hidden">
-                  <div class="group shadow-md relative overflow-hidden rounded-xl mb-8">
-                    <img
-                      alt="Standard Version Demo Preview"
-                      class="
-                        w-full h-full 
-                        object-fit rounded-xl 
-                        group-hover:scale-105 transition-transform duration-500
-                      "
-                      src="./assets/screenshots/template-version-4-light.webp"
-                    />
+                <div
+                  id="variant-3"
+                  class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-8"
+                >
 
-                    <!-- Overlay มืด -->
+                  <!-- Static -->
+                  <div class="group">
+                    <h4 class="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
+                      Static Version
+                    </h4>
                     <div
                       class="
-                        absolute inset-0 bg-black/50 
-                        opacity-0 group-hover:opacity-100 
-                        transition-opacity duration-500
-                      "
-                    ></div>
-
-                    <!-- ปุ่ม Preview -->
-                    <div
-                      class="
-                        absolute inset-0 flex items-center justify-center 
-                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                        relative aspect-[16/10] 
+                        rounded-xl overflow-hidden shadow-lg
                       "
                     >
-                      <a
-                        href="/portfolio-templates/packages/version4/index.html"
-                        target="_blank"
+                      <img 
+                        src="./assets/screenshots/template-version-3-light.webp" 
+                        alt="Demo 1 Static Screenshot" 
+                        class="w-full h-full object-cover"
+                      />
+
+                      <!-- Overlay button -->
+                      <div
                         class="
-                          h-12 px-8
-                          flex items-center justify-center 
-                          rounded-lg bg-primary
-                          text-base font-semibold text-white 
-                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                          absolute inset-0 flex items-center justify-center 
+                          bg-black/50 opacity-0 group-hover:opacity-100 
+                          transition-opacity duration-300
                         "
                       >
-                        Preview
-                      </a>
+                        <a 
+                          href="/creative-portfolio-templates/personal-portfolio/template/demo-3/standard" 
+                          target="_blank" 
+                          class="
+                            px-4 py-2 bg-primary text-white rounded-md 
+                            text-sm font-medium hover:bg-primary-dark
+                          "
+                        >
+                          Preview as Static
+                        </a>
+                      </div>
                     </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                      A clean and straightforward version without animations, 
+                      focusing on content.
+                    </p>
                   </div>
-                  
-                  <div class="group shadow-md relative overflow-hidden rounded-xl">
-                    <img
-                      alt="Standard Version Demo Preview"
-                      class="
-                        w-full h-full 
-                        object-fit mb-8 rounded-xl 
-                        group-hover:scale-105 transition-transform duration-500
-                      "
-                      src="./assets/screenshots/template-version-4-dark.webp"
-                    />
 
-                    <div
+                  <!-- Animated -->
+                  <div class="group">
+                    <h4 
                       class="
-                        absolute inset-0 flex items-center justify-center 
-                        opacity-0 group-hover:opacity-100 transition-opacity duration-500
+                        mb-2 text-lg font-semibold 
+                        text-gray-800 dark:text-gray-200
                       "
                     >
-                      <a
-                        href="/portfolio-templates/packages/version4/index.html"
-                        target="_blank"
+                      Animated Version
+                    </h4>
+                    <div 
+                      class="
+                        relative
+                        aspect-[16/10] rounded-xl overflow-hidden 
+                        shadow-lg transform group-hover:scale-105 
+                        transition-transform duration-300 ease-in-out
+                      "
+                    >
+                      <img 
+                        src="./assets/screenshots/template-version-3-dark.webp" 
+                        alt="Demo 1 Animated Screenshot" 
+                        class="w-full h-full object-cover"
+                      />
+
+                      <!-- Overlay button -->
+                      <div
                         class="
-                          h-12 px-8
-                          flex items-center justify-center 
-                          rounded-lg bg-primary
-                          text-base font-semibold text-white 
-                          shadow-lg shadow-primary/30 hover:shadow-primary/50
+                          absolute inset-0 flex items-center justify-center 
+                          bg-black/50 opacity-0 group-hover:opacity-100 
+                          transition-opacity duration-300
                         "
                       >
-                        Preview
-                      </a>
+                        <a 
+                          href="/creative-portfolio-templates/personal-portfolio/template/demo-3/animate" 
+                          target="_blank" 
+                          class="
+                            px-4 py-2 bg-primary text-white rounded-md 
+                            text-sm font-medium hover:bg-primary-dark
+                          "
+                        >
+                          Preview as Animate
+                        </a>
+                      </div>
                     </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                      A versatile layout with smooth animations for a 
+                      dynamic user experience.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  id="variant-4"
+                  class="tab-content hidden grid grid-cols-1 md:grid-cols-2 gap-8"
+                >
+
+                  <!-- Static -->
+                  <div class="group">
+                    <h4 class="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
+                      Static Version
+                    </h4>
+                    <div
+                      class="
+                        relative aspect-[16/10] 
+                        rounded-xl overflow-hidden shadow-lg
+                      "
+                    >
+                      <img 
+                        src="./assets/screenshots/template-version-4-light.webp" 
+                        alt="Demo 1 Static Screenshot" 
+                        class="w-full h-full object-cover"
+                      />
+
+                      <!-- Overlay button -->
+                      <div
+                        class="
+                          absolute inset-0 flex items-center justify-center 
+                          bg-black/50 opacity-0 group-hover:opacity-100 
+                          transition-opacity duration-300
+                        "
+                      >
+                        <a 
+                          href="/creative-portfolio-templates/personal-portfolio/template/demo-4/standard" 
+                          target="_blank" 
+                          class="
+                            px-4 py-2 bg-primary text-white rounded-md 
+                            text-sm font-medium hover:bg-primary-dark
+                          "
+                        >
+                          Preview as Static
+                        </a>
+                      </div>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                      A clean and straightforward version without animations, 
+                      focusing on content.
+                    </p>
+                  </div>
+
+                  <!-- Animated -->
+                  <div class="group">
+                    <h4 
+                      class="
+                        mb-2 text-lg font-semibold 
+                        text-gray-800 dark:text-gray-200
+                      "
+                    >
+                      Animated Version
+                    </h4>
+                    <div 
+                      class="
+                        relative
+                        aspect-[16/10] rounded-xl overflow-hidden 
+                        shadow-lg transform group-hover:scale-105 
+                        transition-transform duration-300 ease-in-out
+                      "
+                    >
+                      <img 
+                        src="./assets/screenshots/template-version-4-dark.webp" 
+                        alt="Demo 1 Animated Screenshot" 
+                        class="w-full h-full object-cover"
+                      />
+
+                      <!-- Overlay button -->
+                      <div
+                        class="
+                          absolute inset-0 flex items-center justify-center 
+                          bg-black/50 opacity-0 group-hover:opacity-100 
+                          transition-opacity duration-300
+                        "
+                      >
+                        <a 
+                          href="/creative-portfolio-templates/personal-portfolio/template/demo-4/animate" 
+                          target="_blank" 
+                          class="
+                            px-4 py-2 bg-primary text-white rounded-md 
+                            text-sm font-medium hover:bg-primary-dark
+                          "
+                        >
+                          Preview as Animate
+                        </a>
+                      </div>
+                    </div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                      A versatile layout with smooth animations for a 
+                      dynamic user experience.
+                    </p>
                   </div>
                 </div>
               </div>
-
             </div>
           </section>
 
