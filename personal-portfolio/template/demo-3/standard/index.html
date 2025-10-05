@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Personal Portfolio Version 3</title>
+
+    <!-- ============ Favicon ============ -->
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+    <!-- ============ Tailwind CSS ============ -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="./tailwind-config.js"></script>
+
+    <!-- ============ Fonts ============ -->
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- ============ Icons & Animations ============ -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    >
+  </head>
+  <body
+    class="
+      bg-background-light dark:bg-background-dark 
+      text-text-light-primary dark:text-text-dark-primary font-display
+    "
+  >
+    <div class="flex min-h-screen w-full flex-col">
+
+      <!-- ========== Header ========== -->
+      <header
+        class="
+          sticky top-0 z-50 w-full
+          border-b border-border-light dark:border-border-dark 
+          bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm
+        "
+      >
+        <div
+          class="
+            flex items-center justify-between
+            px-4 py-3 sm:px-6 lg:px-8
+            whitespace-nowrap
+          "
+        >
+
+          <!-- ===== Logo ===== -->    
+          <a href="#" class="flex items-center gap-4">
+            <svg
+              class="h-8 w-8 text-primary"
+              fill="none"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_6_319)">
+                <path
+                  d="
+                    M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 
+                    2.60947 19.7452C1.76794 23.9758 2.19984 28.361 
+                    3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 
+                    11.8832 42.134C15.4698 44.5305 19.6865 45.8096 
+                    24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 
+                    42.134C39.7033 39.7375 42.4987 36.3314 44.1494 
+                    32.3462C45.8002 28.361 46.2321 23.9758 45.3905 
+                    19.7452C44.549 15.5145 42.4718 11.6284 39.4217 
+                    8.57829L24 24L8.57829 8.57829Z
+                  "
+                  fill="currentColor"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_6_319">
+                  <rect fill="white" height="48" width="48"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+            <h2
+              class="
+                text-xl font-bold 
+                text-text-light-primary dark:text-text-dark-primary
+              "
+            >
+              Sarah
+            </h2>
+          </a>
+
+          <div class="flex items-center gap-4">
+
+            <!-- ===== Navigator ===== -->
+            <nav
+              class="
+                hidden md:flex items-center gap-6 
+                text-sm font-medium 
+                text-text-light-secondary dark:text-text-dark-secondary
+              "
+            >
+              <a
+                class="
+                  transition-colors 
+                  hover:text-text-light-primary 
+                  dark:hover:text-text-dark-primary
+                "
+                href="#home"
+              >
+                Home
+              </a>
+              <a
+                class="
+                  transition-colors 
+                  hover:text-text-light-primary 
+                  dark:hover:text-text-dark-primary
+                "
+                href="#about"
+              >
+                About
+              </a>
+              <a
+                class="
+                  transition-colors 
+                  hover:text-text-light-primary 
+                  dark:hover:text-text-dark-primary
+                "
+                href="#projects"
+              >
+                Projects
+              </a>
+              <a
+                class="
+                  transition-colors 
+                  hover:text-text-light-primary 
+                  dark:hover:text-text-dark-primary
+                "
+                href="#contact"
+              >
+                Contact
+              </a>
+            </nav>
+
+            <!-- ===== Theme Toggle ===== -->
+            <button
+              id="theme-toggle"
+              class="
+                h-8 w-8
+                flex items-center justify-center
+                rounded-lg bg-gray-200/50 dark:bg-gray-700/50 
+                text-gray-800 dark:text-gray-200 
+                hover:bg-gray-200 dark:hover:bg-gray-700
+              "
+            >
+              <!-- ===== Light Mode ===== -->
+              <span class="material-symbols-outlined text-base block dark:hidden">
+                light_mode
+              </span>
+  
+              <!-- ===== Dark Mode ===== -->
+              <span class="material-symbols-outlined text-base hidden dark:block">
+                dark_mode
+              </span>
+            </button>
+
+            <!-- ===== User Profile ===== -->
+            <img
+              class="h-10 w-10 rounded-full"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuZmZoPb1A7qPh7FBTuPC-Fa2zMf5-yiLB8SvUOGeVxP90RbP2A_qY4tCjZm9hsJceQejuIXsKgRlL4FOG9nhFK7DrAHvio0_dDHX7HeJhh9rkd3ghKziAdZiGisUuysVBeilrPGhit1RYuImdl0Ic5ZLatuwziDHf8x2w2ak01oDYZz4D7-MDsvWdrmNXDnPiV0elxtuwskTMfeJ2tT8pOZVffcWmGDX4CFF7hK1tfQ2FWBVD32cGExFAwsXIHLMng0FJIYUCJSaA"
+              alt="user profile"
+            >
+          </div>
+        </div>
+      </header>
+
+      <main class="w-full flex-1">
+
+        <!-- ========== Hero Section ========== -->
+        <section
+          id="home"
+          class="
+            flex flex flex-col justify-center
+            min-h-[calc(100vh-75px)]
+            mx-auto w-full max-w-6xl 
+            px-4 py-20 sm:px-6 lg:px-8 lg:py-24
+          "
+        >
+          <div class="flex flex-col items-center gap-12 text-center">
+
+            <!-- ===== User Profile ===== -->
+            <img
+              alt="Sarah Chen"
+              class="animate__animated h-40 w-40 rounded-full object-cover shadow-lg"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsNALxVc9SHo5WzQIuIKKYOrpKGPlXB31xzJnjYo_vHfoOxy8jnohzbdOWV0uGVZoZ4TfqlliBJ5BnziuuEbUqTv1RC16bEbKi4wcvhmlLeGN0OYbIQRfB7RSg7UoKdDrlllQQhCfDEkq86GVrvk-7izz6lh8ggUkOhwl9IQINqjnj3-nrtUBPgTPNSWAmrvA7s7HeFERuOr32KvKMEMzPBlXlskKJV8fbO73mZ2b_iPMaH1cw3W3Cq5GmlTbDI0HKP2NxJXT4Ka8i"
+              data-animate="animate__jackInTheBox"
+            />
+
+            <!-- ===== Introduction ===== -->
+            <div class="flex flex-col gap-4">
+              <h1
+                class="
+                  animate__animated
+                  text-5xl sm:text-6xl md:text-7xl font-black 
+                  text-text-light-primary dark:text-text-dark-primary
+                "
+                data-animate="animate__flash"
+              >
+                Designer &amp; Developer
+              </h1>
+              <p
+                class="
+                  animate__animated
+                  mx-auto max-w-3xl 
+                  text-lg text-text-light-secondary dark:text-text-dark-secondary
+                "
+                data-animate="animate__fadeInUp"
+              >
+                I create beautiful, functional, and user-centric digital
+                experiences. Let's build something amazing together.
+              </p>
+            </div>
+
+            <!-- ===== Action ===== -->
+            <div 
+              class="
+                animate__animated 
+                flex flex-wrap justify-center gap-4
+              " 
+              data-animate="animate__fadeInUp"
+            >
+              <button
+                class="
+                  h-12 px-6
+                  flex items-center justify-center 
+                  rounded-lg bg-primary
+                  text-base font-bold text-white 
+                  transition-opacity hover:opacity-80
+                "
+              >
+                Hire Me
+              </button>
+              <a
+                class="
+                  h-12 px-6 
+                  flex items-center justify-center 
+                  rounded-lg bg-primary/10 dark:bg-primary/20 
+                  text-base font-bold text-primary 
+                  transition-colors 
+                  hover:bg-primary/20 dark:hover:bg-primary/30
+                "
+                href="./pdf/Brian-CV.pdf"
+                download
+                target="_blank"
+              >
+                Download CV
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== About Section ========== -->
+        <section
+          id="about"
+          class="bg-card-light dark:bg-card-dark/50 py-20 sm:py-24"
+        >
+          <div
+            class="
+              animate__animated 
+              mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8
+            "
+            data-animate="animate__fadeInUp"
+          >
+
+            <!-- ===== About me ===== -->
+            <div class="mb-16 text-center">
+              <h2
+                class="
+                  text-4xl sm:text-5xl font-bold 
+                  text-text-light-primary dark:text-text-dark-primary
+                "
+              >
+                About Me
+              </h2>
+              <p
+                class="
+                  mx-auto mt-4 max-w-2xl 
+                  text-lg text-text-light-secondary dark:text-text-dark-secondary
+                "
+              >
+                Get to know the person behind the pixels.
+              </p>
+            </div>
+            
+            <div class="grid grid-cols-1 gap-16 lg:grid-cols-3 lg:gap-8">
+              <div class="lg:col-span-1">
+                <div class="space-y-8">
+
+                  <!-- ===== What i do ===== -->
+                  <div>
+                    <h3
+                      class="
+                        text-2xl font-bold mb-4
+                        text-text-light-primary dark:text-text-dark-primary
+                      "
+                    >
+                      Introduction
+                    </h3>
+                    <p
+                      class="text-text-light-secondary dark:text-text-dark-secondary"
+                    >
+                      I'm Sarah, a passionate and detail-oriented designer and
+                      developer based in San Francisco. With a love for clean
+                      aesthetics and intuitive user experiences, I strive to
+                      create digital products that are not only visually
+                      appealing but also a joy to use. My journey in the tech
+                      world has been driven by a constant curiosity and a desire
+                      to solve complex problems with elegant solutions.
+                    </p>
+                  </div>
+
+                  <!-- ===== Skills ===== -->
+                  <div>
+                    <h3
+                      class="
+                        text-2xl font-bold mb-4
+                        text-text-light-primary dark:text-text-dark-primary
+                      "
+                    >
+                      What I Do
+                    </h3>
+                    <p
+                      class="text-text-light-secondary dark:text-text-dark-secondary"
+                    >
+                      I specialize in UI/UX design and front-end development,
+                      bridging the gap between design and code. From wireframing
+                      and prototyping to writing clean, efficient HTML, CSS, and
+                      JavaScript, I am involved in the entire product
+                      development lifecycle.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="lg:col-span-2 space-y-12">
+
+                <!-- ===== My Skills ===== -->
+                <div>
+                  <h3
+                    class="
+                      text-2xl font-bold mb-6
+                      text-text-light-primary dark:text-text-dark-primary
+                    "
+                  >
+                    My Skills
+                  </h3>
+
+                  <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                    <div class="flex flex-col items-center gap-2">
+                      <div class="relative h-24 w-24">
+                        <svg
+                          class="h-full w-full"
+                          fill="none"
+                          stroke-width="8"
+                          viewBox="0 0 100 100"
+                        >
+                          <!-- Background Circle -->
+                          <circle
+                            class="text-border-light dark:text-border-dark"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                          ></circle>
+
+                          <!-- Progress Circle -->
+                          <!--
+                            ✅ How to change percent:
+                            - Update the number "90" inside the calc() below.
+                            - 251.2 = the circumference of the circle (2πr when r=40).
+                            - Formula: calc(251.2 - (251.2 * percent) / 100).
+                          -->
+                          <circle
+                            class="text-primary -rotate-90 origin-center"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                            stroke-dasharray="251.2"
+                            stroke-dashoffset="calc(251.2 - (251.2 * 90) / 100)"
+                            stroke-linecap="round"
+                          ></circle>
+                        </svg>
+
+                        <!-- Percent text in the center -->
+                        <!-- Change "90%" below to match the progress value -->
+                        <span
+                          class="
+                            absolute inset-0 
+                            flex items-center justify-center 
+                            text-xl font-bold 
+                            text-text-light-primary dark:text-text-dark-primary
+                          "
+                        >
+                          90%
+                        </span>
+                      </div>
+                      <p
+                        class="
+                          text-sm font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
+                      >
+                        UI/UX Design
+                      </p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                      <div class="relative h-24 w-24">
+                        <svg
+                          class="h-full w-full"
+                          fill="none"
+                          stroke-width="8"
+                          viewBox="0 0 100 100"
+                        >
+                          <circle
+                            class="text-border-light dark:text-border-dark"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                          ></circle>
+                          <circle
+                            class="text-primary -rotate-90 origin-center"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                            stroke-dasharray="251.2"
+                            stroke-dashoffset="calc(251.2 - (251.2 * 95) / 100)"
+                            stroke-linecap="round"
+                          ></circle>
+                        </svg>
+                        <span
+                          class="
+                            absolute inset-0 
+                            flex items-center justify-center 
+                            text-xl font-bold 
+                            text-text-light-primary dark:text-text-dark-primary
+                          "
+                        >
+                          95%
+                        </span>
+                      </div>
+                      <p
+                        class="
+                          text-sm font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
+                      >
+                        HTML &amp; CSS
+                      </p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                      <div class="relative h-24 w-24">
+                        <svg
+                          class="h-full w-full"
+                          fill="none"
+                          stroke-width="8"
+                          viewBox="0 0 100 100"
+                        >
+                          <circle
+                            class="text-border-light dark:text-border-dark"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                          ></circle>
+                          <circle
+                            class="text-primary -rotate-90 origin-center"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                            stroke-dasharray="251.2"
+                            stroke-dashoffset="calc(251.2 - (251.2 * 85) / 100)"
+                            stroke-linecap="round"
+                          ></circle>
+                        </svg>
+                        <span
+                          class="
+                            absolute inset-0 
+                            flex items-center justify-center 
+                            text-xl font-bold 
+                            text-text-light-primary dark:text-text-dark-primary
+                          "
+                        >
+                          85%
+                        </span>
+                      </div>
+                      <p
+                        class="
+                          text-sm font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
+                      >
+                        JavaScript
+                      </p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                      <div class="relative h-24 w-24">
+                        <svg
+                          class="h-full w-full"
+                          fill="none"
+                          stroke-width="8"
+                          viewBox="0 0 100 100"
+                        >
+                          <circle
+                            class="text-border-light dark:text-border-dark"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                          ></circle>
+                          <circle
+                            class="text-primary -rotate-90 origin-center"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                            stroke-dasharray="251.2"
+                            stroke-dashoffset="calc(251.2 - (251.2 * 80) / 100)"
+                            stroke-linecap="round"
+                          ></circle>
+                        </svg>
+                        <span
+                          class="
+                            absolute inset-0 
+                            flex items-center justify-center 
+                            text-xl font-bold 
+                            text-text-light-primary dark:text-text-dark-primary
+                          "
+                        >
+                          80%
+                        </span>
+                      </div>
+                      <p
+                        class="
+                          text-sm font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
+                      >
+                        React
+                      </p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                      <div class="relative h-24 w-24">
+                        <svg
+                          class="h-full w-full"
+                          fill="none"
+                          stroke-width="8"
+                          viewBox="0 0 100 100"
+                        >
+                          <circle
+                            class="text-border-light dark:text-border-dark"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                          ></circle>
+                          <circle
+                            class="text-primary -rotate-90 origin-center"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                            stroke-dasharray="251.2"
+                            stroke-dashoffset="calc(251.2 - (251.2 * 75) / 100)"
+                            stroke-linecap="round"
+                          ></circle>
+                        </svg>
+                        <span
+                          class="
+                            absolute inset-0 
+                            flex items-center justify-center 
+                            text-xl font-bold 
+                            text-text-light-primary dark:text-text-dark-primary
+                          "
+                        >
+                          75%
+                        </span>
+                      </div>
+                      <p
+                        class="
+                          text-sm font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
+                      >
+                        Figma
+                      </p>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                      <div class="relative h-24 w-24">
+                        <svg
+                          class="h-full w-full"
+                          fill="none"
+                          stroke-width="8"
+                          viewBox="0 0 100 100"
+                        >
+                          <circle
+                            class="text-border-light dark:text-border-dark"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                          ></circle>
+                          <circle
+                            class="text-primary -rotate-90 origin-center"
+                            cx="50"
+                            cy="50"
+                            r="40"
+                            stroke="currentColor"
+                            stroke-dasharray="251.2"
+                            stroke-dashoffset="calc(251.2 - (251.2 * 90) / 100)"
+                            stroke-linecap="round"
+                          ></circle>
+                        </svg>
+                        <span
+                          class="
+                            absolute inset-0 
+                            flex items-center justify-center 
+                            text-xl font-bold 
+                            text-text-light-primary dark:text-text-dark-primary
+                          "
+                        >
+                          90%
+                        </span>
+                      </div>
+                      <p
+                        class="
+                          text-sm font-medium 
+                          text-text-light-secondary dark:text-text-dark-secondary
+                        "
+                      >
+                        Webflow
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- ===== Career Timeline ===== -->
+                <div>
+                  <h3
+                    class="
+                      text-2xl font-bold mb-6
+                      text-text-light-primary dark:text-text-dark-primary
+                    "
+                  >
+                    Career Timeline
+                  </h3>
+                  <div
+                    class="
+                      relative pl-8 ml-3
+                      border-l-2 border-border-light dark:border-border-dark 
+                    "
+                  >
+                    <div class="mb-8">
+                      <div
+                        class="absolute -left-3.5 mt-1.5 h-6 w-6 rounded-full bg-primary"
+                      ></div>
+                      <p class="font-bold text-primary">2020 - Present</p>
+                      <h4
+                        class="
+                          font-bold mt-1
+                          text-text-light-primary dark:text-text-dark-primary 
+                        "
+                      >
+                        Lead Designer &amp; Developer, Tech Innovators
+                      </h4>
+                      <p
+                        class="text-text-light-secondary dark:text-text-dark-secondary mt-2"
+                      >
+                        Leading the design and development of flagship products,
+                        mentoring junior team members, and collaborating with
+                        cross-functional teams.
+                      </p>
+                    </div>
+                    <div class="mb-8">
+                      <div
+                        class="absolute -left-3.5 mt-1.5 h-6 w-6 rounded-full bg-primary/50"
+                      ></div>
+                      <p class="font-bold text-primary/80">2018 - 2020</p>
+                      <h4
+                        class="
+                          font-bold mt-1
+                          text-text-light-primary dark:text-text-dark-primary 
+                        "
+                      >
+                        UX/UI Designer, Creative Agency
+                      </h4>
+                      <p
+                        class="text-text-light-secondary dark:text-text-dark-secondary mt-2"
+                      >
+                        Designed user interfaces for a variety of clients,
+                        conducted user research, and created wireframes and
+                        prototypes.
+                      </p>
+                    </div>
+                    <div>
+                      <div
+                        class="
+                          absolute -left-3.5 mt-1.5 h-6 w-6 
+                          rounded-full bg-primary/30
+                        "
+                      ></div>
+                      <p class="font-bold text-primary/60">2017 - 2018</p>
+                      <h4
+                        class="
+                          font-bold mt-1
+                          text-text-light-primary dark:text-text-dark-primary
+                        "
+                      >
+                        Junior Web Developer, Web Solutions
+                      </h4>
+                      <p
+                        class="text-text-light-secondary dark:text-text-dark-secondary mt-2"
+                      >
+                        Developed and maintained client websites using HTML,
+                        CSS, and JavaScript.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+                  <!-- ===== Education ===== -->
+                  <div>
+                    <h3
+                      class="
+                        text-2xl font-bold mb-6
+                        text-text-light-primary dark:text-text-dark-primary 
+                      "
+                    >
+                      Education
+                    </h3>
+                    <div class="space-y-4">
+                      <div class="flex items-start gap-4">
+                        <span
+                          class="material-symbols-outlined text-primary text-3xl mt-1"
+                        >
+                          school
+                        </span>
+                        <div>
+                          <h4
+                            class="
+                              font-bold 
+                              text-text-light-primary dark:text-text-dark-primary
+                            "
+                          >
+                            B.Sc. in Computer Science
+                          </h4>
+                          <p
+                            class="
+                              text-sm 
+                              text-text-light-secondary dark:text-text-dark-secondary
+                            "
+                          >
+                            University of California, Berkeley
+                          </p>
+                          <p
+                            class="
+                              text-sm 
+                              text-text-light-secondary dark:text-text-dark-secondary
+                            "
+                          >
+                            2013 - 2017
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- ===== Certificates ===== -->
+                  <div>
+                    <h3
+                      class="
+                        text-2xl font-bold mb-6
+                        text-text-light-primary dark:text-text-dark-primary 
+                      "
+                    >
+                      Certificates
+                    </h3>
+                    <div class="space-y-4">
+                      <div class="flex items-start gap-4">
+                        <span
+                          class="material-symbols-outlined text-primary text-3xl mt-1"
+                        >
+                          workspace_premium
+                        </span>
+                        <div>
+                          <h4
+                            class="
+                              font-bold 
+                              text-text-light-primary dark:text-text-dark-primary
+                            "
+                          >
+                            Certified UX Designer
+                          </h4>
+                          <p
+                            class="
+                              text-sm 
+                              text-text-light-secondary dark:text-text-dark-secondary
+                            "
+                          >
+                            Nielsen Norman Group
+                          </p>
+                        </div>
+                      </div>
+                      <div class="flex items-start gap-4">
+                        <span
+                          class="material-symbols-outlined text-primary text-3xl mt-1"
+                        >
+                          workspace_premium
+                        </span>
+                        <div>
+                          <h4
+                            class="
+                              font-bold 
+                              text-text-light-primary dark:text-text-dark-primary
+                            "
+                          >
+                            Front-End Web Developer
+                          </h4>
+                          <p
+                            class="
+                              text-sm 
+                              text-text-light-secondary dark:text-text-dark-secondary
+                            "
+                          >
+                            freeCodeCamp
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== Project Section ========== -->
+        <section id="projects" class="py-20 sm:py-24" >
+          <div 
+            class="
+              animate__animated 
+              mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8
+            " 
+            data-animate="animate__fadeInUp"
+          >
+
+            <!-- ===== Project Header ===== -->
+            <div class="mb-12 text-center">
+              <h2
+                class="
+                  text-4xl sm:text-5xl font-bold 
+                  text-text-light-primary dark:text-text-dark-primary
+                "
+              >
+                My Projects
+              </h2>
+              <p
+                class="
+                  mx-auto mt-4 max-w-2xl 
+                  text-lg text-text-light-secondary dark:text-text-dark-secondary
+                "
+              >
+                A selection of my favorite projects. See the impact I've made.
+              </p>
+            </div>
+
+            <!-- ===== Filter project category tabs ===== -->
+            <div
+              class="
+                mb-10 p-2 sm:gap-3 filter-button
+                flex flex-wrap items-center justify-center gap-2 
+                rounded-full bg-background-light dark:bg-background-dark
+              "
+            >
+            </div>
+
+            <!-- ===== Project list ===== -->
+            <div 
+              class="
+                projects-grid 
+                grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== Testimonials Section ========== -->
+        <section
+          id="testimonials"
+          class="bg-card-light dark:bg-card-dark/50 py-20 sm:py-24"
+        >
+
+          <div 
+            class="
+              animate__animated 
+              mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8
+            " 
+            data-animate="animate__fadeInUp"
+          >
+
+            <!-- ===== Testimonials header ===== -->
+            <div class="mb-12 text-center">
+              <h2
+                class="
+                  text-4xl font-bold 
+                  text-text-light-primary dark:text-text-dark-primary
+                "
+              >
+                What My Clients Say
+              </h2>
+              <p
+                class="
+                  mx-auto mt-4 max-w-2xl 
+                  text-lg text-text-light-secondary dark:text-text-dark-secondary
+                "
+              >
+                I'm proud to have worked with some amazing clients.
+              </p>
+            </div>
+
+            <!-- ===== Testimonials list ===== -->
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+              <!-- ===== Testimonials 1 ===== -->
+              <article
+                class="
+                  rounded-xl p-8 flex flex-col justify-between
+                  border border-border-light dark:border-border-dark 
+                  bg-card-light dark:bg-card-dark
+                "
+              >
+                <p
+                  class="text-text-light-secondary dark:text-text-dark-secondary"
+                >
+                  "Sarah is an exceptional talent. Her attention to detail and
+                  creative vision transformed our project. She delivered beyond
+                  our expectations."
+                </p>
+
+                <div class="mt-6 flex items-center gap-4">
+                  <img
+                    alt="Client 1"
+                    class="h-12 w-12 rounded-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo2DsPxOLZdAnGlyMS4UBXYwuIo2FK1t8yorTzhPcJeo54mLe87gk3ANONLBHrn5vguMv_HVADweg1V7NzHd6cp61AT5bQj2QGLe_b-NWqOrvLG7qF_4SdlFkAYHDzCloXDNOGQdPU2tKvEx-E0AJOaX2yWkrj4ez4InLc1R3RpcmKj0KxwfGhad1zuCduiWyNV2Rui3CFw8ZhBgFEj_egA59VHqUwraOL5s7vNrUSMZXUg4jz9LCe0pw2KygGpBpdLEZPKEitN7WV"
+                  />
+                  <div>
+                    <p
+                      class="
+                        font-bold 
+                        text-text-light-primary dark:text-text-dark-primary
+                      "
+                    >
+                      John Doe
+                    </p>
+                    <p
+                      class="
+                        text-sm 
+                        text-text-light-secondary dark:text-text-dark-secondary
+                      "
+                    >
+                      CEO, Innovate Inc.
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ===== Testimonials 2 ===== -->
+              <article
+                class="
+                  rounded-xl p-8 flex flex-col justify-between
+                  border border-border-light dark:border-border-dark 
+                  bg-card-light dark:bg-card-dark
+                "
+              >
+                <p
+                  class="text-text-light-secondary dark:text-text-dark-secondary"
+                >
+                  "Working with Sarah was a breeze. She's a great communicator
+                  and her development skills are top-notch. Highly recommended!"
+                </p>
+                <div class="mt-6 flex items-center gap-4">
+                  <img
+                    alt="Client 2"
+                    class="h-12 w-12 rounded-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe0-3tGeNFQAdMxgto8tjFGgB8JAdd8TeqWxW8C8GXOwMiKLRUL7n0R6lTnty8MNILV272xGePNI1KNJxp5xHj8JuxnKeFjYPW8CMTcmkOyrugUkogHkzp24BWqbWOJUsAq_rPzCo5cXrkU5tqE2gJSPOd0IlxBJOEZVrDF8IdM0oyQnCfTJKuSNFCzJ2p15DfXlE84OGW4ZuqZOciHdI4ePleex66TxtfVdllov3Bggnn3oDcE54aZcjlLjRg317c8ZSHEyis24qu"
+                  />
+                  <div>
+                    <p
+                      class="
+                        font-bold 
+                        text-text-light-primary dark:text-text-dark-primary
+                      "
+                    >
+                      Jane Smith
+                    </p>
+                    <p
+                      class="
+                        text-sm 
+                        text-text-light-secondary dark:text-text-dark-secondary
+                      "
+                    >
+                      Marketing Director, Creative Solutions
+                    </p>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ===== Testimonials 3 ===== -->
+              <article
+                class="
+                  rounded-xl p-8 flex flex-col justify-between
+                  border border-border-light dark:border-border-dark 
+                  bg-card-light dark:bg-card-dark 
+                "
+              >
+                <p
+                  class="text-text-light-secondary dark:text-text-dark-secondary"
+                >
+                  "The new website design is stunning and has significantly
+                  improved our user engagement. Sarah is a true professional."
+                </p>
+                <div class="mt-6 flex items-center gap-4">
+                  <img
+                    alt="Client 3"
+                    class="h-12 w-12 rounded-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKT72yQ-dqSFOrRQ26XKKibGQasAJjosIyHwl8ajIjMdtdYt-qgDRVwmRJbZ5w4DbLqsRlE51wL0bfLVRJ_0Sn-vV4V6kvIwXmFCq-KkkCnd_qAxS2lT8gmnzRX31pXKG7KtFoZYvyvT7vcIeL-6Q0zYzJyGfU2w6EB9gfIgohw-KaObLaupj5tCe3kiJqQ2z0-cn9SG6fypuytbrbwi_pNzGalcCUv6tkRWHuGBETlytXnlfP7w04-kLGnN5WZ4Khtg3PVKeGhOXm"
+                  />
+                  <div>
+                    <p
+                      class="
+                        font-bold 
+                        text-text-light-primary dark:text-text-dark-primary
+                      "
+                    >
+                      Mike Johnson
+                    </p>
+                    <p
+                      class="
+                        text-sm 
+                        text-text-light-secondary dark:text-text-dark-secondary
+                      "
+                    >
+                      Founder, Tech Startup
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========== Contact Section ========== -->
+        <section class="py-20 sm:py-24" id="contact">
+          <div class="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-12 lg:grid-cols-2">
+              <div class="space-y-6">
+
+                <!-- ===== Contact Header ===== -->
+                <div>
+                  <h2
+                    class="
+                      text-4xl font-bold 
+                      text-text-light-primary dark:text-text-dark-primary
+                    "
+                  >
+                    Let's Work Together
+                  </h2>
+                  <p
+                    class="
+                      text-lg 
+                      text-text-light-secondary dark:text-text-dark-secondary
+                    "
+                  >
+                    Have a project in mind? I'd love to hear about it. Fill out
+                    the form or send me an email.
+                  </p>
+                </div>
+
+                <!-- ===== Contact Information ===== -->
+                <div class="space-y-4">
+                  <div class="flex items-center gap-4">
+                    <span
+                      class="material-symbols-outlined text-primary text-2xl"
+                    >
+                      email
+                    </span>
+                    <a
+                      class="hover:text-primary"
+                      href="mailto:hello@sarahchen.design"
+                    >
+                      hello@sarahchen.design
+                    </a>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <span
+                      class="material-symbols-outlined text-primary text-2xl"
+                    >
+                      phone
+                    </span>
+                    <a class="hover:text-primary" href="tel:+1234567890">
+                      +1 (234) 567-890
+                    </a>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <span
+                      class="material-symbols-outlined text-primary text-2xl"
+                    >
+                      location_on
+                    </span>
+                    <p>San Francisco, California</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ===== Contact Form ===== -->
+              <div
+                class="
+                  rounded-xl p-8
+                  border border-border-light dark:border-border-dark 
+                  bg-card-light dark:bg-card-dark shadow-lg
+                "
+              >
+                <form id="contact-form" class="space-y-6" >
+                  <div>
+                    <label class="sr-only" for="name">Name</label>
+                    <input
+                      id="name"
+                      class="
+                        block w-full px-4 py-3
+                        rounded-md focus:ring-primary
+                        border-border-light dark:border-border-dark focus:border-primary
+                        bg-background-light dark:bg-background-dark shadow-sm
+                        text-text-light-primary dark:text-text-dark-primary 
+                      "
+                      name="name"
+                      placeholder="Your Name"
+                      type="text"
+                    />
+                  </div>
+                  <div>
+                    <label class="sr-only" for="email">Email</label>
+                    <input
+                      id="email"
+                      class="
+                        block w-full px-4 py-3
+                        rounded-md focus:ring-primary
+                        border-border-light dark:border-border-dark focus:border-primary
+                        bg-background-light dark:bg-background-dark shadow-sm
+                        text-text-light-primary dark:text-text-dark-primary
+                      "
+                      name="email"
+                      placeholder="Your Email"
+                      type="email"
+                    />
+                  </div>
+                  <div>
+                    <label class="sr-only" for="message">Message</label>
+                    <textarea
+                      id="message"
+                      class="
+                        block w-full px-4 py-3
+                        rounded-md focus:ring-primary
+                        border-border-light dark:border-border-dark focus:border-primary
+                        bg-background-light dark:bg-background-dark shadow-sm
+                        text-text-light-primary dark:text-text-dark-primary
+                      "
+                      name="message"
+                      placeholder="Your Message"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <button
+                    class="
+                      w-full h-12 px-6
+                      flex items-center justify-center 
+                      rounded-lg bg-primary 
+                      text-base font-bold text-white 
+                      transition-opacity hover:opacity-80
+                    "
+                    type="submit"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ========== Footer ========== -->
+      <footer
+        class="
+          border-t border-border-light dark:border-border-dark 
+          bg-card-light/50 dark:bg-card-dark/50
+        "
+      >
+        <div class="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+          <div
+            class="
+              flex flex-col gap-4 sm:flex-row
+              items-center justify-between 
+            "
+          >
+
+            <!-- ===== Copyright ===== -->
+            <p
+              class="
+                text-sm 
+                text-text-light-secondary dark:text-text-dark-secondary
+              "
+            >
+              © 2024 Sarah Portfolio. All rights reserved.
+            </p>
+
+            <!-- ===== Contact ===== -->
+            <div class="flex items-center gap-4">
+              <a
+                class="
+                  text-text-light-secondary dark:text-text-dark-secondary 
+                  transition-colors hover:text-primary
+                "
+                href="#"
+              >
+                <i class="fa-brands fa-x-twitter"></i>
+              </a>
+              <a
+                class="
+                  text-text-light-secondary dark:text-text-dark-secondary 
+                  transition-colors hover:text-primary
+                "
+                href="#"
+              >
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a
+                class="
+                  text-text-light-secondary dark:text-text-dark-secondary 
+                  transition-colors hover:text-primary
+                "
+                href="#"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
