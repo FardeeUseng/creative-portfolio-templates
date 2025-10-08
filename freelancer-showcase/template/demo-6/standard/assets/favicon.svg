@@ -1,0 +1,8 @@
+          <svg
+            class="h-6 w-6 text-primary"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M12 2L2 12l10 10 10-10L12 2zm-2 14.59V7.41L4.41 12 10 17.59z"></path>
+          </svg>

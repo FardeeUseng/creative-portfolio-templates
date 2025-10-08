@@ -1,0 +1,154 @@
+@layer base {
+  :root {
+    --background-dark: #0a0a0a;
+    --primary-pink: #ff00ff;
+    --primary-purple: #9c27b0;
+    --primary-blue: #03a9f4;
+  }
+}
+@keyframes digital-rain {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 10% 20%;
+  }
+}
+.digital-rain-bg {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="0" y="10" font-family="monospace" font-size="10" fill="rgba(0, 255, 0, 0.1)">01101001</text><text x="10" y="25" font-family="monospace" font-size="10" fill="rgba(0, 255, 0, 0.1)">10100110</text><text x="20" y="5" font-family="monospace" font-size="10" fill="rgba(0, 255, 0, 0.1)">00110101</text><text x="30" y="35" font-family="monospace" font-size="10" fill="rgba(0, 255, 0, 0.1)">11010100</text><text x="40" y="15" font-family="monospace" font-size="10" fill="rgba(0, 255, 0, 0.1)">01011010</text><text x="50" y="50" font-family="monospace" font-size="10" fill="rgba(0, 255, 0, 0.1)">10010110</text><text x="60" y="20" font-family="monospace" font-size="10" fill="rgba(0, 255, 0, 0.1)">01100101</text><text x="70" y="40" font-family="monospace" font-size="10" fill="rgba(0, 255, 0, 0.1)">10101100</text><text x="80" y="10" font-family="monospace" font-size="10" fill="rgba(0, 255, 0, 0.1)">00101011</text><text x="90" y="30" font-family="monospace" font-size="10" fill="rgba(0, 255, 0, 0.1)">11001010</text></svg>');
+  animation: digital-rain 10s linear infinite;
+}
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 5px var(--primary-pink), 0 0 10px var(--primary-pink),
+      0 0 20px var(--primary-pink);
+  }
+  50% {
+    opacity: 0.8;
+    text-shadow: 0 0 2px var(--primary-pink), 0 0 5px var(--primary-pink),
+      0 0 10px var(--primary-pink);
+  }
+}
+.flicker {
+  animation: flicker 1.5s infinite;
+}
+.neon-border {
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: 0 0 5px var(--tw-shadow-color), 0 0 10px var(--tw-shadow-color),
+    0 0 20px var(--tw-shadow-color);
+}
+.text-glow-pink {
+  text-shadow: 0 0 5px var(--primary-pink), 0 0 10px var(--primary-pink);
+}
+.text-glow-blue {
+  text-shadow: 0 0 5px var(--primary-blue), 0 0 10px var(--primary-blue);
+}
+.text-glow-purple {
+  text-shadow: 0 0 5px var(--primary-purple), 0 0 10px var(--primary-purple);
+}
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background-dark);
+  overflow: hidden;
+  clip-path: inset(50% 0 50% 0);
+}
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 var(--primary-pink);
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--primary-blue), 2px 2px var(--primary-pink);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+.glitch-hover:hover .glitch::before,
+.glitch-hover:hover .glitch::after {
+  animation-play-state: running;
+}
+.glitch-hover .glitch::before,
+.glitch-hover .glitch::after {
+  animation-play-state: paused;
+}
+@keyframes glitch-anim-1 {
+  0% {
+    clip-path: inset(40% 0 60% 0);
+  }
+  20% {
+    clip-path: inset(10% 0 85% 0);
+  }
+  40% {
+    clip-path: inset(55% 0 30% 0);
+  }
+  60% {
+    clip-path: inset(30% 0 70% 0);
+  }
+  80% {
+    clip-path: inset(80% 0 5% 0);
+  }
+  100% {
+    clip-path: inset(50% 0 45% 0);
+  }
+}
+@keyframes glitch-anim-2 {
+  0% {
+    clip-path: inset(60% 0 40% 0);
+  }
+  20% {
+    clip-path: inset(90% 0 2% 0);
+  }
+  40% {
+    clip-path: inset(25% 0 70% 0);
+  }
+  60% {
+    clip-path: inset(75% 0 15% 0);
+  }
+  80% {
+    clip-path: inset(10% 0 88% 0);
+  }
+  100% {
+    clip-path: inset(40% 0 58% 0);
+  }
+}
+.scanline {
+  position: relative;
+  overflow: hidden;
+}
+.scanline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(255, 255, 255, 0.05) 3px,
+    rgba(255, 255, 255, 0.05) 4px
+  );
+  animation: scanline-anim 2s linear infinite;
+  pointer-events: none;
+  opacity: 0.3;
+}
+@keyframes scanline-anim {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}

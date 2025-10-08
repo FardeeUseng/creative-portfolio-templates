@@ -1,0 +1,10 @@
+            <svg
+              class="h-8 w-8 text-[var(--primary-pink)] flicker"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L2 7V17L12 22L22 17V7L12 2ZM11 12H13V17H11V12ZM11 7H13V10H11V7Z"
+              ></path>
+            </svg>

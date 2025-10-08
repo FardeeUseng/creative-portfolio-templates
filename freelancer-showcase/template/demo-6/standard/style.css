@@ -1,0 +1,66 @@
+.blinking-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    color: transparent;
+  }
+
+  50% {
+    color: #13ec13;
+  }
+}
+
+.typing {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(30, end) forwards;
+}
+
+.typing-delay-1 {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(40, end) forwards;
+  animation-delay: 2s;
+}
+
+.typing-delay-2 {
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(20, end) forwards;
+  animation-delay: 5s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #13ec13;
+  border-radius: 4px;
+  border: 2px solid #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #10c010;
+}

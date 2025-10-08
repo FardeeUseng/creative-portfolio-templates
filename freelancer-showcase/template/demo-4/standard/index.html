@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Demo 4 - Freelancer Showcase (Standard)</title>
+
+  <!-- ============ Favicon ============ -->
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+  
+  <!-- ============ Fonts ============ -->
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link
+    as="style"
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700;900"
+    onload="this.rel='stylesheet'"
+    rel="stylesheet"
+  />
+
+  <!-- ============ Tailwind CSS ============ -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="./tailwind-config.js"></script>
+
+  <!-- ============ Custom CSS ============ -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="
+    bg-background-light dark:bg-background-dark 
+    font-display text-neutral-800 dark:text-neutral-200
+">
+  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+    <div class="layout-container flex h-full grow flex-col">
+      <header class="
+          flex items-center justify-between whitespace-nowrap 
+          border-b border-neutral-200/50 dark:border-neutral-700/50 px-10 py-5
+      ">
+        <div class="flex items-center gap-3 text-neutral-900 dark:text-white">
+          <svg
+            class="h-6 w-6 text-primary"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19.7781 17.0728V6.92725C19.7781 7.85401 18.4386 8.67188 16.3963 9.15944C15.1457 9.45802 13.6315 9.63276 12 9.63276C10.3685 9.63276 8.85429 9.45802 7.60366 9.15944C5.56138 8.67188 4.22187 7.85401 4.22187 6.92725V17.0728C4.22187 17.9995 5.56138 18.8174 7.60366 19.305C8.85429 19.6035 10.3685 19.7782 12 19.7782C13.6315 19.7782 15.1457 19.6035 16.3963 19.305C18.4386 18.8174 19.7781 17.9995 19.7781 17.0728Z"
+              fill="currentColor"
+              opacity="0.6"
+            ></path>
+            <path
+              d="M19.7781 9.39385C19.1588 9.69628 18.4251 9.94193 17.6285 10.1321C16.2918 10.4513 14.6986 10.6328 12 10.6328C9.30136 10.6328 7.70817 10.4513 6.37146 10.1321C5.57488 9.94193 4.84119 9.69628 4.22187 9.39385V17.0637C4.22582 17.0772 4.27137 17.2434 4.68951 17.5135C5.15901 17.8239 5.87458 18.1027 6.83584 18.3322C8.00035 18.6102 9.43559 18.7782 12 18.7782C14.5644 18.7782 15.9996 18.6102 17.1642 18.3322C18.1254 18.1027 18.841 17.8239 19.3105 17.5135C19.7286 17.2434 19.7742 17.0772 19.7781 17.0637V9.39385Z"
+              fill="currentColor"
+              opacity="0.4"
+            ></path>
+            <path clip-rule="evenodd"
+              d="M5.22423 6.92594C5.23746 6.96353 5.30913 7.12297 5.68951 7.36803C6.13898 7.6631 6.8246 7.95723 7.82173 8.18324C9.02237 8.47164 10.4061 8.63276 12 8.63276C13.5939 8.63276 14.9776 8.47164 16.1783 8.18324C17.1754 7.95723 17.861 7.6631 18.3105 7.36803C18.6909 7.12297 18.7625 6.96353 18.7758 6.92594C18.7641 6.89382 18.7184 6.79764 18.5317 6.64654C18.2599 6.42674 17.8144 6.18235 17.1715 5.95874C15.8949 5.51446 14.0667 5.22188 12 5.22188C9.93332 5.22188 8.10514 5.51446 6.8285 5.95874C6.18561 6.18235 5.74013 6.42674 5.46825 6.64654C5.28159 6.79764 5.23591 6.89382 5.22423 6.92594ZM20.7781 6.92725V17.0728C20.7781 18.0539 20.0789 18.7521 19.3958 19.1934C18.675 19.6586 17.7096 20.0195 16.6285 20.2755C15.2918 20.5947 13.6986 20.7763 11.9981 20.7763C10.3014 20.7763 8.70821 20.5947 7.3715 20.2755C6.29037 20.0195 5.32504 19.6586 4.60421 19.1934C3.92113 18.7521 3.22187 18.0539 3.22187 17.0728V6.92725C3.22187 6.13419 3.68661 5.52271 4.1979 5.09181C4.71612 4.65525 5.40685 4.31571 6.1715 4.07424C7.71427 3.53455 9.77443 3.22188 12 3.22188C14.2256 3.22188 16.2857 3.53455 17.8285 4.07424C18.5931 4.31571 19.2839 4.65525 19.8021 5.09181C20.3134 5.52271 20.7781 6.13419 20.7781 6.92725Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+          <h2 class="text-xl font-bold">Studio</h2>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#">
+            Work
+          </a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#">
+            Services
+          </a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#">
+            About
+          </a>
+          <a class="text-sm font-medium hover:text-primary transition-colors" href="#">
+            Contact
+          </a>
+        </nav>
+        <button class="
+            hidden md:flex min-w-[84px] items-center justify-center 
+            rounded-lg h-10 px-4 bg-neutral-100 dark:bg-neutral-800 
+            text-neutral-900 dark:text-white text-sm font-bold 
+            hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors
+        ">
+          <span>Resume</span>
+        </button>
+      </header>
+
+      <main class="flex flex-1 justify-center py-10 px-4 sm:px-10 lg:px-20">
+        <div class="w-full max-w-5xl">
+          <div class="
+              relative min-h-[520px] p-8 md:p-12
+              flex flex-col justify-end rounded-xl overflow-hidden 
+            "
+            style='
+              background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzeJBTQXx5Q_0L2hJWe1G2AfVj_TOZ8o20mLa8GNeE0q1h1bPdynJOjvqiYDIBkpM677KGQSJUmGLwh2OyUGF2SqNCE0dz5pJ5Yma4VifAp4x4Z_vUvgWyk8c4gSkNG2iHun_1ZhqrB5xfKCXfob2BQ3u8EFD_FXdbNABpc3Yxy3cWfauq60Wa-PeR-T4nm2REyubF71QaLPvGdUU3xFNRFWb05HlTkBUJhLPT6CGayZDLZ2nUcjhnvl07CgLIBqkek6HowDba_Rw");
+              background-size: cover;
+              background-position: center;
+            '
+          >
+            <div class="flex flex-col gap-4 text-left max-w-2xl">
+              <h1 class="text-white text-4xl md:text-6xl font-bold leading-tight tracking-tighter">
+                Crafting Digital Experiences That Resonate
+              </h1>
+              <p class="text-neutral-200 text-base md:text-lg font-normal leading-relaxed">
+                I'm a freelance designer specializing in crafting digital experiences that are both beautiful and
+                functional. With a focus on user-centered design and a passion for innovation, I help businesses achieve
+                their goals through impactful design solutions.
+              </p>
+            </div>
+            <button class="
+                mt-8 h-12 px-6 bg-primary hover:bg-primary/90 
+                flex w-fit items-center justify-center rounded-full 
+                text-white text-base font-bold transition-colors
+              ">
+              <span>View My Work</span>
+            </button>
+          </div>
+
+          <section class="py-16 md:py-24">
+            <h2 class="
+                mb-8 md:mb-12 
+                text-3xl md:text-4xl font-bold tracking-tighter 
+                text-center text-neutral-900 dark:text-white
+            ">
+              Featured Projects
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="flex flex-col gap-4 group">
+                <div class="
+                    w-full bg-center bg-no-repeat bg-cover 
+                    aspect-[4/3] rounded-lg overflow-hidden
+                  "
+                  style='
+                    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCZr7SDDe2infGi9SSRvuMfDlQeCXM517XBbeSmv-hWuK9bmhAxkG0wazcO-9D5YWUg9Ms-bb955llMjk24gLDPotN8xr1Ozg5a_4qrwtmzmATY6SikIj3d_zJ3sr3SzKHS4gBNPOj1xBlB6Ki-i6UhBmnWeY2RQ1jQJSf8IKd5KVriDUB_POcW1JXQJPI32raoSojbV09QTHn2Ne7-JdldEpJqQceUVmgOqE78rZHeVSvsdVdGFCAN38mzC4ToFiFT1YwR9aseNdI");
+                  '
+                >
+                </div>
+                <div>
+                  <h3 class="
+                      text-lg font-bold text-neutral-900 dark:text-white 
+                      group-hover:text-primary transition-colors
+                  ">
+                    Project Zenith
+                  </h3>
+                  <p class="text-neutral-600 dark:text-neutral-400 text-sm">
+                    A comprehensive branding and web design project for a tech startup.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-4 group">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg"
+                  style='
+                    background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCobecKo9vAFMo2P-7Hx2nJk5LBJ3asE2CVa6zOYAdAsBymki8Bjh9LBDipmBIspVYHSr4yu8OsSBlQVh1ieD9SmF6DC3rkc0MYCCNNUJAKZZTsTJmkMMLn4uC6ZnevnfQiiLJFK4XTRtx2mcagwoLFN9DxbDJOXEdjEX-KGsklXmpaSifwEEraL0eTfD9ca7MhI-cOHbrqdkYImTbE3QtF_xCimcY8OfDls9b6XWWLZr1tWoxIL_-3InwMRfXiyEbyODrxwCMBPHU");
+                  '
+                >
+                </div>
+                <div>
+                  <h3 class="
+                      text-lg font-bold text-neutral-900 dark:text-white 
+                      group-hover:text-primary transition-colors
+                  ">
+                    Project Aurora
+                  </h3>
+                  <p class="text-neutral-600 dark:text-neutral-400 text-sm">
+                    A mobile app redesign for a fitness and wellness company.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-4 group">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-[4/3] bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDESVnHSR2i4Z9PSLeBCb4yeyp_EPSqLuPYx2FUStCc-t3fZIToOE95nfZkLY7e2QpGohlaigYZ5k0X399i00DHd6vSMwNnMTok399-UTHujnApGutJuc6ReIGtyRbU-gRVq2XuHmCfzO7m8j-O2xMhFdbe02mNkwSxoWO3UVn3Tluqj7-7-bGqQZOXTknBaW77IsQ4s-ZnUm4df-7ViCIvv2Q3mxRD94po3euGKOtibCos5GGMjKBo8x2zubbyBeVvdOYbhkbXme0");'
+                >
+                </div>
+                <div>
+                  <h3 class="
+                      text-lg font-bold text-neutral-900 dark:text-white 
+                      group-hover:text-primary transition-colors
+                  ">
+                    Project Nova
+                  </h3>
+                  <p class="text-neutral-600 dark:text-neutral-400 text-sm">
+                    An e-commerce platform development for a fashion brand.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="py-16 md:py-24 bg-background-light dark:bg-background-dark rounded-xl">
+            <h2 class="
+                text-3xl md:text-4xl font-bold tracking-tighter 
+                mb-8 md:mb-12 text-center text-neutral-900 dark:text-white
+            ">
+              Services
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8">
+              <div class="
+                  flex flex-col gap-4 items-center text-center 
+                  p-6 rounded-lg border border-neutral-200/80 
+                  dark:border-neutral-800 bg-white dark:bg-neutral-900/50
+              ">
+                <div class="text-primary bg-primary/10 p-3 rounded-full">
+                  <svg
+                    fill="currentColor"
+                    height="28"
+                    viewBox="0 0 256 256"
+                    width="28"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM92.69,208H48V163.31l88-88L180.69,120ZM192,108.68,147.31,64l24-24L216,84.68Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-lg font-bold text-neutral-900 dark:text-white">
+                    Branding &amp; Identity
+                  </h3>
+                  <p
+                    class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed"
+                  >
+                    Crafting unique and
+                    memorable brand identities that resonate with your target audience.
+                  </p>
+                </div>
+              </div>
+              <div class="
+                  flex flex-col gap-4 items-center text-center 
+                  p-6 rounded-lg border border-neutral-200/80 
+                  dark:border-neutral-800 bg-white dark:bg-neutral-900/50
+              ">
+                <div class="text-primary bg-primary/10 p-3 rounded-full">
+                  <svg
+                    fill="currentColor"
+                    height="28"
+                    viewBox="0 0 256 256"
+                    width="28"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-lg font-bold text-neutral-900 dark:text-white">
+                    Web Design &amp; Development
+                  </h3>
+                  <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
+                    Building responsive and
+                    user-friendly websites that drive engagement and conversions.
+                  </p>
+                </div>
+              </div>
+              <div class="
+                  flex flex-col gap-4 items-center text-center 
+                  p-6 rounded-lg border border-neutral-200/80 
+                  dark:border-neutral-800 bg-white dark:bg-neutral-900/50
+              ">
+                <div class="text-primary bg-primary/10 p-3 rounded-full">
+                  <svg
+                    fill="currentColor"
+                    height="28"
+                    viewBox="0 0 256 256"
+                    width="28"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z">
+                    </path>
+                  </svg>
+                </div>
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-lg font-bold text-neutral-900 dark:text-white">
+                    UX/UI Design
+                  </h3>
+                  <p class="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed">
+                    Designing intuitive and
+                    seamless user experiences that enhance usability and satisfaction.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="py-16 md:py-24">
+            <div class="max-w-3xl mx-auto text-center">
+              <h2 class="
+                  text-3xl md:text-4xl font-bold tracking-tighter 
+                  mb-6 text-neutral-900 dark:text-white"
+              >
+                About Me
+              </h2>
+              <p class="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed">
+                I'm a freelance designer with over 5 years of experience in the industry. I'm passionate about creating
+                digital experiences that are both beautiful and functional. My approach is rooted in user-centered
+                design, ensuring that every project meets the needs of its intended audience. I believe in collaboration
+                and transparency, working closely with clients to bring their visions to life.
+              </p>
+            </div>
+          </section>
+
+          <section class="py-16 md:py-24">
+            <div class="max-w-xl mx-auto">
+              <h2 class="
+                  text-3xl md:text-4xl font-bold tracking-tighter 
+                  mb-8 text-center text-neutral-900 dark:text-white
+              ">
+                Contact
+              </h2>
+              <form class="space-y-6">
+                <div>
+                  <label
+                    class="text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                    for="name"
+                  >
+                    Your Name
+                  </label>
+                  <input
+                    id="name"
+                    class="
+                      form-input mt-2 w-full rounded-lg 
+                      border-neutral-300 dark:border-neutral-700 
+                      bg-white dark:bg-neutral-900/50 p-3 
+                      text-base text-neutral-800 dark:text-neutral-200 
+                      placeholder:text-neutral-400 dark:placeholder:text-neutral-500 
+                      focus:border-primary focus:ring-primary
+                    "
+                    placeholder="Enter your name"
+                    type="text"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                    for="email"
+                  >
+                    Your Email
+                  </label>
+                  <input
+                    id="email"
+                    class="
+                      form-input mt-2 w-full rounded-lg focus:ring-primary
+                      border-neutral-300 dark:border-neutral-700 focus:border-primary
+                      bg-white dark:bg-neutral-900/50 p-3 
+                      text-base text-neutral-800 dark:text-neutral-200 
+                      placeholder:text-neutral-400 dark:placeholder:text-neutral-500
+                    "
+                    placeholder="Enter your email"
+                    type="email"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    class="text-sm font-medium text-neutral-700 dark:text-neutral-300"
+                    for="message"
+                  >
+                    Your Message
+                  </label>
+                  <textarea
+                    id="message"
+                    class="
+                      form-textarea mt-2 w-full rounded-lg 
+                      border-neutral-300 dark:border-neutral-700 
+                      bg-white dark:bg-neutral-900/50 p-3 min-h-[140px] 
+                      text-base text-neutral-800 dark:text-neutral-200 
+                      placeholder:text-neutral-400 dark:placeholder:text-neutral-500 
+                      focus:border-primary focus:ring-primary
+                    "
+                    placeholder="Enter your message"
+                  ></textarea>
+                </div>
+
+                <div class="flex justify-start">
+                  <button class="
+                      flex items-center justify-center 
+                      rounded-full h-12 px-6 min-w-[84px] 
+                      bg-primary hover:bg-primary/90 transition-colors
+                      text-white text-base font-bold
+                  ">
+                    <span>Send Message</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="border-t border-neutral-200/50 dark:border-neutral-700/50">
+        <div class="
+            max-w-5xl mx-auto px-5 py-8 gap-4
+            flex flex-col sm:flex-row items-center justify-between
+        ">
+          <p class="text-neutral-600 dark:text-neutral-400 text-sm">
+            © 2024 Studio. All rights reserved.
+          </p>
+          <div class="flex gap-4">
+            <a
+              class="
+                text-neutral-500 dark:text-neutral-400 
+                hover:text-primary dark:hover:text-primary transition-colors
+              "
+              href="#"
+            >
+              <svg
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 256 256"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z">
+                </path>
+              </svg>
+            </a>
+            <a
+              class="
+                text-neutral-500 dark:text-neutral-400 
+                hover:text-primary dark:hover:text-primary transition-colors
+              "
+              href="#"
+            >
+              <svg
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 256 256"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
+                </path>
+              </svg>
+            </a>
+            <a
+              class="
+                text-neutral-500 dark:text-neutral-400 
+                hover:text-primary dark:hover:text-primary transition-colors
+              "
+              href="#"
+            >
+              <svg
+                fill="currentColor"
+                height="24"
+                viewBox="0 0 256 256"
+                width="24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z">
+                </path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.glow-effect {
+  box-shadow: 0 0 10px theme("colors.primary"), 0 0 20px theme("colors.primary"),
+    0 0 30px theme("colors.primary");
+}
+.dynamic-text-container span {
+  transition: opacity 0.5s ease-in-out;
+}
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax-section {
+  transition: transform 0.5s ease-out;
+}
+.skill-chart:hover .skill-circle {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px theme("colors.primary"));
+}
+.skill-chart .skill-circle {
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+.skill-chart:hover .skill-details {
+  opacity: 1;
+  transform: translateY(0);
+}
+.skill-chart .skill-details {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}

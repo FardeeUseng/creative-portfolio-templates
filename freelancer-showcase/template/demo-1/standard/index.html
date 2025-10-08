@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html class="dark scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Demo 1 - Freelancer Showcase (Standard)</title>
+
+  <!-- ============ Favicon ============ -->
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+  <!-- ============ Fonts ============ -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&amp;display=swap"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+  <!-- ============ Tailwind CSS ============ -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="./talwind-config.js"></script>
+
+  <!-- ============ Custom CSS ============ -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="
+    bg-background-light dark:bg-background-dark 
+    font-display text-gray-800 dark:text-gray-200
+  ">
+  <div class="relative w-full overflow-x-hidden">
+    <div class="absolute top-0 left-0 w-full h-full -z-20">
+      <div class="
+          absolute top-[10%] left-[10%] w-[400px] h-[400px] 
+          bg-primary/10 rounded-full blur-3xl animate-subtle-pulse
+        ">
+      </div>
+      <div class="
+          absolute bottom-[5%] right-[15%] w-[500px] h-[500px] 
+          bg-primary/15 rounded-full blur-3xl animate-subtle-float animation-delay-4000
+        ">
+      </div>
+      <div class="
+          absolute top-[25%] right-[5%] w-[300px] h-[300px] 
+          bg-sky-400/10 rounded-full blur-3xl animate-subtle-pulse animation-delay-2000
+        ">
+      </div>
+    </div>
+
+    <div
+      class="
+        absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 
+        w-[600px] h-[600px] bg-primary/20 rounded-full blur-3xl -z-10 parallax
+      "
+      data-rellax-speed="-7">
+    </div>
+
+    <div class="container mx-auto px-4">
+      <header class="flex items-center justify-between whitespace-nowrap py-6">
+        <div class="flex items-center gap-4 text-gray-800 dark:text-white">
+          <div class="h-8 w-8 text-primary">
+            <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path
+                clip-rule="evenodd"
+                d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+              >
+              </path>
+            </svg>
+          </div>
+          <h2 class="text-xl font-bold">Nova</h2>
+        </div>
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#home"
+          >
+            Home
+          </a>
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#about"
+          >
+            About
+          </a>
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#skills"
+          >
+            Skills
+          </a>
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#projects"
+          >
+            Projects
+          </a>
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#contact"
+          >
+            Contact
+          </a>
+        </nav>
+      </header>
+
+      <main class="py-16 sm:py-24">
+        <section id="home">
+          <div class="text-center max-w-4xl mx-auto" data-rellax-speed="-2">
+            <h1 class="
+              text-4xl sm:text-6xl font-bold 
+              tracking-tighter text-gray-900 dark:text-white
+            ">
+              Crafting Digital Experiences That
+              <span class="text-primary dynamic-text-container">
+                <span class="opacity-100">Resonate</span>
+              </span>
+            </h1>
+            <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
+              I'm a freelance designer and developer specializing in creating
+              innovative and user-centric digital products. Let's bring your
+              vision to life.
+            </p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <a class="
+                  bg-primary px-6 py-3 rounded-lg hover:opacity-90 transition-opacity glow-effect
+                  text-white text-base font-bold leading-normal tracking-wide
+                "
+                href="#projects">Explore My Work</a>
+              <a class="
+                  text-base font-semibold leading-6 
+                  text-gray-900 dark:text-white group
+                "
+                href="#about"
+              >
+                Learn more
+                <span
+                  aria-hidden="true"
+                  class="transition-transform group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="py-24 sm:py-32">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div
+                class="relative h-96 w-full rounded-xl bg-cover bg-center"
+                data-rellax-speed="1"
+                style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAmkIj2lrChy4UbnIBEX7Br6Q86WQwNndTwqv-mE9y_LXXCsOx26JGel428n6n-o-CjeydOkNz_EIJyz50Xhjs-z56f5kOtb7wBTrsaAXvN_l5R50RhV08803BluffBWj0GFQWn6ip6Bd-wnIsNJpNbJbWCk2H-CqOpD42hFPykT22swIezgFXhAw5nZcXKVnfRw7GP0Z8pqn2ddIRfX1poa-klC0KjqrrawxE93miF6TW20o_LJeuybagLfEq3KIiUNqmfUnXHYY8');
+                  "
+              >
+                <div
+                  class="
+                    absolute -inset-2 rounded-xl 
+                    border-2 border-primary/50 glow-effect opacity-50
+                  ">
+                </div>
+              </div>
+              <div class=" data-rellax-speed=" -1">
+                <h2 class="text-base font-semibold leading-7 text-primary">
+                  About Me
+                </h2>
+                <p class="
+                  mt-2 text-3xl font-bold tracking-tight 
+                  text-gray-900 dark:text-white sm:text-4xl
+                ">
+                  A Passion for Problem Solving
+                </p>
+                <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
+                  From a young age, I've been captivated by the power of
+                  technology to solve real-world problems. My journey started
+                  with simple scripts and evolved into a full-fledged passion
+                  for designing and developing elegant, efficient, and
+                  user-friendly digital solutions. I thrive on challenges and
+                  am constantly exploring new technologies to push the
+                  boundaries of what's possible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="py-24 sm:py-32">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:text-center" data-rellax-speed="0.5">
+              <h2 class="text-base font-semibold leading-7 text-primary">
+                My Expertise
+              </h2>
+              <p class="
+                mt-2 text-3xl font-bold tracking-tight 
+                text-gray-900 dark:text-white sm:text-4xl
+              ">
+                Visualizing My Skillset
+              </p>
+              <p class="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-400">
+                I specialize in a range of disciplines, from intuitive UI/UX
+                design to robust full-stack development. This holistic
+                approach allows me to build seamless and cohesive digital
+                products from concept to deployment.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6">
+              <div class="
+                  bg-white/5 dark:bg-background-dark/50 
+                  border border-gray-200/10 dark:border-gray-800/50 
+                  rounded-xl p-6 shadow-lg backdrop-blur-sm transition-all 
+                  duration-300 hover:border-primary/50 hover:shadow-primary/20
+                ">
+                <div class="flex flex-col gap-4">
+                  <div>
+                    <p class="text-lg font-semibold text-gray-900 dark:text-gray-50">
+                      Web Development
+                    </p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                      Overall Proficiency
+                    </p>
+                  </div>
+                  <div class="text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
+                    90%
+                  </div>
+                  <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        HTML
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 95%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        CSS
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 90%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        JavaScript
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 85%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        React
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 80%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        Node.js
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 70%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="
+                  bg-white/5 dark:bg-background-dark/50 
+                  border border-gray-200/10 dark:border-gray-800/50 
+                  rounded-xl p-6 shadow-lg backdrop-blur-sm transition-all 
+                  duration-300 hover:border-primary/50 hover:shadow-primary/20
+              ">
+                <div class="flex flex-col gap-4">
+                  <div>
+                    <p class="text-lg font-semibold text-gray-900 dark:text-gray-50">
+                      Mobile Development
+                    </p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                      Overall Proficiency
+                    </p>
+                  </div>
+                  <div class="text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
+                    85%
+                  </div>
+                  <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        Swift
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 80%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        Kotlin
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 75%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        React Native
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 90%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        Flutter
+                      </p>
+                      <div class="
+                        w-full bg-gray-200 dark:bg-gray-800/50 
+                        rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 70%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="
+                  bg-white/5 dark:bg-background-dark/50 
+                  border border-gray-200/10 dark:border-gray-800/50 
+                  rounded-xl p-6 shadow-lg backdrop-blur-sm transition-all 
+                  duration-300 hover:border-primary/50 hover:shadow-primary/20
+              ">
+                <div class="flex flex-col gap-4">
+                  <div>
+                    <p class="text-lg font-semibold text-gray-900 dark:text-gray-50">
+                      UI/UX Design
+                    </p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">
+                      Overall Proficiency
+                    </p>
+                  </div>
+                  <div class="text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
+                    95%
+                  </div>
+                  <div class="space-y-4 pt-4">
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        Figma
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 95%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        Sketch
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 80%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        Prototyping
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 90%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                      <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
+                        User Research
+                      </p>
+                      <div class="
+                          w-full bg-gray-200 dark:bg-gray-800/50 
+                          rounded-full h-2 skill-bar-wrapper
+                      ">
+                        <div class="bg-primary h-2 rounded-full" style="width: 85%;">
+                          <div class="skill-bar-glow"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="awards" class="py-24 sm:py-32">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:text-center" data-rellax-speed="0.5">
+              <h2 class="text-base font-semibold leading-7 text-primary">
+                Certifications &amp; Awards
+              </h2>
+              <p class="
+                  mt-2 text-3xl font-bold tracking-tight 
+                  text-gray-900 dark:text-white sm:text-4xl
+              ">
+                Recognitions of Excellence
+              </p>
+              <p class="mt-4 text-lg leading-8 text-gray-600 dark:text-gray-400">
+                My dedication to quality and innovation has been recognized by
+                industry leaders. Here are some of my proudest achievements.
+              </p>
+            </div>
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="
+                  group relative flex flex-col gap-2 rounded-xl p-6 
+                  bg-background-light/50 dark:bg-background-dark/50 
+                  border border-gray-200 dark:border-gray-800 transition-all duration-300 
+                  hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/50
+                "
+                data-rellax-speed="1"
+              >
+                <div class="flex items-center gap-4">
+                  <div class="
+                      h-12 w-12 bg-primary/10 rounded-full 
+                      flex items-center justify-center text-primary 
+                      animate-icon-float [animation-delay:-0.2s]
+                  ">
+                    <span class="material-symbols-outlined text-2xl">
+                      workspace_premium
+                    </span>
+                  </div>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    Certified UX Designer
+                  </h3>
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Awarded by Design Institute of America
+                </p>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                  Demonstrates advanced knowledge in user experience
+                  principles, research, and design thinking methodologies.
+                </p>
+              </div>
+              <div class="
+                  group relative flex flex-col gap-2 rounded-xl p-6 
+                  bg-background-light/50 dark:bg-background-dark/50 
+                  border border-gray-200 dark:border-gray-800 transition-all duration-300 
+                  hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/50
+                "
+                data-rellax-speed="1.5"
+              >
+                <div class="flex items-center gap-4">
+                  <div class="
+                      h-12 w-12 bg-primary/10 rounded-full 
+                      flex items-center justify-center text-primary 
+                      animate-icon-float [animation-delay:-0.4s]
+                  ">
+                    <span class="material-symbols-outlined text-2xl">emoji_events</span>
+                  </div>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    Web Innovator Award 2023
+                  </h3>
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Presented by TechCon
+                </p>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                  Recognized for developing a groundbreaking e-commerce
+                  platform with a novel user interface.
+                </p>
+              </div>
+              <div class="
+                  group relative flex flex-col gap-2 rounded-xl p-6 
+                  bg-background-light/50 dark:bg-background-dark/50 
+                  border border-gray-200 dark:border-gray-800 transition-all duration-300 
+                  hover:shadow-2xl hover:shadow-primary/20 hover:border-primary/50
+                "
+                data-rellax-speed="2"
+              >
+                <div class="flex items-center gap-4">
+                  <div
+                    class="
+                      h-12 w-12 bg-primary/10 rounded-full 
+                      flex items-center justify-center text-primary 
+                      animate-icon-float [animation-delay:-0.6s]"
+                    >
+                    <span class="material-symbols-outlined text-2xl">verified</span>
+                  </div>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    Advanced React Developer
+                  </h3>
+                </div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Certified by The React Foundation
+                </p>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                  Validation of expertise in advanced React concepts,
+                  including state management, performance optimization, and
+                  hooks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="py-24 sm:py-32">
+          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:text-center" data-rellax-speed="0.5">
+              <h2 class="text-base font-semibold leading-7 text-primary">
+                Featured Projects
+              </h2>
+              <p class="
+                  mt-2 text-3xl font-bold tracking-tight 
+                  text-gray-900 dark:text-white sm:text-4xl
+              ">
+                Showcasing My Best Work
+              </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div class="
+                  group relative flex flex-col gap-4 rounded-xl 
+                  overflow-hidden bg-background-light/50 dark:bg-background-dark/50 
+                  border border-gray-200 dark:border-gray-800 transition-all 
+                  duration-300 hover:shadow-2xl hover:shadow-primary/20
+                "
+                data-rellax-speed="1"
+              >
+                <div
+                  class="w-full aspect-video bg-cover bg-center"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuANYOIib63TUQIZP6eBLVN9Ma1w7kpmCcXV8ZJeIJNkjelDQ924svO3I_AO__YgHocH_dz-fBZxTPYEoMhti3xfPuzq005Q3fdgLEAYF-rwouZTevOBDX8pz5q027LRJgPjZx1KMye5G-UjFf7NwpsCvN3Y0b4VdPQQGNRvB75K9rvJLlixcw7wh0qZFBf514iUcWC56cKsUxkrJ0Lb-NnbBBK3oa8O79OQ6uBd8OQFGypDIiFYTMvedspAAFPtDk1EjZzkf41gwfc');
+                  ">
+                </div>
+                <div class="p-6">
+                  <p class="text-lg font-semibold text-gray-900 dark:text-white">
+                    Project Zenith
+                  </p>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    A cutting-edge web application for a tech startup.
+                  </p>
+                </div>
+                <div class="
+                    absolute inset-0 bg-black/70 
+                    flex items-center justify-center 
+                    opacity-0 group-hover:opacity-100 
+                    transition-opacity duration-300 backdrop-blur-sm
+                ">
+                  <button class="bg-primary text-white text-sm font-bold px-4 py-2 rounded-lg">
+                    View Details
+                  </button>
+                </div>
+              </div>
+
+              <div class="
+                  group relative flex flex-col gap-4 rounded-xl overflow-hidden 
+                  bg-background-light/50 dark:bg-background-dark/50 
+                  border border-gray-200 dark:border-gray-800 transition-all 
+                  duration-300 hover:shadow-2xl hover:shadow-primary/20
+                "
+                data-rellax-speed="1.5"
+              >
+                <div
+                  class="w-full aspect-video bg-cover bg-center"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYvKsaJh1XEBOLP6ax-K1ub-BgoN9FKuKuSBmIv8szxnRW5TVmjcHWa9GB1QgXnxeh-TG55Yndva_Wm63qKoRoqD91LomoQPGBhX4AhoVzNLMPyIfkLcAl4JxJ-jns1iDPqhAYowWJhc1RcI0OIITwEjvfwsAnNrqRzZJUBjDSPiT_JeALT_YkR8Gh6FR2QrEzJkvpHp5zsrPPOsEXHLLiGEXeY8zuzJ4qUljNpRuGJuTpQHIbmadVuh7KLLWCJ2TL-RukE84NXp8');
+                "></div>
+                <div class="p-6">
+                  <p class="text-lg font-semibold text-gray-900 dark:text-white">
+                    Project Horizon
+                  </p>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    A mobile app redesign for a fitness brand.
+                  </p>
+                </div>
+                <div class="
+                    absolute inset-0 bg-black/70 
+                    flex items-center justify-center opacity-0 group-hover:opacity-100 
+                    transition-opacity duration-300 backdrop-blur-sm
+                ">
+                  <button class="bg-primary text-white text-sm font-bold px-4 py-2 rounded-lg">
+                    View Details
+                  </button>
+                </div>
+              </div>
+
+              <div class="
+                  group relative flex flex-col gap-4 rounded-xl overflow-hidden 
+                  bg-background-light/50 dark:bg-background-dark/50 
+                  border border-gray-200 dark:border-gray-800 transition-all 
+                  duration-300 hover:shadow-2xl hover:shadow-primary/20
+                "
+                data-rellax-speed="2"
+              >
+                <div
+                  class="w-full aspect-video bg-cover bg-center"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB-uqr1Clf0DkrQU5CxqziHdvPb9UvP8BiKZGb8qkZEhi3_qklybX78H7F16nHr4SqLXOUlMl-YrpGWexA5GrydgtglzXk8GjdWdwBh1XoHqDUjToNw368VY12-ka0pmqm8PF2daAhjM8f01WcLMRSRAu1HGf8rtitdBmT_rD2M0aV8OlDDpAcZq4pk9x6Pf-HdLT8gMwIzWU-gM1VsqA6suL875JHIdCIESoxgrK7FNLq23O6wPfU_5KyhoMFhzUKraRH2f8ium_4');
+                  ">
+                </div>
+                <div class="p-6">
+                  <p class="text-lg font-semibold text-gray-900 dark:text-white">
+                    Project Nebula
+                  </p>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                    An e-commerce platform for a fashion retailer.
+                  </p>
+                </div>
+                <div class="
+                  absolute inset-0 bg-black/70 
+                  flex items-center justify-center 
+                  opacity-0 group-hover:opacity-100 
+                  transition-opacity duration-300 backdrop-blur-sm
+                ">
+                  <button class="bg-primary text-white text-sm font-bold px-4 py-2 rounded-lg">
+                    View Details
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="py-24 sm:py-32">
+          <div class="mx-auto max-w-2xl px-4" data-rellax-speed="0.5">
+            <div class="mx-auto max-w-2xl lg:text-center">
+              <h2 class="text-base font-semibold leading-7 text-primary">
+                Get In Touch
+              </h2>
+              <p class="
+                mt-2 text-3xl font-bold tracking-tight 
+                text-gray-900 dark:text-white sm:text-4xl
+              ">
+                Let's Build Something Great
+              </p>
+            </div>
+            <div class="
+              mt-16 p-6 
+              rounded-xl bg-background-light/50 dark:bg-background-dark/50 
+              border border-gray-200 dark:border-gray-800
+            ">
+              <div class="flex flex-col space-y-4">
+                <div class="flex items-start gap-3">
+                  <img alt="User avatar" class="h-10 w-10 rounded-full border-2 border-primary"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmSIQIMxIFwuZp9bs6DHdWermFvPEEmP52gnwhJtglsFbbygGPEsnY-214DI4S-fObtzG6LWsmuhyPCDgM3cWvvxVfxfTjPF9oH_w7Pmc6gYR3iAWQblnLBRmI2Rvjd255xTuA7X-WvEwKnGrTXXvsNqsK0wLCUhf2dAVsW46HnmXFryLF8OcCePmkz6XwZWE9a0gvzXsr_1_tJt_-7n8d0lYKNVl7TkitBSL3QxH8yTUHRmu8tsh_12jdYtSxuOUC7EDJ9Mv4zhs" />
+                  <div class="bg-gray-200 dark:bg-gray-700 p-3 rounded-lg rounded-tl-none">
+                    <p class="text-sm text-gray-800 dark:text-gray-200">
+                      Hey there! I'm interested in collaborating on a new
+                      project. Are you available?
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 justify-end">
+                  <div class="bg-primary p-3 rounded-lg rounded-br-none">
+                    <p class="text-sm text-white">
+                      Hi! Thanks for reaching out. I'm always excited about
+                      new opportunities. Tell me more about your project.
+                    </p>
+                  </div>
+                  <div class="
+                    h-10 w-10 rounded-full bg-primary 
+                    flex items-center justify-center text-white font-bold text-lg
+                  ">
+                    N
+                  </div>
+                </div>
+              </div>
+              <div class="mt-6 flex items-center gap-2">
+                <input class="
+                    flex-1 bg-gray-200 dark:bg-gray-700 border-none rounded-full 
+                    px-4 py-2 text-sm focus:ring-2 focus:ring-primary focus:outline-none
+                  "
+                  placeholder="Type your message..."
+                  type="text"
+                />
+                <button class="
+                  bg-primary text-white p-2 rounded-full 
+                  hover:opacity-90 transition-opacity
+                ">
+                  <span class="material-symbols-outlined">send</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="py-12 border-t border-gray-200 dark:border-gray-800">
+        <div class="
+          container mx-auto px-4 gap-6
+          flex flex-col md:flex-row items-center justify-between
+        ">
+          <div class="flex gap-4">
+            <a class="text-gray-500 hover:text-primary transition-colors" href="#">
+              <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path clip-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  fill-rule="evenodd"></path>
+              </svg>
+            </a>
+
+            <a class="text-gray-500 hover:text-primary transition-colors" href="#">
+              <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                </path>
+              </svg>
+            </a>
+
+            <a class="text-gray-500 hover:text-primary transition-colors" href="#">
+              <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path clip-rule="evenodd"
+                  d="M12 2C6.477 2 2 6.477 2 12.019c0 4.435 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12.019C22 6.477 17.523 2 12 2z"
+                  fill-rule="evenodd"></path>
+              </svg>
+            </a>
+          </div>
+          
+          <p class="text-sm text-gray-500">
+            © 2023 Nova. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

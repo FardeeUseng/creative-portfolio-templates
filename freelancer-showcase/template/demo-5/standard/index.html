@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Demo 5 - Freelancer Showcase (Standard)</title>
+
+    <!-- ============ Favicon ============ -->
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+    <!-- ============ Fonts ============ -->
+    <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+    <link
+      as="style"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=VT323&amp;family=Orbitron:wght@400;700;900"
+      onload="this.rel='stylesheet'"
+      rel="stylesheet"
+    />
+
+    <!-- ============ Tailwind CSS ============ -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <!-- ============ Custom CSS ============ -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- ============ Tailwind Config ============ -->
+    <script src="./tailwind-config.js"></script>
+  </head>
+
+  <body class="bg-background-dark font-body text-neutral-200 digital-rain-bg">
+    <div class="
+        relative min-h-screen w-full bg-black/80
+        flex flex-col overflow-x-hidden
+    ">
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="
+            flex items-center justify-between whitespace-nowrap 
+            border-b-2 border-[var(--primary-purple)]/50 
+            px-10 py-5 shadow-[0_0_15px_rgba(156,39,176,0.5)]
+        ">
+          <div class="flex items-center gap-3 text-white">
+            <svg
+              class="h-8 w-8 text-[var(--primary-pink)] flicker"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 2L2 7V17L12 22L22 17V7L12 2ZM11 12H13V17H11V12ZM11 7H13V10H11V7Z"
+              ></path>
+            </svg>
+            <h2
+              class="text-3xl font-bold uppercase text-glow-pink glitch"
+              data-text="CYBERLANCER"
+            >
+              CYBERLANCER
+            </h2>
+          </div>
+
+          <nav class="hidden md:flex items-center gap-8 text-lg">
+            <a
+              class="
+                hover:text-[var(--primary-pink)] hover:text-glow-pink 
+                transition-all duration-300 relative glitch-hover
+              "
+              href="#"
+            >
+              <span class="glitch" data-text="[Work]">
+                [Work]
+              </span>
+            </a>
+            <a
+              class="
+                hover:text-[var(--primary-pink)] hover:text-glow-pink 
+                transition-all duration-300 relative glitch-hover
+              "
+              href="#"
+            >
+              <span class="glitch" data-text="[Skills]">
+                [Skills]
+              </span>
+            </a>
+            <a
+              class="
+                hover:text-[var(--primary-pink)] hover:text-glow-pink 
+                transition-all duration-300 relative glitch-hover
+              "
+              href="#"
+            >
+              <span class="glitch" data-text="[Intel]">
+                [Intel]
+              </span>
+            </a>
+            <a
+              class="
+                hover:text-[var(--primary-pink)] hover:text-glow-pink 
+                transition-all duration-300 relative glitch-hover
+              "
+              href="#"
+            >
+              <span class="glitch" data-text="[Connect]">
+                [Connect]
+              </span>
+            </a>
+          </nav>
+
+          <button class="
+              min-w-[100px] h-10 px-4 relative glitch-hover
+              hidden md:flex items-center justify-center
+              bg-transparent hover:bg-[var(--primary-blue)]/20
+              text-white text-lg font-bold transition-all duration-300 
+              neon-border border-[var(--primary-blue)] shadow-[var(--primary-blue)]
+          ">
+            <span class="glitch" data-text="&gt;_DATA">&gt;_DATA</span>
+          </button>
+        </header>
+        
+        <main class="flex flex-1 justify-center py-10 px-4 sm:px-10 lg:px-20">
+          <div class="w-full max-w-7xl">
+            <div
+              class="
+                min-h-[520px] p-8 md:p-12 
+                relative flex flex-col justify-center items-center text-center 
+                border-2 border-[var(--primary-pink)] shadow-[0_0_20px_var(--primary-pink)] scanline
+              "
+              style="
+                background-image: linear-gradient(
+                    rgba(10, 10, 10, 0.8) 0%,
+                    rgba(10, 10, 10, 0.9) 100%
+                  ),
+                  url('https://lh3.googleusercontent.com/aida-public/AB6AXuBzeJBTQXx5Q_0L2hJWe1G2AfVj_TOZ8o20mLa8GNeE0q1h1bPdynJOjvqiYDIBkpM677KGQSJUmGLwh2OyUGF2SqNCE0dz5pJ5Yma4VifAp4x4Z_vUvgWyk8c4gSkNG2iHun_1ZhqrB5xfKCXfob2BQ3u8EFD_FXdbNABpc3Yxy3cWfauq60Wa-PeR-T4nm2REyubF71QaLPvGdUU3xFNRFWb05HlTkBUJhLPT6CGayZDLZ2nUcjhnvl07CgLIBqkek6HowDba_Rw');
+                background-size: cover;
+                background-position: center;
+              "
+            >
+              <div class="flex flex-col gap-6 max-w-3xl">
+                <h1
+                  class="
+                    text-white text-5xl md:text-7xl 
+                    font-display font-black leading-tight 
+                    tracking-wider uppercase glitch
+                  "
+                  data-text="ENGINEERING REALITIES"
+                >
+                  ENGINEERING REALITIES
+                </h1>
+                <p class="
+                    text-neutral-300 text-xl md:text-2xl 
+                    leading-relaxed tracking-wider
+                ">
+                  Weaving code and chaos into digital dimensions. In the
+                  neon-drenched streets of the web, I forge high-tech, dystopian
+                  experiences that are visually striking and ruthlessly
+                  effective.
+                </p>
+              </div>
+              <button class="
+                  mt-10 w-fit h-14 px-8 relative glitch-hover
+                  flex items-center justify-center 
+                  bg-[var(--primary-pink)] hover:bg-white 
+                  text-black text-xl font-bold hover:text-[var(--primary-pink)] 
+                  transition-all duration-300 shadow-[0_0_15px_var(--primary-pink)]
+              ">
+                <span class="glitch" data-text="&gt; JACK IN">
+                  &gt; JACK IN
+                </span>
+              </button>
+            </div>
+
+            <section class="py-16 md:py-24">
+              <h2
+                class="
+                  text-4xl md:text-5xl font-display font-bold tracking-widest 
+                  mb-12 text-center text-white text-glow-blue uppercase glitch
+                "
+                data-text="Holographic Projections"
+              >
+                Holographic Projections
+              </h2>
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+              >
+                <div class="
+                    flex flex-col gap-4 group relative 
+                    border-2 border-[var(--primary-blue)]/50 p-4 hover:border-[var(--primary-blue)] 
+                    bg-black/50 backdrop-blur-sm hover:shadow-[0_0_20px_var(--primary-blue)] scanline
+                    transition-all duration-300
+                ">
+                  <div
+                    class="
+                      w-full bg-center bg-no-repeat aspect-video bg-cover 
+                      overflow-hidden opacity-80 group-hover:opacity-100 transition-opacity
+                    "
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCZr7SDDe2infGi9SSRvuMfDlQeCXM517XBbeSmv-hWuK9bmhAxkG0wazcO-9D5YWUg9Ms-bb955llMjk24gLDPotN8xr1Ozg5a_4qrwtmzmATY6SikIj3d_zJ3sr3SzKHS4gBNPOj1xBlB6Ki-i6UhBmnWeY2RQ1jQJSf8IKd5KVriDUB_POcW1JXQJPI32raoSojbV09QTHn2Ne7-JdldEpJqQceUVmgOqE78rZHeVSvsdVdGFCAN38mzC4ToFiFT1YwR9aseNdI');
+                      filter: contrast(1.2) saturate(1.5) hue-rotate(290deg);
+                    "
+                  ></div>
+                  <div class="
+                      absolute inset-0 opacity-50
+                      bg-gradient-to-t from-black via-transparent to-transparent
+                  "
+                  ></div>
+                  <div class="z-10 mt-2">
+                    <h3 class="
+                        text-2xl font-display font-bold text-white text-glow-blue 
+                        group-hover:text-[var(--primary-blue)] transition-colors flicker
+                    ">
+                      SYSTEM_SHOCK_REBUILD
+                    </h3>
+                    <p class="text-neutral-400 text-lg tracking-wide">
+                      Interface overhaul for a corporate security drone network.
+                    </p>
+                  </div>
+                </div>
+                <div class="
+                    flex flex-col gap-4 group p-4 
+                    border-2 border-[var(--primary-blue)]/50 hover:border-[var(--primary-blue)] 
+                    relative bg-black/50 backdrop-blur-sm transition-all duration-300 
+                    hover:shadow-[0_0_20px_var(--primary-blue)] scanline
+                ">
+                  <div
+                    class="
+                      w-full 
+                      bg-center bg-no-repeat aspect-video bg-cover overflow-hidden 
+                      opacity-80 group-hover:opacity-100 transition-opacity
+                    "
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCobecKo9vAFMo2P-7Hx2nJk5LBJ3asE2CVa6zOYAdAsBymki8Bjh9LBDipmBIspVYHSr4yu8OsSBlQVh1ieD9SmF6DC3rkc0MYCCNNUJAKZZTsTJmkMMLn4uC6ZnevnfQiiLJFK4XTRtx2mcagwoLFN9DxbDJOXEdjEX-KGsklXmpaSifwEEraL0eTfD9ca7MhI-cOHbrqdkYImTbE3QtF_xCimcY8OfDls9b6XWWLZr1tWoxIL_-3InwMRfXiyEbyODrxwCMBPHU');
+                      filter: contrast(1.2) saturate(1.5) hue-rotate(180deg);
+                    "
+                  ></div>
+                  <div class="
+                      absolute inset-0 opacity-50
+                      bg-gradient-to-t from-black via-transparent to-transparent
+                  "
+                  ></div>
+                  <div class="z-10 mt-2">
+                    <h3 class="
+                        text-2xl font-display font-bold text-white text-glow-blue 
+                        group-hover:text-[var(--primary-blue)] transition-colors flicker
+                    ">
+                      NEURAL_NET_VISUALIZER
+                    </h3>
+                    <p class="text-neutral-400 text-lg tracking-wide">
+                      Data stream visualization for an underground bio-aug
+                      clinic.
+                    </p>
+                  </div>
+                </div>
+                <div class="
+                    flex flex-col gap-4 group p-4 scanline
+                    border-2 border-[var(--primary-blue)]/50 
+                    relative bg-black/50 backdrop-blur-sm transition-all duration-300 
+                    hover:border-[var(--primary-blue)] hover:shadow-[0_0_20px_var(--primary-blue)]
+                ">
+                  <div
+                    class="
+                      bg-center bg-no-repeat aspect-video bg-cover overflow-hidden 
+                      w-full opacity-80 group-hover:opacity-100 transition-opacity
+                    "
+                    style="
+                      background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDESVnHSR2i4Z9PSLeBCb4yeyp_EPSqLuPYx2FUStCc-t3fZIToOE95nfZkLY7e2QpGohlaigYZ5k0X399i00DHd6vSMwNnMTok399-UTHujnApGutJuc6ReIGtyRbU-gRVq2XuHmCfzO7m8j-O2xMhFdbe02mNkwSxoWO3UVn3Tluqj7-7-bGqQZOXTknBaW77IsQ4s-ZnUm4df-7ViCIvv2Q3mxRD94po3euGKOtibCos5GGMjKBo8x2zubbyBeVvdOYbhkbXme0');
+                      filter: contrast(1.2) saturate(1.5) hue-rotate(220deg);
+                    "
+                  ></div>
+                  <div class="
+                      absolute inset-0 opacity-50
+                      bg-gradient-to-t from-black via-transparent to-transparent
+                  "></div>
+                  <div class="z-10 mt-2">
+                    <h3 class="
+                        text-2xl font-display font-bold text-white text-glow-blue 
+                        group-hover:text-[var(--primary-blue)] transition-colors flicker
+                    ">
+                      BLACK_MARKET_NODE
+                    </h3>
+                    <p class="text-neutral-400 text-lg tracking-wide">
+                      Decentralized exchange for illicit cybernetics and data.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="
+                py-16 md:py-24 
+                border-y-2 border-[var(--primary-purple)]/50 shadow-[0_0_30px_rgba(156,39,176,0.3)]
+            ">
+              <h2
+                class="
+                  text-4xl md:text-5xl font-display font-bold tracking-widest
+                  mb-12 text-center text-white text-glow-purple uppercase glitch
+                "
+                data-text="Skill Circuitry"
+              >
+                Skill Circuitry
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 relative">
+                <div class="
+                    absolute top-1/2 left-0 w-full h-px 
+                    bg-[var(--primary-purple)]/50 -translate-y-1/2
+                "></div>
+                <div class="
+                    absolute top-1/2 left-1/3 w-px h-16 
+                    bg-[var(--primary-purple)]/50 -translate-y-1/2
+                "></div>
+                <div class="
+                    absolute top-1/2 left-2/3 w-px h-16 
+                    bg-[var(--primary-purple)]/50 -translate-y-1/2
+                "></div>
+                <div class="
+                    flex flex-col gap-4 items-center text-center p-6 z-10 
+                    bg-black/70 border border-[var(--primary-purple)]/30 scanline
+                ">
+                  <div class="
+                      text-[var(--primary-purple)] bg-[var(--primary-purple)]/10 p-4 
+                      border-2 border-[var(--primary-purple)] shadow-[0_0_10px_var(--primary-purple)]
+                  ">
+                    <svg
+                      fill="currentColor"
+                      height="32"
+                      viewBox="0 0 256 256"
+                      width="32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M204.2,51.8a12,12,0,0,0-17,17L204.4,86H160a12,12,0,0,0,0,24h24V134H116a36,36,0,0,1-36-36V80a12,12,0,0,0-24,0v18a60,60,0,0,0,60,60h68v24H160a12,12,0,0,0,0,24h44.4l-17.2,17.2a12,12,0,1,0,17,17l40-40a12,12,0,0,0,0-17Z M96,110a12,12,0,0,1-12,12H51.6l17.2,17.2a12,12,0,1,1-17,17l-40-40a12,12,0,0,1,0-17l40-40a12,12,0,1,1,17,17L51.6,98H84A12,12,0,0,1,96,110Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3 class="text-xl font-bold text-white font-display uppercase">
+                      Wetware Integration
+                    </h3>
+                    <p class="text-neutral-400 text-lg leading-relaxed">
+                      Fusing organic UX with synthetic UI for seamless
+                      human-machine interaction.
+                    </p>
+                  </div>
+                </div>
+                <div class="
+                    flex flex-col gap-4 items-center text-center p-6 z-10 
+                    bg-black/70 border border-[var(--primary-purple)]/30 scanline
+                ">
+                  <div class="
+                      text-[var(--primary-purple)] bg-[var(--primary-purple)]/10 p-4 
+                      border-2 border-[var(--primary-purple)] shadow-[0_0_10px_var(--primary-purple)]
+                  ">
+                    <svg
+                      fill="currentColor"
+                      height="32"
+                      viewBox="0 0 256 256"
+                      width="32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M74.4,220.8a12,12,0,0,1-8.8-20L121.2,128,65.6,55.2a12,12,0,0,1,17.6-16l64,72a12,12,0,0,1,0,16l-64,72A12,12,0,0,1,74.4,220.8Z M178.4,39.2a12,12,0,0,0-17.6,16L216.4,128l-55.6,72.8a12,12,0,0,0,17.6,16l64-84a12,12,0,0,0,0-16Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3 class="text-xl font-bold text-white font-display uppercase">
+                      Code Cracking
+                    </h3>
+                    <p class="text-neutral-400 text-lg leading-relaxed">
+                      Exploiting legacy systems and building impenetrable
+                      digital fortresses.
+                    </p>
+                  </div>
+                </div>
+                <div class="
+                    flex flex-col gap-4 items-center text-center p-6 z-10 
+                    bg-black/70 border border-[var(--primary-purple)]/30 scanline
+                ">
+                  <div class="
+                      text-[var(--primary-purple)] bg-[var(--primary-purple)]/10 p-4 
+                      border-2 border-[var(--primary-purple)] shadow-[0_0_10px_var(--primary-purple)]
+                  ">
+                    <svg
+                      fill="currentColor"
+                      height="32"
+                      viewBox="0 0 256 256"
+                      width="32"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128ZM84,116a12,12,0,1,0,12,12A12,12,0,0,0,84,116Zm88,0a12,12,0,1,0,12,12A12,12,0,0,0,172,116Zm-44,48a16,16,0,1,0,16,16A16,16,0,0,0,128,164Zm0-96a16,16,0,1,0-16-16A16,16,0,0,0,128,68ZM228,128A100,100,0,1,1,128,28,100.2,100.2,0,0,1,228,128Zm-24,0a76,76,0,1,0-76,76A76.1,76.1,0,0,0,204,128Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div class="flex flex-col gap-1">
+                    <h3
+                      class="text-xl font-bold text-white font-display uppercase"
+                    >
+                      Brand Synthesis
+                    </h3>
+                    <p class="text-neutral-400 text-lg leading-relaxed">
+                      Fabricating hyper-real corporate identities that dominate
+                      the datastream.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="py-16 md:py-24">
+              <div class="max-w-4xl mx-auto text-center">
+                <h2
+                  class="
+                    text-4xl md:text-5xl font-display font-bold tracking-widest 
+                    mb-6 text-white text-glow-pink uppercase glitch
+                  "
+                  data-text="Intel Dossier"
+                >
+                  Intel Dossier
+                </h2>
+                <p
+                  class="text-neutral-300 text-xl leading-relaxed tracking-wide"
+                >
+                  A ghost in the machine with over 5 years of rewriting the
+                  rules of the digital frontier. My philosophy is simple:
+                  innovate or be deleted. I interface directly with clients,
+                  decrypting their needs to architect bespoke realities. My work
+                  is a chaotic symphony of form and function, designed to leave
+                  an indelible mark on the user's psyche.
+                </p>
+              </div>
+            </section>
+
+            <section class="py-16 md:py-24">
+              <div class="
+                  max-w-2xl mx-auto p-8 
+                  border-2 border-[var(--primary-blue)]/50 
+                  bg-black/70 shadow-[0_0_25px_rgba(3,169,244,0.3)] scanline
+              ">
+                <h2 class="
+                    text-3xl md:text-4xl font-display font-bold tracking-wider 
+                    mb-8 text-center text-white text-glow-blue flicker uppercase
+                ">
+                  &gt; INITIATE_CONTACT
+                </h2>
+                <form class="space-y-6">
+                  <div class="relative">
+                    <label
+                      for="name"
+                      class="
+                        absolute -top-2 left-3 bg-black px-1 
+                        text-sm text-[var(--primary-blue)]
+                      "
+                    >
+                      &gt; USER_ID:
+                    </label>
+                    <input
+                      id="name"
+                      class="
+                        form-input mt-2 w-full p-3 bg-transparent 
+                        border-2 border-[var(--primary-blue)] focus:border-[var(--primary-pink)]
+                        text-lg text-white placeholder:text-neutral-500 focus:ring-0
+                      "
+                      placeholder="[Enter callsign]"
+                      type="text"
+                    />
+                  </div>
+
+                  <div class="relative">
+                    <label
+                      for="email"
+                      class="
+                        absolute -top-2 left-3 bg-black px-1 
+                        text-sm text-[var(--primary-blue)]
+                      "
+                    >
+                      &gt; SECURE_CHANNEL:
+                    </label>
+                    <input
+                      id="email"
+                      class="
+                        form-input mt-2 w-full bg-transparent p-3 
+                        border-2 border-[var(--primary-blue)] focus:border-[var(--primary-pink)]
+                        text-lg text-white placeholder:text-neutral-500  focus:ring-0"
+                      placeholder="[Enter net address]"
+                      type="email"
+                    />
+                  </div>
+                  <div class="relative">
+                    <label
+                      class="
+                        absolute -top-2 left-3 bg-black px-1 
+                        text-sm text-[var(--primary-blue)]
+                      "
+                      for="message"
+                    >
+                      &gt; DATA_PACKET:
+                    </label>
+                    <textarea
+                      id="message"
+                      class="
+                        form-textarea mt-2 w-full 
+                        border-2 border-[var(--primary-blue)] focus:border-[var(--primary-pink)] 
+                        bg-transparent p-3 min-h-[160px] focus:ring-0
+                        text-lg text-white placeholder:text-neutral-500 
+                      "
+                      placeholder="[Encrypt message...]"
+                    ></textarea>
+                  </div>
+                  <div class="flex justify-start">
+                    <button class="
+                        flex items-center justify-center 
+                        h-12 px-6 min-w-[150px] 
+                        bg-transparent hover:bg-[var(--primary-pink)] 
+                        text-lg font-bold transition-all duration-300 
+                        neon-border border-[var(--primary-pink)] shadow-[var(--primary-pink)] 
+                        text-[var(--primary-pink)] hover:text-black relative glitch-hover
+                    ">
+                      <span class="glitch" data-text="TRANSMIT &gt;&gt;">
+                        TRANSMIT &gt;&gt;
+                      </span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </section>
+          </div>
+        </main>
+
+        <footer class="border-t-2 border-[var(--primary-purple)]/50 py-6">
+          <div class="
+              max-w-7xl mx-auto px-5 gap-4
+              flex flex-col sm:flex-row items-center justify-between
+          ">
+            <p class="text-neutral-400 text-base tracking-wider">
+              &gt; C:/2024_CYBERLANCER_PROTOCOLS
+            </p>
+            <div class="flex gap-6">
+              <a
+                class="text-neutral-400 hover:text-[var(--primary-pink)] transition-colors"
+                href="#"
+              >
+                <svg
+                  fill="currentColor"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22,3.29C21.09,3.68 20.13,3.95 19.13,4.09C20.2,3.48 21,2.53 21.39,1.4C20.41,2 19.36,2.41 18.26,2.68C17.34,1.69 16.03,1 14.5,1C11.54,1 9.17,3.37 9.17,6.33C9.17,6.76 9.22,7.18 9.31,7.58C6.2,6.04 3.5,4.35 1.73,1.91C1.26,2.71 1,3.65 1,4.66C1,6.58 2,8.23 3.5,9.16C2.65,9.13 1.86,8.89 1.17,8.53V8.58C1.17,11.23 3.12,13.45 5.6,13.92C5.15,14.04 4.67,14.11 4.17,14.11C3.81,14.11 3.47,14.08 3.14,14.01C3.83,16.2 5.78,17.83 8.1,17.87C6.18,19.34 3.82,20.17 1.28,20.17C0.88,20.17 0.48,20.15 0,20.1C2.37,21.69 5.22,22.5 8.29,22.5C16.61,22.5 21.39,15.68 21.39,9.75C21.39,9.56 21.39,9.37 21.38,9.18C22.29,8.53 23.06,7.72 23.69,6.79C22.82,7.17 21.9,7.44 20.94,7.58C21.9,6.97 22.66,6 23,5.05L22,3.29Z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                class="text-neutral-400 hover:text-[var(--primary-pink)] transition-colors"
+                href="#"
+              >
+                <svg
+                  fill="currentColor"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12,2A10,10 0 0,0 2,12C2,16.42 5.58,20 10,20C10.55,20 11.09,19.92 11.61,19.77C10.61,18.88 10,17.5 10,16C10,12.69 12.69,10 16,10C17.5,10 18.88,10.61 19.77,11.61C19.92,11.09 20,10.55 20,10C20,5.58 16.42,2 12,2M8.5,8C9.33,8 10,8.67 10,9.5C10,10.33 9.33,11 8.5,11C7.67,11 7,10.33 7,9.5C7,8.67 7.67,8 8.5,8M15.5,8C16.33,8 17,8.67 17,9.5C17,10.33 16.33,11 15.5,11C14.67,11 14,10.33 14,9.5C14,8.67 14.67,8 15.5,8M8,13H16C16,15.21 14.21,17 12,17C9.79,17 8,15.21 8,13Z"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                class="text-neutral-400 hover:text-[var(--primary-pink)] transition-colors"
+                href="#"
+              >
+                <svg
+                  fill="currentColor"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.43 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,6 7.78,5.22 6.88,5.22C6,5.22 5.22,6 5.22,6.88A1.68,1.68 0 0,0 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
