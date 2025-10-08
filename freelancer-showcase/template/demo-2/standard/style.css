@@ -1,3 +1,7 @@
+section {
+  scroll-margin-top: 150px;
+}
+
 .grid-bg {
   background-image: linear-gradient(
       to right,
@@ -7,9 +11,11 @@
     linear-gradient(to bottom, theme("colors.border-dark") 1px, transparent 1px);
   background-size: 4rem 4rem;
 }
+
 .active-nav-link {
   color: theme("colors.brand-primary");
 }
+
 .active-nav-link::after {
   content: "";
   display: block;

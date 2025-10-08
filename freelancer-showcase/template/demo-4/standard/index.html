@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="utf-8" />
@@ -11,6 +11,7 @@
   
   <!-- ============ Fonts ============ -->
   <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link
     as="style"
     href="https://fonts.googleapis.com/css2?display=swap&amp;family=Newsreader:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700;900"
@@ -30,11 +31,13 @@
     bg-background-light dark:bg-background-dark 
     font-display text-neutral-800 dark:text-neutral-200
 ">
-  <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+  <div class="relative flex min-h-screen w-full flex-col">
     <div class="layout-container flex h-full grow flex-col">
       <header class="
+          sticky top-0 z-10 px-10 py-5
+          backdrop-blur-sm bg-background-light/80 dark:bg-background-dark/80 
           flex items-center justify-between whitespace-nowrap 
-          border-b border-neutral-200/50 dark:border-neutral-700/50 px-10 py-5
+          border-b border-neutral-200/50 dark:border-neutral-700/50
       ">
         <div class="flex items-center gap-3 text-neutral-900 dark:text-white">
           <svg
@@ -63,37 +66,85 @@
         </div>
 
         <nav class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-medium hover:text-primary transition-colors" href="#">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#home"
+          >
+            Home
+          </a>
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#projects"
+          >
             Work
           </a>
-          <a class="text-sm font-medium hover:text-primary transition-colors" href="#">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#services"
+          >
             Services
           </a>
-          <a class="text-sm font-medium hover:text-primary transition-colors" href="#">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#about"
+          >
             About
           </a>
-          <a class="text-sm font-medium hover:text-primary transition-colors" href="#">
+          <a
+            class="text-sm font-medium hover:text-primary transition-colors"
+            href="#contact"
+          >
             Contact
           </a>
         </nav>
-        <button class="
-            hidden md:flex min-w-[84px] items-center justify-center 
-            rounded-lg h-10 px-4 bg-neutral-100 dark:bg-neutral-800 
-            text-neutral-900 dark:text-white text-sm font-bold 
-            hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors
-        ">
-          <span>Resume</span>
-        </button>
+
+        <div class="flex items-center gap-4">
+          <!-- ===== Theme Toggle ===== -->
+          <button
+            id="theme-toggle"
+            class="
+              h-8 w-8
+              flex items-center justify-center
+              rounded-lg bg-gray-200/50 dark:bg-gray-700/50 
+              text-gray-800 dark:text-gray-200 
+              hover:bg-gray-200 dark:hover:bg-gray-700
+            "
+          >
+            <!-- ===== Light Mode ===== -->
+            <span class="material-symbols-outlined text-base block dark:hidden">
+              light_mode
+            </span>
+  
+            <!-- ===== Dark Mode ===== -->
+            <span class="material-symbols-outlined text-base hidden dark:block">
+              dark_mode
+            </span>
+          </button>
+
+          <button class="
+              hidden md:flex min-w-[84px] items-center justify-center 
+              rounded-lg h-10 px-4 bg-neutral-800 dark:bg-neutral-100 
+              text-white dark:text-neutral-900 text-sm font-bold 
+              hover:bg-neutral-700 dark:hover:bg-neutral-200 transition-colors
+          ">
+            <span>Resume</span>
+          </button>
+        </div>
       </header>
 
       <main class="flex flex-1 justify-center py-10 px-4 sm:px-10 lg:px-20">
         <div class="w-full max-w-5xl">
-          <div class="
+          <section
+            id="home" 
+            class="
               relative min-h-[520px] p-8 md:p-12
               flex flex-col justify-end rounded-xl overflow-hidden 
             "
             style='
-              background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzeJBTQXx5Q_0L2hJWe1G2AfVj_TOZ8o20mLa8GNeE0q1h1bPdynJOjvqiYDIBkpM677KGQSJUmGLwh2OyUGF2SqNCE0dz5pJ5Yma4VifAp4x4Z_vUvgWyk8c4gSkNG2iHun_1ZhqrB5xfKCXfob2BQ3u8EFD_FXdbNABpc3Yxy3cWfauq60Wa-PeR-T4nm2REyubF71QaLPvGdUU3xFNRFWb05HlTkBUJhLPT6CGayZDLZ2nUcjhnvl07CgLIBqkek6HowDba_Rw");
+              background-image: linear-gradient(
+                rgba(0, 0, 0, 0.2) 0%, 
+                rgba(0, 0, 0, 0.5) 100%), 
+                url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzeJBTQXx5Q_0L2hJWe1G2AfVj_TOZ8o20mLa8GNeE0q1h1bPdynJOjvqiYDIBkpM677KGQSJUmGLwh2OyUGF2SqNCE0dz5pJ5Yma4VifAp4x4Z_vUvgWyk8c4gSkNG2iHun_1ZhqrB5xfKCXfob2BQ3u8EFD_FXdbNABpc3Yxy3cWfauq60Wa-PeR-T4nm2REyubF71QaLPvGdUU3xFNRFWb05HlTkBUJhLPT6CGayZDLZ2nUcjhnvl07CgLIBqkek6HowDba_Rw");
               background-size: cover;
               background-position: center;
             '
@@ -115,9 +166,9 @@
               ">
               <span>View My Work</span>
             </button>
-          </div>
+          </section>
 
-          <section class="py-16 md:py-24">
+          <section id="projects" class="py-16 md:py-24">
             <h2 class="
                 mb-8 md:mb-12 
                 text-3xl md:text-4xl font-bold tracking-tighter 
@@ -191,7 +242,10 @@
             </div>
           </section>
 
-          <section class="py-16 md:py-24 bg-background-light dark:bg-background-dark rounded-xl">
+          <section
+            id="services"
+            class="py-16 md:py-24 bg-background-light dark:bg-background-dark rounded-xl"
+          >
             <h2 class="
                 text-3xl md:text-4xl font-bold tracking-tighter 
                 mb-8 md:mb-12 text-center text-neutral-900 dark:text-white
@@ -287,7 +341,7 @@
             </div>
           </section>
 
-          <section class="py-16 md:py-24">
+          <section id="about" class="py-16 md:py-24">
             <div class="max-w-3xl mx-auto text-center">
               <h2 class="
                   text-3xl md:text-4xl font-bold tracking-tighter 
@@ -304,7 +358,7 @@
             </div>
           </section>
 
-          <section class="py-16 md:py-24">
+          <section id="contact" class="py-16 md:py-24">
             <div class="max-w-xl mx-auto">
               <h2 class="
                   text-3xl md:text-4xl font-bold tracking-tighter 
@@ -463,5 +517,7 @@
       </footer>
     </div>
   </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>

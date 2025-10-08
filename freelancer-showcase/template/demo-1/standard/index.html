@@ -29,8 +29,8 @@
 <body class="
     bg-background-light dark:bg-background-dark 
     font-display text-gray-800 dark:text-gray-200
-  ">
-  <div class="relative w-full overflow-x-hidden">
+">
+  <div class="relative w-full">
     <div class="absolute top-0 left-0 w-full h-full -z-20">
       <div class="
           absolute top-[10%] left-[10%] w-[400px] h-[400px] 
@@ -54,11 +54,16 @@
         absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 
         w-[600px] h-[600px] bg-primary/20 rounded-full blur-3xl -z-10 parallax
       "
-      data-rellax-speed="-7">
+      data-rellax-speed="-7"
+    >
     </div>
 
     <div class="container mx-auto px-4">
-      <header class="flex items-center justify-between whitespace-nowrap py-6">
+      <header class="
+          sticky top-0 z-10 py-6 
+          flex items-center justify-between 
+          whitespace-nowrap backdrop-blur-sm
+      ">
         <div class="flex items-center gap-4 text-gray-800 dark:text-white">
           <div class="h-8 w-8 text-primary">
             <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -73,38 +78,64 @@
           </div>
           <h2 class="text-xl font-bold">Nova</h2>
         </div>
-        <nav class="hidden md:flex items-center gap-8">
-          <a
-            class="text-sm font-medium hover:text-primary transition-colors"
-            href="#home"
+
+        <div class="flex items-center gap-4">
+          <nav class="hidden md:flex items-center gap-8">
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#home"
+            >
+              Home
+            </a>
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#about"
+            >
+              About
+            </a>
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#skills"
+            >
+              Skills
+            </a>
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#projects"
+            >
+              Projects
+            </a>
+            <a
+              class="text-sm font-medium hover:text-primary transition-colors"
+              href="#contact"
+            >
+              Contact
+            </a>
+          </nav>
+          
+          <!-- ===== Theme Toggle ===== -->
+          <button
+            id="theme-toggle"
+            class="
+              h-8 w-8
+              flex items-center justify-center
+              rounded-lg bg-gray-200/50 dark:bg-gray-700/50 
+              text-gray-800 dark:text-gray-200 
+              hover:bg-gray-200 dark:hover:bg-gray-700
+            "
           >
-            Home
-          </a>
-          <a
-            class="text-sm font-medium hover:text-primary transition-colors"
-            href="#about"
-          >
-            About
-          </a>
-          <a
-            class="text-sm font-medium hover:text-primary transition-colors"
-            href="#skills"
-          >
-            Skills
-          </a>
-          <a
-            class="text-sm font-medium hover:text-primary transition-colors"
-            href="#projects"
-          >
-            Projects
-          </a>
-          <a
-            class="text-sm font-medium hover:text-primary transition-colors"
-            href="#contact"
-          >
-            Contact
-          </a>
-        </nav>
+            <!-- ===== Light Mode ===== -->
+            <span class="material-symbols-outlined text-base block dark:hidden">
+              light_mode
+            </span>
+  
+            <!-- ===== Dark Mode ===== -->
+            <span class="material-symbols-outlined text-base hidden dark:block">
+              dark_mode
+            </span>
+          </button>
+        </div>
+
       </header>
 
       <main class="py-16 sm:py-24">
@@ -781,5 +812,7 @@
       </footer>
     </div>
   </div>
+
+  <script src="./script.js"></script>
 </body>
 </html>
