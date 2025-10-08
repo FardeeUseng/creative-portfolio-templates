@@ -1,0 +1,7 @@
+body {
+  font-family: "Inter", sans-serif;
+}
+
+section {
+  scroll-margin-top: 96px; /* ปรับตาม navbar height */
+}

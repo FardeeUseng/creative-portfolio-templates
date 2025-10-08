@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>SaaS Template Docs</title>
+
+    <!-- ============ Favicon ============ -->
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
+
+    <!-- ============ Tailwind CSS ============ -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="./tailwid-config.js"></script>
+
+    <!-- ============ Fonts ============ -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+
+    <!-- ============ Custom CSS ============ -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body
+    class="
+      bg-background-light dark:bg-background-dark 
+      font-display text-gray-800 dark:text-gray-200
+    "
+  >
+    <div class="flex flex-col min-h-screen">
+      <header
+        class="
+          sticky top-0 z-10 
+          bg-background-light/80 dark:bg-background-dark/80 
+          backdrop-blur-sm border-b border-gray-200 dark:border-gray-800
+        "
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center gap-4">
+              <div class="text-primary size-8">
+                <svg
+                  fill="none"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="
+                      M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 
+                      35.1504 41.3601 35.2992L24 42V18.4228Z
+                    "
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  ></path>
+                  <path
+                    clip-rule="evenodd"
+                    d="
+                      M24 8.18819L33.4123 11.574L24 15.2071L14.5877 
+                      11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 
+                      32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 
+                      37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 
+                      22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 
+                      3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 
+                      38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 
+                      25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 
+                      45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 
+                      8.65208L25.354 2.29885Z
+                    "
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+              <h1 class="text-xl font-bold text-gray-900 dark:text-white">
+                Freelancer Showcase Template Docs
+              </h1>
+            </div>
+
+            <!-- ===== Actions ===== -->
+            <div class="flex items-center gap-4">
+              <!-- ===== Theme Toggle ===== -->
+              <button
+                id="theme-toggle"
+                class="
+                  h-8 w-8
+                  flex items-center justify-center
+                  rounded-lg bg-gray-200/50 dark:bg-gray-700/50 
+                  text-gray-800 dark:text-gray-200 
+                  hover:bg-gray-200 dark:hover:bg-gray-700
+                "
+              >
+                <!-- ===== Light Mode ===== -->
+                <span class="material-symbols-outlined text-base block dark:hidden">
+                  light_mode
+                </span>
+    
+                <!-- ===== Dark Mode ===== -->
+                <span class="material-symbols-outlined text-base hidden dark:block">
+                  dark_mode
+                </span>
+              </button>
+
+              <a
+                href="#support"
+                class="
+                  rounded-lg h-10 px-4 
+                  flex items-center justify-center 
+                  bg-primary hover:bg-primary/90 transition-colors
+                  text-white text-sm font-bold
+                "
+              >
+                Get Help
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main
+        class="
+          container flex-grow mx-auto 
+          px-4 sm:px-6 lg:px-8 py-8 lg:py-12
+        "
+      >
+        <div class="lg:grid lg:grid-cols-12 lg:gap-8">
+          <aside class="lg:col-span-3 lg:sticky lg:top-24 self-start">
+            <nav class="space-y-1">
+              <h2 class="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                On this page
+              </h2>
+              <a
+                href="#demo-previews"
+                class="
+                  block p-3 
+                  rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 
+                  text-gray-700 dark:text-gray-300 font-medium transition-colors
+                "
+              >
+                Demo Previews
+              </a>
+              <a
+                href="#introduction"
+                class="
+                  block p-3 
+                  rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 
+                  text-gray-700 dark:text-gray-300 font-medium transition-colors
+                "
+              >
+                Introduction
+              </a>
+              <a
+                href="#folder-structure"
+                class="
+                  block p-3 
+                  rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 
+                  text-gray-700 dark:text-gray-300 font-medium transition-colors
+                "
+              >
+                Folder Structure
+              </a>
+              <a
+                href="#getting-started"
+                class="
+                  block p-3 
+                  rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 
+                  text-gray-700 dark:text-gray-300 font-medium transition-colors
+                "
+              >
+                Getting Started
+              </a>
+              <a
+                href="#credits"
+                class="
+                  block p-3 
+                  rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 
+                  text-gray-700 dark:text-gray-300 font-medium transition-colors
+                "
+              >
+                Credits
+              </a>
+              <a
+                class="
+                  block p-3 
+                  rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 
+                  text-gray-700 dark:text-gray-300 font-medium transition-colors
+                "
+                href="#support"
+              >
+                Support
+              </a>
+            </nav>
+          </aside>
+
+          <div class="lg:col-span-9">
+            <div class="mb-12">
+              <h1
+                class="
+                  text-4xl md:text-5xl font-bold 
+                  text-gray-900 dark:text-white mb-4
+                "
+              >
+                Freelancer Showcase Template Documentation
+              </h1>
+              <p class="text-lg text-gray-600 dark:text-gray-400">
+                This documentation provides complete setup guidance, 
+                folder structure overview, and customization instructions for the 
+                <strong>Freelancer Showcase</strong> landing page template — 
+                crafted for creative professionals, designers, and developers 
+                to present their work beautifully.
+              </p>
+            </div>
+
+            <div class="space-y-10">
+              <section
+                id="demo-previews"
+                class="
+                  rounded-xl p-6 md:p-8 my-10
+                  bg-gray-100 dark:bg-background-dark/50 
+                "
+              >
+                <h2
+                  class="
+                    pb-3 mb-6 
+                    text-3xl font-bold text-gray-900 dark:text-white
+                    border-b border-gray-200 dark:border-gray-700 
+                  "
+                >
+                  Demo Previews
+                </h2>
+                <p
+                  class="
+                    mb-8
+                    text-base leading-relaxed 
+                    text-gray-600 dark:text-gray-400
+                  "
+                >
+                  Explore the different <strong>Freelancer Showcase</strong> 
+                  demo variations included with this template. Each demo is crafted 
+                  with a unique visual style — from minimal and clean layouts 
+                  to vibrant, animated experiences. Some demos include both 
+                  <strong>Standard</strong> and <strong>Animate</strong> versions, 
+                  while others are designed as a single optimized layout.
+                </p>
+
+                <div class="space-y-16">
+
+                  <!-- Demo 1 -->
+                  <div class="space-y-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                      Demo 1: Futuristic All-in-One
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                      <!-- Static -->
+                      <div class="group">
+                        <h4 class="mb-2 text-lg font-semibold text-gray-800 dark:text-gray-200">
+                          Static Version
+                        </h4>
+                        <div
+                          class="
+                            relative aspect-[16/10] 
+                            rounded-xl overflow-hidden shadow-lg
+                          "
+                        >
+                          <img 
+                            src="../document/assets/thumbnails/template-demo-1.png" 
+                            alt="Demo 1 Static Screenshot" 
+                            class="w-full h-full object-cover"
+                          />
+
+                          <!-- Overlay button -->
+                          <div
+                            class="
+                              absolute inset-0 flex items-center justify-center 
+                              bg-black/50 opacity-0 group-hover:opacity-100 
+                              transition-opacity duration-300
+                            "
+                          >
+                            <a 
+                              href="/tech-startup-templates/freelancer-showcase/template/demo-1/standard" 
+                              target="_blank" 
+                              class="
+                                px-4 py-2 bg-primary text-white rounded-md 
+                                text-sm font-medium hover:bg-primary-dark
+                              "
+                            >
+                              Preview
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Animated -->
+                      <div class="group">
+                        <h4 
+                          class="
+                            mb-2 text-lg font-semibold 
+                            text-gray-800 dark:text-gray-200
+                          "
+                        >
+                          Animated Version
+                        </h4>
+                        <div 
+                          class="
+                            relative
+                            aspect-[16/10] rounded-xl overflow-hidden 
+                            shadow-lg transform group-hover:scale-105 
+                            transition-transform duration-300 ease-in-out
+                          "
+                        >
+                          <img 
+                            src="../document/assets/thumbnails/template-demo-1.png" 
+                            alt="Demo 1 Animated Screenshot" 
+                            class="w-full h-full object-cover"
+                          />
+
+                          <!-- Overlay button -->
+                          <div
+                            class="
+                              absolute inset-0 flex items-center justify-center 
+                              bg-black/50 opacity-0 group-hover:opacity-100 
+                              transition-opacity duration-300
+                            "
+                          >
+                            <a 
+                              href="/tech-startup-templates/freelancer-showcase/template/demo-1/animate" 
+                              target="_blank" 
+                              class="
+                                px-4 py-2 bg-primary text-white rounded-md 
+                                text-sm font-medium hover:bg-primary-dark
+                              "
+                            >
+                              Preview
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Demo 2 -->
+                  <div class="space-y-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                      Demo 2: Minimalist Dark Theme
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div class="group">
+                        <h4
+                          class="
+                            mb-2 text-lg font-semibold 
+                            text-gray-800 dark:text-gray-200
+                          "
+                        >
+                          Static Version
+                        </h4>
+                        <div
+                          class="
+                            relative aspect-[16/10] 
+                            rounded-xl overflow-hidden shadow-lg
+                          "
+                        >
+                          <img 
+                            src="../document/assets/thumbnails/template-demo-2.png" 
+                            alt="Demo 2 Static Screenshot" 
+                            class="w-full h-full object-cover"
+                          />
+                          
+                          <!-- Overlay button -->
+                          <div
+                            class="
+                              absolute inset-0 flex items-center justify-center 
+                              bg-black/50 opacity-0 group-hover:opacity-100 
+                              transition-opacity duration-300
+                            "
+                          >
+                            <a 
+                              href="/tech-startup-templates/freelancer-showcase/template/demo-2/standard" 
+                              target="_blank" 
+                              class="
+                                px-4 py-2 bg-primary text-white rounded-md 
+                                text-sm font-medium hover:bg-primary-dark
+                              "
+                            >
+                              Preview
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <h4
+                          class="
+                            mb-2 text-lg font-semibold 
+                            text-gray-800 dark:text-gray-200
+                          "
+                        >
+                          Animated Version
+                        </h4>
+                        <div
+                          class="
+                            relative
+                            aspect-[16/10] rounded-xl overflow-hidden 
+                            shadow-lg transform group-hover:scale-105 
+                            transition-transform duration-300 ease-in-out
+                          "
+                        >
+                          <img 
+                            src="../document/assets/thumbnails/template-demo-2.png" 
+                            alt="Demo 2 Animated Screenshot" 
+                            class="w-full h-full object-cover"
+                          />
+                          
+                          <!-- Overlay button -->
+                          <div
+                            class="
+                              absolute inset-0 flex items-center justify-center 
+                              bg-black/50 opacity-0 group-hover:opacity-100 
+                              transition-opacity duration-300
+                            "
+                          >
+                            <a 
+                              href="/tech-startup-templates/freelancer-showcase/template/demo-2/animate" 
+                              target="_blank" 
+                              class="
+                                px-4 py-2 bg-primary text-white rounded-md 
+                                text-sm font-medium hover:bg-primary-dark
+                              "
+                            >
+                              Preview
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <!-- Demo 3 -->
+                  <div class="space-y-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                      Demo 3: Artistic Dynamic
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                      <div class="group">
+                        <h4
+                          class="
+                            mb-2 text-lg font-semibold 
+                            text-gray-800 dark:text-gray-200
+                          "
+                        >
+                          Static Version
+                        </h4>
+                        <div
+                          class="
+                            relative aspect-[16/10] 
+                            rounded-xl overflow-hidden shadow-lg
+                          "
+                        >
+                          <img 
+                            src="../document/assets/thumbnails/template-demo-3.png" 
+                            alt="Demo 3 Static Screenshot" 
+                            class="w-full h-full object-cover"
+                          />
+                          
+                          <!-- Overlay button -->
+                          <div
+                            class="
+                              absolute inset-0 flex items-center justify-center 
+                              bg-black/50 opacity-0 group-hover:opacity-100 
+                              transition-opacity duration-300
+                            "
+                          >
+                            <a 
+                              href="/tech-startup-templates/freelancer-showcase/template/demo-3/standard" 
+                              target="_blank" 
+                              class="
+                                px-4 py-2 bg-primary text-white rounded-md 
+                                text-sm font-medium hover:bg-primary-dark
+                              "
+                            >
+                              Preview
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <h4
+                          class="
+                            mb-2 text-lg font-semibold 
+                            text-gray-800 dark:text-gray-200
+                          "
+                        >
+                          Animated Version
+                        </h4>
+                        <div
+                          class="
+                            relative
+                            aspect-[16/10] rounded-xl overflow-hidden 
+                            shadow-lg transform group-hover:scale-105 
+                            transition-transform duration-300 ease-in-out
+                          "
+                        >
+                          <img 
+                            src="../document/assets/thumbnails/template-demo-3.png" 
+                            alt="Demo 3 Animated Screenshot" 
+                            class="w-full h-full object-cover"
+                          />
+                          
+                          <!-- Overlay button -->
+                          <div
+                            class="
+                              absolute inset-0 flex items-center justify-center 
+                              bg-black/50 opacity-0 group-hover:opacity-100 
+                              transition-opacity duration-300
+                            "
+                          >
+                            <a 
+                              href="/tech-startup-templates/freelancer-showcase/template/demo-3/animate" 
+                              target="_blank" 
+                              class="
+                                px-4 py-2 bg-primary text-white rounded-md 
+                                text-sm font-medium hover:bg-primary-dark
+                              "
+                            >
+                              Preview
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Demo 4 -->
+                  <div class="space-y-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                      Demo 4: Minimalist Editorial 
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                      <div class="group">
+                        <h4
+                          class="
+                            mb-2 text-lg font-semibold 
+                            text-gray-800 dark:text-gray-200
+                          "
+                        >
+                          Static Version
+                        </h4>
+                        <div
+                          class="
+                            relative aspect-[16/10] 
+                            rounded-xl overflow-hidden shadow-lg
+                          "
+                        >
+                          <img 
+                            src="../document/assets/thumbnails/template-demo-4.png" 
+                            alt="Demo 3 Static Screenshot" 
+                            class="w-full h-full object-cover"
+                          />
+                          
+                          <!-- Overlay button -->
+                          <div
+                            class="
+                              absolute inset-0 flex items-center justify-center 
+                              bg-black/50 opacity-0 group-hover:opacity-100 
+                              transition-opacity duration-300
+                            "
+                          >
+                            <a 
+                              href="/tech-startup-templates/freelancer-showcase/template/demo-4/standard" 
+                              target="_blank" 
+                              class="
+                                px-4 py-2 bg-primary text-white rounded-md 
+                                text-sm font-medium hover:bg-primary-dark
+                              "
+                            >
+                              Preview
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="group">
+                        <h4
+                          class="
+                            mb-2 text-lg font-semibold 
+                            text-gray-800 dark:text-gray-200
+                          "
+                        >
+                          Animated Version
+                        </h4>
+                        <div
+                          class="
+                            relative
+                            aspect-[16/10] rounded-xl overflow-hidden 
+                            shadow-lg transform group-hover:scale-105 
+                            transition-transform duration-300 ease-in-out
+                          "
+                        >
+                          <img 
+                            src="../document/assets/thumbnails/template-demo-4.png" 
+                            alt="Demo 3 Animated Screenshot" 
+                            class="w-full h-full object-cover"
+                          />
+                          
+                          <!-- Overlay button -->
+                          <div
+                            class="
+                              absolute inset-0 flex items-center justify-center 
+                              bg-black/50 opacity-0 group-hover:opacity-100 
+                              transition-opacity duration-300
+                            "
+                          >
+                            <a 
+                              href="/tech-startup-templates/freelancer-showcase/template/demo-4/animate" 
+                              target="_blank" 
+                              class="
+                                px-4 py-2 bg-primary text-white rounded-md 
+                                text-sm font-medium hover:bg-primary-dark
+                              "
+                            >
+                              Preview
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Demo 5 -->
+                  <div class="space-y-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                      Demo 5: Cyberpunk
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div class="group">
+                        <h4
+                          class="
+                            mb-2 text-lg font-semibold 
+                            text-gray-800 dark:text-gray-200
+                          "
+                        >
+                          Animated Version
+                        </h4>
+                        <div
+                          class="
+                            relative
+                            aspect-[16/10] rounded-xl overflow-hidden 
+                            shadow-lg transform group-hover:scale-105 
+                            transition-transform duration-300 ease-in-out
+                          "
+                        >
+                          <img 
+                            src="../document/assets/thumbnails/template-demo-5.png" 
+                            alt="Demo 3 Animated Screenshot" 
+                            class="w-full h-full object-cover"
+                          />
+                          
+                          <!-- Overlay button -->
+                          <div
+                            class="
+                              absolute inset-0 flex items-center justify-center 
+                              bg-black/50 opacity-0 group-hover:opacity-100 
+                              transition-opacity duration-300
+                            "
+                          >
+                            <a 
+                              href="/tech-startup-templates/freelancer-showcase/template/demo-5" 
+                              target="_blank" 
+                              class="
+                                px-4 py-2 bg-primary text-white rounded-md 
+                                text-sm font-medium hover:bg-primary-dark
+                              "
+                            >
+                              Preview
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Demo 6 -->
+                  <div class="space-y-8">
+                    <h3 class="text-2xl font-bold text-gray-900 dark:text-white">
+                      Demo 6: Developer Console
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div class="group">
+                        <h4
+                          class="
+                            mb-2 text-lg font-semibold 
+                            text-gray-800 dark:text-gray-200
+                          "
+                        >
+                          Animated Version
+                        </h4>
+                        <div
+                          class="
+                            relative
+                            aspect-[16/10] rounded-xl overflow-hidden 
+                            shadow-lg transform group-hover:scale-105 
+                            transition-transform duration-300 ease-in-out
+                          "
+                        >
+                          <img 
+                            src="../document/assets/thumbnails/template-demo-6.png" 
+                            alt="Demo 3 Animated Screenshot" 
+                            class="w-full h-full object-cover"
+                          />
+                          
+                          <!-- Overlay button -->
+                          <div
+                            class="
+                              absolute inset-0 flex items-center justify-center 
+                              bg-black/50 opacity-0 group-hover:opacity-100 
+                              transition-opacity duration-300
+                            "
+                          >
+                            <a 
+                              href="/tech-startup-templates/freelancer-showcase/template/demo-6" 
+                              target="_blank" 
+                              class="
+                                px-4 py-2 bg-primary text-white rounded-md 
+                                text-sm font-medium hover:bg-primary-dark
+                              "
+                            >
+                              Preview
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section id="introduction">
+                <h2
+                  class="
+                    pb-2 mb-4 
+                    text-2xl font-bold text-gray-900 dark:text-white
+                    border-b border-gray-200 dark:border-gray-700 
+                  "
+                >
+                  Introduction
+                </h2>
+                <p
+                  class="
+                    text-base leading-relaxed 
+                    text-gray-600 dark:text-gray-400 mb-4
+                  "
+                >
+                  Thank you for choosing our <strong>Freelancer Showcase Template</strong>.
+                  This template is crafted for creative professionals, developers, and freelancers
+                  who want to present their portfolio in a clean and modern way. 
+                  It’s lightweight, fully responsive, and easy to customize — 
+                  helping you showcase your work beautifully and attract more clients.
+                </p>
+                <ul class="list-disc list-inside text-base text-gray-600 dark:text-gray-400">
+                  <li>Built with HTML5, CSS3, and Tailwind CSS</li>
+                  <li>Optimized for portfolio and freelancer use cases</li>
+                  <li>Includes multiple demo variations — with and without animations</li>
+                </ul>
+              </section>
+
+              <section id="folder-structure">
+                <h2
+                  class="
+                    pb-2 mb-4 
+                    text-2xl font-bold text-gray-900 dark:text-white
+                    border-b border-gray-200 dark:border-gray-700 
+                  "
+                >
+                  Folder Structure
+                </h2>
+                <p
+                  class="
+                    text-base leading-relaxed mb-6
+                    text-gray-600 dark:text-gray-400 
+                  "
+                >
+                  The Freelancer Showcase Template is organized to make it easy 
+                  to navigate and customize. Each demo variation, including Standard 
+                  and Animate versions, is separated into its own folder.
+                </p>
+                <div class="space-y-4">
+                  <div
+                    class="
+                      bg-white dark:bg-background-dark p-4 rounded-lg 
+                      border border-gray-200 dark:border-gray-800
+                    "
+                  >
+                    <p class="font-mono text-sm font-medium text-primary">index.html</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      Main HTML file for each demo version.
+                    </p>
+                  </div>
+
+                  <div
+                    class="
+                      bg-white dark:bg-background-dark p-4 rounded-lg 
+                      border border-gray-200 dark:border-gray-800
+                    "
+                  >
+                    <p class="font-mono text-sm font-medium text-primary">style.css</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      CSS file containing all styling for the template, including 
+                      Tailwind utilities and custom styles.
+                    </p>
+                  </div>
+
+                  <div
+                    class="
+                      bg-white dark:bg-background-dark p-4 rounded-lg 
+                      border border-gray-200 dark:border-gray-800
+                    "
+                  >
+                    <p class="font-mono text-sm font-medium text-primary">script.js</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      JavaScript file for interactive features, animations, 
+                      and demo-specific behaviors.
+                    </p>
+                  </div>
+
+                  <div
+                    class="
+                      bg-white dark:bg-background-dark p-4 rounded-lg 
+                      border border-gray-200 dark:border-gray-800
+                    "
+                  >
+                    <p class="font-mono text-sm font-medium text-primary">
+                      tailwind-config.js
+                    </p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      Tailwind CSS configuration file for customizing colors, fonts, 
+                      spacing, and utilities.
+                    </p>
+                  </div>
+
+                  <div
+                    class="
+                      bg-white dark:bg-background-dark p-4 rounded-lg 
+                      border border-gray-200 dark:border-gray-800
+                    "
+                  >
+                    <p class="font-mono text-sm font-medium text-primary">assets/</p>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                      Contains images, icons, fonts, and favicons used 
+                      throughout the template demos.
+                    </p>
+                  </div>
+                </div>
+              </section>
+
+              <section id="getting-started">
+                <h2
+                  class="
+                    pb-2 mb-4
+                    text-2xl font-bold text-gray-900 dark:text-white
+                    border-b border-gray-200 dark:border-gray-700 
+                  "
+                >
+                  Getting Started
+                </h2>
+                <p
+                  class="
+                    text-base leading-relaxed mb-6
+                    text-gray-600 dark:text-gray-400 
+                  "
+                >
+                  Follow these steps to get your landing page up and running. 
+                  No build tools are required; Tailwind CSS is included via CDN.
+                </p>
+                <ol class="list-decimal list-inside space-y-4">
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">
+                      Download the Template:
+                    </span>
+                    Download the template package from your purchase source.
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">
+                      Extract the Package:
+                    </span>
+                    Extract the contents of the downloaded package to your desired project directory.
+                  </li>
+                  <li class="text-gray-600 dark:text-gray-400">
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">
+                      Open in Browser:
+                    </span>
+                    Open the
+                    <code
+                      class="
+                        bg-primary/10 dark:bg-primary/20 rounded
+                        text-primary font-mono text-sm px-1 py-0.5 
+                      "
+                    >
+                      index.html
+                    </code>
+                    file in your web browser. If your template has multiple demos, navigate 
+                    to the demo folder you want to view (Standard / Animate version).
+                  </li>
+                </ol>
+              </section>
+
+              <section id="credits">
+                <h2
+                  class="
+                    pb-2 mb-4 
+                    text-2xl font-bold text-gray-900 dark:text-white
+                    border-b border-gray-200 dark:border-gray-700 
+                  "
+                >
+                  Credits
+                </h2>
+                <p
+                  class="
+                    mb-6
+                    text-base leading-relaxed 
+                    text-gray-600 dark:text-gray-400
+                  "
+                >
+                  This template utilizes the following resources:
+                </p>
+                <ul
+                  class="
+                    list-disc list-inside space-y-2 
+                    text-gray-600 dark:text-gray-400
+                  "
+                >
+                  <li>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">
+                      Tailwind CSS:
+                    </span>
+                    Utility-first CSS framework used for building responsive layouts.
+                  </li>
+                  <li>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">
+                      Google Icons (Material Icons):
+                    </span>
+                    Free icons for UI elements.
+                  </li>
+                  <li>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">
+                      Animate.css:
+                    </span>
+                    Library for CSS animations used in demo elements.
+                  </li>
+                  <li>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">
+                      Google Fonts:
+                    </span>
+                    Free fonts used for typography.
+                  </li>
+                  <li>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">
+                      Unsplash:
+                    </span>
+                    Free stock images used in demo previews.
+                  </li>
+                </ul>
+              </section>
+
+              <section id="support">
+                <h2
+                  class="
+                    pb-2 mb-4 
+                    text-2xl font-bold text-gray-900 dark:text-white
+                    border-b border-gray-200 dark:border-gray-700 
+                  "
+                >
+                  Support
+                </h2>
+                <div
+                  class="
+                    bg-primary/10 dark:bg-primary/20 p-6 
+                    rounded-lg border-l-4 border-primary
+                  "
+                >
+                  <p
+                    class="
+                      text-base leading-relaxed 
+                      text-gray-800 dark:text-gray-200
+                    "
+                  >
+                    If you encounter any issues or have questions, please contact our support 
+                    team at
+                    <a
+                      class="font-medium text-primary hover:underline"
+                      href="mailto:support@example.com"
+                    >
+                      fardee.tat@gmail.com
+                    </a>. We typically respond within 24–48 hours and are happy to assist you!
+                  </p>
+                </div>
+              </section>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer
+        class="
+          bg-background-light dark:bg-background-dark 
+          border-t border-gray-200 dark:border-gray-800
+        "
+      >
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+          <div class="flex flex-col md:flex-row items-center justify-between">
+            <p class="text-sm text-gray-500 dark:text-gray-400">
+              © 2023 Fardee Useng. All rights reserved.
+            </p>
+            <a
+              class="
+                text-sm text-gray-500 dark:text-gray-400 
+                hover:text-primary dark:hover:text-primary 
+                transition-colors mt-2 md:mt-0
+              "
+              href="#"
+            >
+              fardee.tat@gmail.com
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
