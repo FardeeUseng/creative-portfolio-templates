@@ -1,0 +1,26 @@
+section {
+  scroll-margin-top: 150px;
+}
+
+.grid-bg {
+  background-image: linear-gradient(
+      to right,
+      theme("colors.border-dark") 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, theme("colors.border-dark") 1px, transparent 1px);
+  background-size: 4rem 4rem;
+}
+
+.active-nav-link {
+  color: theme("colors.brand-primary");
+}
+
+.active-nav-link::after {
+  content: "";
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  background-color: theme("colors.brand-primary");
+  margin-top: 4px;
+}

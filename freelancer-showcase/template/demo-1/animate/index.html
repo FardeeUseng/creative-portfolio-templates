@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Demo 1 - Freelancer Showcase (Standard)</title>
+  <title>Demo 1 - Freelancer Showcase (Animate)</title>
 
   <!-- ============ Favicon ============ -->
   <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
@@ -17,7 +17,7 @@
     rel="stylesheet"
   />
   
-  <!-- ============ Icons ============ -->
+  <!-- ============ Icons & Animations ============ -->
   <link
     rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
@@ -26,6 +26,10 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
   />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  >
 
   <!-- ============ Tailwind CSS ============ -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -140,12 +144,24 @@
             "
           >
             <!-- ===== Light Mode ===== -->
-            <span class="material-symbols-outlined text-base block dark:hidden">
+            <span
+              class="
+                animate__animated material-symbols-outlined
+                text-base block dark:hidden
+              "
+              data-animate="animate__rotateIn"
+            >
               light_mode
             </span>
   
             <!-- ===== Dark Mode ===== -->
-            <span class="material-symbols-outlined text-base hidden dark:block">
+            <span
+              class="
+                animate__animated material-symbols-outlined
+                text-base hidden dark:block
+              "
+              data-animate="animate__rotateIn"
+            >
               dark_mode
             </span>
           </button>
@@ -155,21 +171,37 @@
       <main class="py-16 sm:py-24">
         <section id="home">
           <div class="text-center max-w-4xl mx-auto" data-rellax-speed="-2">
-            <h1 class="
-              text-4xl sm:text-6xl font-bold 
-              tracking-tighter text-gray-900 dark:text-white
-            ">
+            <h1
+              class="
+                animate__animated
+                text-4xl sm:text-6xl font-bold 
+                tracking-tighter text-gray-900 dark:text-white
+              "
+              data-animate="animate__flash"
+            >
               Crafting Digital Experiences That
               <span class="text-primary dynamic-text-container">
                 <span class="opacity-100">Resonate</span>
               </span>
             </h1>
-            <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400">
+            <p
+              class="
+                animate__animated
+                mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400
+              "
+              data-animate="animate__fadeInUp"
+            >
               I'm a freelance designer and developer specializing in creating
               innovative and user-centric digital products. Let's bring your
               vision to life.
             </p>
-            <div class="mt-10 flex items-center justify-center gap-x-6">
+            <div
+              class="
+                animate__animated
+                mt-10 flex items-center justify-center gap-x-6
+              "
+              data-animate="animate__fadeInUp"
+            >
               <a class="
                   bg-primary px-6 py-3 rounded-lg hover:opacity-90 transition-opacity glow-effect
                   text-white text-base font-bold leading-normal tracking-wide
@@ -197,7 +229,10 @@
         </section>
 
         <section id="about" class="py-24 sm:py-32">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="animate__animated mx-auto max-w-7xl px-6 lg:px-8"
+            data-animate="animate__fadeInUp"
+          >
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div
                 class="relative h-96 w-full rounded-xl bg-cover bg-center"
@@ -238,7 +273,10 @@
         </section>
 
         <section id="skills" class="py-24 sm:py-32">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="animate__animated mx-auto max-w-7xl px-6 lg:px-8"
+            data-animate="animate__fadeInUp"
+          >
             <div class="mx-auto max-w-2xl lg:text-center" data-rellax-speed="0.5">
               <h2 class="text-base font-semibold leading-7 text-primary">
                 My Expertise
@@ -273,9 +311,17 @@
                       Overall Proficiency
                     </p>
                   </div>
-                  <div class="text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
-                    90%
-                  </div>
+
+                  <h3 
+                    class="
+                      animate_counter text-5xl font-bold 
+                      text-gray-900 dark:text-white tracking-tight
+                    "
+                    data-target="90"
+                  >
+                    0%
+                  </h3>
+
                   <div class="space-y-4 pt-4">
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
@@ -285,11 +331,16 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 95%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="90%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
                     </div>
+
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
                         CSS
@@ -298,11 +349,16 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 90%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="90%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
                     </div>
+
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
                         JavaScript
@@ -311,11 +367,16 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 85%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="85%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
                     </div>
+
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
                         React
@@ -324,11 +385,16 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 80%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="80%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
                     </div>
+
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
                         Node.js
@@ -337,7 +403,11 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 70%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="70%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
@@ -361,9 +431,17 @@
                       Overall Proficiency
                     </p>
                   </div>
-                  <div class="text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
-                    85%
-                  </div>
+                  
+                  <h3 
+                    class="
+                      animate_counter text-5xl font-bold 
+                      text-gray-900 dark:text-white tracking-tight
+                    "
+                    data-target="85"
+                  >
+                    0%
+                  </h3>
+
                   <div class="space-y-4 pt-4">
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
@@ -373,11 +451,16 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 80%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="80%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
                     </div>
+
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
                         Kotlin
@@ -386,11 +469,16 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 75%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="75%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
                     </div>
+
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
                         React Native
@@ -399,11 +487,16 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 90%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="90%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
                     </div>
+
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
                         Flutter
@@ -412,7 +505,11 @@
                         w-full bg-gray-200 dark:bg-gray-800/50 
                         rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 70%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="70%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
@@ -436,9 +533,17 @@
                       Overall Proficiency
                     </p>
                   </div>
-                  <div class="text-5xl font-bold text-gray-900 dark:text-white tracking-tight">
-                    95%
-                  </div>
+
+                  <h3 
+                    class="
+                      animate_counter text-5xl font-bold 
+                      text-gray-900 dark:text-white tracking-tight
+                    "
+                    data-target="95"
+                  >
+                    0%
+                  </h3>
+                  
                   <div class="space-y-4 pt-4">
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
@@ -448,11 +553,16 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 95%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="95%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
                     </div>
+
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
                         Sketch
@@ -461,11 +571,16 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 80%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="80%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
                     </div>
+
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
                         Prototyping
@@ -474,11 +589,16 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 90%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="90%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
                     </div>
+
                     <div class="flex items-center gap-3">
                       <p class="w-20 text-sm font-medium text-gray-600 dark:text-gray-400">
                         User Research
@@ -487,7 +607,11 @@
                           w-full bg-gray-200 dark:bg-gray-800/50 
                           rounded-full h-2 skill-bar-wrapper
                       ">
-                        <div class="bg-primary h-2 rounded-full" style="width: 85%;">
+                        <div
+                          class="progress-bar bg-primary h-2 rounded-full"
+                          data-width="85%"
+                          style="width: 0;"
+                        >
                           <div class="skill-bar-glow"></div>
                         </div>
                       </div>
@@ -500,7 +624,10 @@
         </section>
 
         <section id="awards" class="py-24 sm:py-32">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="animate__animated mx-auto max-w-7xl px-6 lg:px-8"
+            data-animate="animate__fadeInUp"
+          >
             <div class="mx-auto max-w-2xl lg:text-center" data-rellax-speed="0.5">
               <h2 class="text-base font-semibold leading-7 text-primary">
                 Certifications &amp; Awards
@@ -516,6 +643,7 @@
                 industry leaders. Here are some of my proudest achievements.
               </p>
             </div>
+
             <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <article class="
                   group relative flex flex-col gap-2 rounded-xl p-6 
@@ -560,6 +688,7 @@
                   <div class="
                       h-12 w-12 min-w-12 bg-primary/10 rounded-full 
                       flex items-center justify-center text-primary 
+                      animate-icon-float [animation-delay:-0.4s]
                   ">
                     <span class="material-symbols-outlined text-2xl">emoji_events</span>
                   </div>
@@ -589,7 +718,8 @@
                     class="
                       h-12 w-12 min-w-12 bg-primary/10 rounded-full 
                       flex items-center justify-center text-primary 
-                    ">
+                      animate-icon-float [animation-delay:-0.6s]"
+                    >
                     <span class="material-symbols-outlined text-2xl">verified</span>
                   </div>
                   <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
@@ -610,7 +740,10 @@
         </section>
 
         <section id="projects" class="py-24 sm:py-32">
-          <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div
+            class="animate__animated mx-auto max-w-7xl px-6 lg:px-8"
+            data-animate="animate__fadeInUp"
+          >
             <div class="mx-auto max-w-2xl lg:text-center" data-rellax-speed="0.5">
               <h2 class="text-base font-semibold leading-7 text-primary">
                 Featured Projects
@@ -728,7 +861,11 @@
         </section>
 
         <section id="contact" class="py-24 sm:py-32">
-          <div class="mx-auto max-w-2xl px-4" data-rellax-speed="0.5">
+          <div
+            class="animate__animated mx-auto max-w-2xl px-4"
+            data-rellax-speed="0.5" 
+            data-animate="animate__fadeInUp"
+          >
             <div class="mx-auto max-w-2xl lg:text-center">
               <h2 class="text-base font-semibold leading-7 text-primary">
                 Get In Touch
@@ -740,6 +877,7 @@
                 Let's Build Something Great
               </p>
             </div>
+
             <div class="
               mt-16 p-6 
               rounded-xl bg-background-light/50 dark:bg-background-dark/50 

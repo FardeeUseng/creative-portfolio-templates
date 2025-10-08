@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Demo 2 - Freelancer Showcase (Standard)</title>
+  <title>Demo 2 - Freelancer Showcase (Animate)</title>
 
   <!-- ============ Favicon ============ -->
   <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
@@ -26,6 +26,10 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
   />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  >
   
   <!-- ============ Tailwind CSS ============ -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -97,18 +101,28 @@
             <p class="font-mono text-sm uppercase tracking-widest text-brand-secondary">
               // FREELANCE DESIGNER &amp; DEVELOPER
             </p>
-            <h1 class="
-              mt-4 text-4xl sm:text-6xl lg:text-7xl 
-              font-bold text-brand-primary leading-tight
-            ">
+            <h1
+              class="
+                animate__animated
+                mt-4 text-4xl sm:text-6xl lg:text-7xl 
+                font-bold text-brand-primary leading-tight
+              "
+              data-animate="animate__flash"
+            >
               Crafting Digital Realities from Code and Pixels.
             </h1>
-            <p class="mt-6 text-lg text-brand-secondary max-w-2xl">
+            <p
+              class="animate__animated mt-6 text-lg text-brand-secondary max-w-2xl"
+              data-animate="animate__fadeInUp"
+            >
               I build unique, high-performance web experiences that drive
               results. Clean, minimalist aesthetics with a focus on
               user-centric design.
             </p>
-            <div class="mt-10 flex items-center gap-x-6">
+            <div
+              class="animate__animated mt-10 flex items-center gap-x-6"
+              data-animate="animate__fadeInUp"
+            >
               <a class="
                 bg-brand-primary text-background-dark text-base font-bold 
                 px-8 py-4 hover:bg-opacity-90 transition-colors
@@ -136,7 +150,13 @@
       </section>
 
       <section id="about" class="col-span-12 lg:col-span-7">
-        <div class="bg-surface-dark border border-border-dark p-8 md:p-12 h-full">
+        <div
+          class="
+            animate__animated p-8 md:p-12 h-full
+            bg-surface-dark border border-border-dark
+          "
+          data-animate="animate__fadeInUp"
+        >
           <p class="font-mono text-sm uppercase tracking-widest text-brand-secondary">
             // ABOUT ME
           </p>
@@ -161,7 +181,13 @@
       </section>
 
       <div class="col-span-12 lg:col-span-5">
-        <div class="bg-surface-dark border border-border-dark h-full">
+        <div
+          class="
+            animate__animated h-full
+            bg-surface-dark border border-border-dark 
+          " 
+          data-animate="animate__fadeInUp"
+        >
           <img
             alt="Portrait of a freelancer"
             class="object-cover w-full h-full grayscale"
@@ -171,7 +197,13 @@
       </div>
 
       <section id="skills" class="col-span-12">
-        <div class="bg-surface-dark border border-border-dark p-8 md:p-12">
+        <div
+          class="
+            animate__animated p-8 md:p-12
+            bg-surface-dark border border-border-dark 
+          "
+          data-animate="animate__fadeInUp"
+        >
           <p class="font-mono text-sm uppercase tracking-widest text-brand-secondary">
             // SKILLS
           </p>
@@ -180,7 +212,12 @@
           </h2>
           <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8">
             <div class="text-center">
-              <p class="text-6xl font-mono text-brand-primary">90%</p>
+              <p
+                class="animate_counter text-6xl font-mono text-brand-primary"
+                data-target="90"
+              >
+                0%
+              </p>
               <p class="mt-2 text-sm font-semibold tracking-wider uppercase">
                 UI/UX Design
               </p>
@@ -189,7 +226,12 @@
               </p>
             </div>
             <div class="text-center">
-              <p class="text-6xl font-mono text-brand-primary">80%</p>
+              <p
+                class="animate_counter text-6xl font-mono text-brand-primary"
+                data-target="80"
+              >
+                0%
+              </p>
               <p class="mt-2 text-sm font-semibold tracking-wider uppercase">
                 Frontend Dev
               </p>
@@ -198,7 +240,12 @@
               </p>
             </div>
             <div class="text-center">
-              <p class="text-6xl font-mono text-brand-primary">75%</p>
+              <p
+                class="animate_counter text-6xl font-mono text-brand-primary"
+                data-target="75"
+              >
+                0%
+              </p>
               <p class="mt-2 text-sm font-semibold tracking-wider uppercase">
                 Backend Dev
               </p>
@@ -207,7 +254,12 @@
               </p>
             </div>
             <div class="text-center">
-              <p class="text-6xl font-mono text-brand-primary">95%</p>
+              <p
+                class="animate_counter text-6xl font-mono text-brand-primary"
+                data-target="95"
+              >
+                0%
+              </p>
               <p class="mt-2 text-sm font-semibold tracking-wider uppercase">
                 Prototyping
               </p>
@@ -220,7 +272,13 @@
       </section>
 
       <section id="projects" class="col-span-12">
-        <div class="bg-surface-dark border border-border-dark p-8 md:p-12">
+        <div
+          class="
+            animate__animated p-8 md:p-12
+            bg-surface-dark border border-border-dark 
+          " 
+          data-animate="animate__fadeInUp"
+        >
           <p class="font-mono text-sm uppercase tracking-widest text-brand-secondary">
             // PROJECTS
           </p>
@@ -285,7 +343,13 @@
       </section>
 
       <section id="awards" class="col-span-12 lg:col-span-8" >
-        <div class="bg-surface-dark border border-border-dark p-8 md:p-12 h-full">
+        <div
+          class="
+            animate__animated p-8 md:p-12 h-full
+            bg-surface-dark border border-border-dark 
+          "
+          data-animate="animate__fadeInUp"
+        >
           <p class="font-mono text-sm uppercase tracking-widest text-brand-secondary">
             // CERTIFICATIONS
           </p>
@@ -337,10 +401,14 @@
       </section>
 
       <section id="contact" class="col-span-12 lg:col-span-4" >
-        <div class="
-          bg-surface-dark border border-border-dark 
-          p-8 md:p-12 h-full flex flex-col
-        ">
+        <div
+          class="
+            animate__animated
+            bg-surface-dark border border-border-dark 
+            p-8 md:p-12 h-full flex flex-col
+          "
+          data-animate="animate__fadeInUp"
+        >
           <p class="font-mono text-sm uppercase tracking-widest text-brand-secondary">
             // CONTACT
           </p>
@@ -403,6 +471,7 @@
       </div>
     </footer>
   </div>
-</body>
 
+  <script src="./script.js"></script>
+</body>
 </html>

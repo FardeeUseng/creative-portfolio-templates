@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" class="dark scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Demo 3 - Freelancer Showcase (Standard)</title>
+
+  <!-- ============ Favicon ============ -->
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+
+  <!-- ============ Fonts ============ -->
+  <link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect" />
+  <link
+    as="style" 
+    href="https://fonts.googleapis.com/css2?display=swap&amp;family=Spline+Sans:wght@400;500;700;900"
+    onload="this.rel='stylesheet'"
+    rel="stylesheet"
+  />
+
+  <!-- ============ Icons & Animations ============ -->
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  >
+
+  <!-- ============ Tailwind CSS ============ -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="./tailwind-config.js"></script>
+
+  <!-- ============ Custom CSS ============ -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+  <div class="
+      relative flex min-h-screen w-full flex-col
+      text-background-dark dark:text-background-light
+  ">
+    <header class="
+        sticky top-0 z-10 px-10 py-5
+        flex items-center justify-between 
+        border-b border-primary/20 whitespace-nowrap 
+        backdrop-blur-sm bg-background-light/80 dark:bg-background-dark/80 
+    ">
+      <div class="flex items-center gap-3">
+        <svg
+          class="h-8 w-8 text-primary"
+          fill="none"
+          viewBox="0 0 48 48"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M39.5563 34.1455V13.8546C39.5563 15.708 36.8773 17.3437 32.7927 18.3189C30.2914 18.916 27.263 19.2655 24 19.2655C20.737 19.2655 17.7086 18.916 15.2073 18.3189C11.1227 17.3437 8.44365 15.708 8.44365 13.8546V34.1455C8.44365 35.9988 11.1227 37.6346 15.2073 38.6098C17.7086 39.2069 20.737 39.5564 24 39.5564C27.263 39.5564 30.2914 39.2069 32.7927 38.6098C36.8773 37.6346 39.5563 35.9988 39.5563 34.1455Z"
+            fill="currentColor"
+          >
+          </path>
+          <path clip-rule="evenodd"
+            d="M10.4485 13.8519C10.4749 13.9271 10.6203 14.246 11.379 14.7361C12.298 15.3298 13.7492 15.9145 15.6717 16.3735C18.0007 16.9296 20.8712 17.2655 24 17.2655C27.1288 17.2655 29.9993 16.9296 32.3283 16.3735C34.2508 15.9145 35.702 15.3298 36.621 14.7361C37.3796 14.246 37.5251 13.9271 37.5515 13.8519C37.5287 13.7876 37.4333 13.5973 37.0635 13.2931C36.5266 12.8516 35.6288 12.3647 34.343 11.9175C31.79 11.0295 28.1333 10.4437 24 10.4437C19.8667 10.4437 16.2099 11.0295 13.657 11.9175C12.3712 12.3647 11.4734 12.8516 10.9365 13.2931C10.5667 13.5973 10.4713 13.7876 10.4485 13.8519ZM37.5563 18.7877C36.3176 19.3925 34.8502 19.8839 33.2571 20.2642C30.5836 20.9025 27.3973 21.2655 24 21.2655C20.6027 21.2655 17.4164 20.9025 14.7429 20.2642C13.1498 19.8839 11.6824 19.3925 10.4436 18.7877V34.1275C10.4515 34.1545 10.5427 34.4867 11.379 35.027C12.298 35.6207 13.7492 36.2054 15.6717 36.6644C18.0007 37.2205 20.8712 37.5564 24 37.5564C27.1288 37.5564 29.9993 37.2205 32.3283 36.6644C34.2508 36.2054 35.702 35.6207 36.621 35.027C37.4573 34.4867 37.5485 34.1546 37.5563 34.1275V18.7877ZM41.5563 13.8546V34.1455C41.5563 36.1078 40.158 37.5042 38.7915 38.3869C37.3498 39.3182 35.4192 40.0389 33.2571 40.5551C30.5836 41.1934 27.3973 41.5564 24 41.5564C20.6027 41.5564 17.4164 41.1934 14.7429 40.5551C12.5808 40.0389 10.6502 39.3182 9.20848 38.3869C7.84205 37.5042 6.44365 36.1078 6.44365 34.1455L6.44365 13.8546C6.44365 12.2684 7.37223 11.0454 8.39581 10.2036C9.43325 9.3505 10.8137 8.67141 12.343 8.13948C15.4203 7.06909 19.5418 6.44366 24 6.44366C28.4582 6.44366 32.5797 7.06909 35.657 8.13948C37.1863 8.67141 38.5667 9.3505 39.6042 10.2036C40.6278 11.0454 41.5563 12.2684 41.5563 13.8546Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          >
+          </path>
+        </svg>
+        <h2 class="text-xl font-bold">Studio</h2>
+      </div>
+
+      <nav class="hidden items-center gap-8 md:flex">
+        <a class="text-sm font-medium hover:text-primary" href="#home">Home</a>
+        <a class="text-sm font-medium hover:text-primary" href="#about">About</a>
+        <a class="text-sm font-medium hover:text-primary" href="#skills">Skills</a>
+        <a class="text-sm font-medium hover:text-primary" href="#projects">Projects</a>
+        <a class="text-sm font-medium hover:text-primary" href="#contact">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <!-- ===== Theme Toggle ===== -->
+        <button
+          id="theme-toggle"
+          class="
+            h-8 w-8
+            flex items-center justify-center
+            rounded-lg bg-gray-200/50 dark:bg-gray-700/50 
+            text-gray-800 dark:text-gray-200 
+            hover:bg-gray-200 dark:hover:bg-gray-700
+          "
+        >
+          <!-- ===== Light Mode ===== -->
+          <span
+            class="
+              animate__animated material-symbols-outlined
+              text-base block dark:hidden
+            "
+            data-animate="animate__rotateIn"
+          >
+            light_mode
+          </span>
+  
+          <!-- ===== Dark Mode ===== -->
+          <span
+            class="
+              animate__animated material-symbols-outlined
+              text-base hidden dark:block
+            "
+            data-animate="animate__rotateIn"
+          >
+            dark_mode
+          </span>
+        </button>
+
+        <button class="hidden rounded-lg bg-primary px-4 py-2 
+            text-sm font-bold text-background-dark transition-transform 
+            hover:scale-105 md:block
+        ">
+          Hire Me
+        </button>
+      </div>
+    </header>
+
+    <main class="container mx-auto flex-1 px-4 py-16 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-5xl">
+        <section id="home" class="@container">
+          <div class="flex flex-col items-center gap-12 @[864px]:flex-row">
+            <div
+              class="animate__animated relative w-full @[864px]:w-1/2"
+              data-animate="animate__jackInTheBox"
+            >
+              <div
+                class="aspect-square w-full rounded-xl bg-cover bg-center"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCtu6hIJR41ipIlSgS8Oxy0wLF3KpBo5EWwqW6cm_OHDc2-Aq13ZUu6An1V9RLkuHTyMDf5Mjal-qQqSdmMAdtEvYydwFD7Wt10OZkRamyMPiiSBvoLL_yGzph1C2VsICoFlseMKZ35T94YtQO_VEVGuT5jav60Ay9PgFBoGMsRNR5a6BREMJErUk5JLabprOozJU5tHH6uJUJWeDFKWHlC90nX85ofj8_pFaLn8PyQmFxKkhQutsgBP2E8_JIGOnKt-hwYy9pGH3k');
+                "
+              ></div>
+              <div class="
+                absolute -bottom-8 -right-8 h-32 w-32 
+                rounded-full bg-primary/20 dark:bg-primary/30"
+              ></div>
+            </div>
+
+            <div class="flex flex-col gap-6 text-center @[864px]:w-1/2 @[864px]:text-left">
+              <div class="flex flex-col gap-4">
+                <h1
+                  class="
+                    animate__animated text-4xl font-black 
+                    tracking-tighter sm:text-5xl md:text-6xl
+                  "
+                  data-animate="animate__flash"
+                >
+                  Unleash Your Creative Vision
+                </h1>
+                <p
+                  class="
+                    animate__animated text-base text-background-dark/70 
+                    dark:text-background-light/70 sm:text-lg
+                  "
+                  data-animate="animate__fadeInUp"
+                >
+                  I'm a freelance designer specializing in crafting unique
+                  digital experiences. Let's bring your ideas to life with
+                  innovative design and cutting-edge technology.
+                </p>
+              </div>
+              <button
+                class="
+                  animate__animated
+                  w-full rounded-lg bg-primary px-5 py-3 
+                  text-base font-bold text-background-dark transition-transform 
+                  hover:scale-105 @[864px]:w-auto
+                "
+                data-animate="animate__fadeInUp"
+              >
+                Explore My Work
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <div class="mt-24 space-y-16">
+          <section
+            id="about"
+            class="animate__animated text-center"
+            data-animate="animate__fadeInUp"
+          >
+            <h2 class="text-3xl font-bold">About Me</h2>
+            <p class="
+                mx-auto mt-4 max-w-3xl 
+                text-background-dark/70 dark:text-background-light/70
+            ">
+              I'm a passionate designer with a focus on creating visually
+              stunning and user-centric digital products. My approach blends
+              artistic expression with strategic design thinking to deliver
+              exceptional results. I thrive on challenges and am always eager
+              to explore new creative avenues.
+            </p>
+          </section>
+
+          <section
+            id="skills"
+            class="animate__animated"
+            data-animate="animate__fadeInUp"
+          >
+            <h2 class="mb-8 text-center text-3xl font-bold">
+              Skills Visualization
+            </h2>
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
+              <div class="
+                  aspect-square rounded-xl bg-cover bg-center 
+                  transition-transform hover:scale-105"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAFKkx0LdLnO5ciQYDByGZAt3iSugCWXfcT8O9GcZl1f4GfoNfJKbeEMbm9NtbDzN14HBqZRYG8czDVXH9_qk20X-hH8w4VkRTXdFlwz6CLmirMbnd6tXtFt9QYFnXId6ra2pDgWuncbKvJSkgLyCow5QoAx4kGrXteFPCljXB4vDvZiJ-A1nJ-3GYRVZrbAWlXn67xJJ7qUAt1BXUDeX3lFsu0ZIxDFRoXGRr5qq8WAQDF1nEXdwipOwjS9zaTqMSoM78QUenBOV4');
+                "
+              ></div>
+              <div class="
+                  aspect-square rounded-xl bg-cover bg-center 
+                  transition-transform hover:scale-105"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2YMK5TJpy2Dr6MQD7a3LF55WxQL90bEvl-NbWEXiCjCdIbt_PRnGtNQKGQLfN6935k5TThbRDXunrQy2eGjngBbJOPMaCEwvp7yBcOJ47EiGt7Evu94XKq57ic1DKKPjeoqKMaDIxDR2J6DCpaqSvVynIGN-pZPj7IQmZ6jqiEfm5Nc1Xq8TltEFhx5KbClAXdiADi6H1Tufh6HF6GI5W64-xVOBogcf4ATsYUrrV_F-VLs2ZJb_I6LnzkK3iLv7YvaXMUhgrcAw');
+                "
+              ></div>
+              <div class="
+                  aspect-square rounded-xl bg-cover bg-center 
+                  transition-transform hover:scale-105"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC78kf5uvV3kJqSPd-l64HCFai6WMg8uTNPzRFbhpSu6l6PXbMszlJDSNdUt_ZyUqf45g2zDFIVhPm3LrJ9KSFHO4pDvuCts6MvUhNVMX5DhRdjti17gnXFREJnnTEkM9E5jp8mypzFT7MM8E9vnfFiqh-gEHuT0_g1KC95rcHISYK8nULoTNodLgaEZRNa7p6YI97v6bpJrvC0TI5_oLwII1i0K1Iw-Ti3dmYxuB6gvxkLGAUIO0B1U7M_CNwNy9BaEC-1B4M-ZL4');
+                "
+              ></div>
+              <div class="
+                  aspect-square rounded-xl bg-cover bg-center 
+                  transition-transform hover:scale-105"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCo3RS2nyMMg9zA6E-VgyOYBr4mmnsGrxEMyVe4tMIjapNin-0bQZMtnW-Kw-E8f8k_E9k_PFpmIIQEKCClZNlgPiriR0_-MpIYQHDiledh0V2fBwrr5R4jeoWlh1CrQ45jVnuiaYvOYRt7MQG86ef6HWIEahUFi-ebmxImiv3Dq7sCHc2PpypMK7kjPh_IaYpJUFi1T3lJq9R7NF0pDKMN8QhQRuODDvGppQfMYZ6P-KkS64H_Ck1EGsAemAYt03eWmWk7tby9dbI');
+                "
+              ></div>
+              <div class="
+                  aspect-square rounded-xl bg-cover bg-center 
+                  transition-transform hover:scale-105"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDOP-aeCmdHaxQxO1moZ_OUBBa9vExvu1qHF_v--pdNqvkF8zNic4ImgjLi4ePdmp9VagvTPXK-rsi-zOab6xv9zsPYxVZzuXPeY5j_YSi39QURorTimxwV-2KQ0ZAbnGNGrxk3E5uqTbXtFUOJScasiDiWNY4u_lHfbzhRREM1QvjZe-ZSOS_gjKiYEB1Kn3qVM9cj3-8QibDQ9q06TzgiuEMu1j0MwdnvQhUTryfiduLupg-3TSR8TvvO_jEnzb-L7gT004iTK2U');
+                "
+              ></div>
+              <div class="
+                  aspect-square rounded-xl bg-cover bg-center 
+                  transition-transform hover:scale-105"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpJcbj83ag1HV_P49KgfPn74SzTE-773wlQGV3KRVDeqYJRwmSOFfWiASIwzo0KoIvUtvVSX40gpRC6s7-k3zp7vNEPuyMxkSQuFiMUJ2ZX6h-z_Xw8ZzcW2iWCcYBaxlezIQr0z36QboyTK0HJWKJZiBu0urPV9xXckuUqm7V6cUWX-I14pDcuxguqDgsEf66e4JulYkRPDUTIUMXOVYiqePUe23vChINqFvP4nkVEcDIIiOpvx-iJvMaKc7OUZh_WNMaDkO_I2w');
+                "
+              ></div>
+            </div>
+          </section>
+
+          <section
+            id="projects"
+            class="animate__animated"
+            data-animate="animate__fadeInUp"
+          >
+            <h2 class="mb-8 text-center text-3xl font-bold">Projects</h2>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+              <div class="group overflow-hidden rounded-xl bg-background-light 
+                  shadow-md transition-shadow hover:shadow-lg dark:bg-background-dark/50
+              ">
+                <div 
+                  class="aspect-video w-full bg-cover bg-center"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAemIsM_LBKMuPI9pdg5v1zg1jrW3Umc1UlBrECXH9YC41VrRC0V6GWwnnGRjmsXboRF2ZAAOnM2fC8QWpAh3GfGPZuopxmMiUMxC3wJN6gmJGgGOS256XZLN2WB3Vz5p2HDuQP_T-N2GDrawar9AT7y7p1wGo2YDwvwKwHCRw7dN6EFu1d0P61HkWypuB9bAL9mlzzfAC544UExSFrx7K5Q652XhA9nvGKRg3dwYM1ncZbH2tRXN6DHnEx_P8gEj32rrnaOUq8YH0');
+                  "
+                ></div>
+                <div class="p-6">
+                  <h3 class="text-lg font-bold">
+                    Project 1: Innovative App Design
+                  </h3>
+                  <p class="mt-2 text-sm text-background-dark/70 dark:text-background-light/70">
+                    A mobile app designed for seamless user interaction and
+                    intuitive navigation.
+                  </p>
+                </div>
+              </div>
+              <div class="
+                  group overflow-hidden rounded-xl bg-background-light shadow-md 
+                  transition-shadow hover:shadow-lg dark:bg-background-dark/50
+              ">
+                <div
+                  class="aspect-video w-full bg-cover bg-center"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXDrXSWV8Avs536LsnAlRD_SciRHQt7atEuY_pjcwFUpDjh0-fV7m8PgvJqCai4r05cvB2f0ZvjzP__3unXbj_CiEXs7fWV9cnjlE53X0YCbu-ppXesyzce20G1MO2eB81ZYpEMmwdQRMXXP_iY1HgROwPszF7oPK4u85s-nTwjyCuIvxtymxtw879KM06_38YnL3ocwCjQPehiozYG_zfifiUPL-qS-CIFAWceftnrRaBiCfRIPGpLbq84OQfvYMXfYIY77tMAj0');
+                  "
+                ></div>
+                <div class="p-6">
+                  <h3 class="text-lg font-bold">
+                    Project 2: Dynamic Website Redesign
+                  </h3>
+                  <p class="mt-2 text-sm text-background-dark/70 dark:text-background-light/70">
+                    A complete website overhaul focusing on modern aesthetics
+                    and enhanced user experience.
+                  </p>
+                </div>
+              </div>
+              <div class="
+                  group overflow-hidden rounded-xl bg-background-light shadow-md 
+                  transition-shadow hover:shadow-lg dark:bg-background-dark/50
+              ">
+                <div
+                  class="aspect-video w-full bg-cover bg-center"
+                  style="
+                    background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAcB4gLy9iLz4dVYR9PDcLmbWfWRpjEA-yWbZaTy_SWuOm5hNi6S02Dltp44dV_e5KC8bgukS38vA4nMR5LCVA9xFQ2wRx21XVU7u3lfkALFfytWK-ByHboJHL-PFvEE6_9HLvFwctDUGYSydYoQ8Cb7_7CDCLmUqQotu2kxnLNybsoHPwY4funOZzHhghAtNq52Y2F0b-0AdjvK4HYrneFfNq2T_tBYXN63CHCPn7-hbswiKzHJurtyoVrkUevqZOAWW-JqSBSlaQ');
+                  ">
+                </div>
+                <div class="p-6">
+                  <h3 class="text-lg font-bold">
+                    Project 3: Brand Identity Refresh
+                  </h3>
+                  <p class="mt-2 text-sm text-background-dark/70 dark:text-background-light/70">
+                    A comprehensive brand identity project, including logo,
+                    color palette, and visual guidelines.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="contact" class="animate__animated" data-animate="animate__fadeInUp">
+            <h2 class="mb-8 text-center text-3xl font-bold">Contact</h2>
+            <form class="mx-auto max-w-xl space-y-6">
+              <div>
+                <label class="sr-only" for="name">Name</label>
+                <input
+                  id="name"
+                  class="
+                    form-input w-full rounded-lg border-primary/30 bg-background-light p-4 
+                    text-base placeholder:text-background-dark/50 focus:border-primary focus:ring-primary 
+                    dark:bg-background-dark/50 dark:placeholder:text-background-light/50
+                  "
+                  placeholder="Your Name"
+                  type="text"
+                />
+              </div>
+              <div>
+                <label class="sr-only" for="email">Email</label>
+                <input
+                  id="email"
+                  class="
+                    form-input w-full rounded-lg border-primary/30 bg-background-light p-4 
+                    text-base placeholder:text-background-dark/50 focus:border-primary focus:ring-primary 
+                    dark:bg-background-dark/50 dark:placeholder:text-background-light/50
+                  "
+                  placeholder="Your Email"
+                  type="email"
+                />
+              </div>
+              <div>
+                <label class="sr-only" for="message">Message</label>
+                <textarea
+                  id="message"
+                  class="
+                    form-textarea w-full rounded-lg border-primary/30 bg-background-light p-4 
+                    text-base placeholder:text-background-dark/50 focus:border-primary focus:ring-primary 
+                    dark:bg-background-dark/50 dark:placeholder:text-background-light/50
+                  "
+                  placeholder="Your Message"
+                  rows="5"
+                ></textarea>
+              </div>
+              <div class="flex justify-end">
+                <button
+                  class="
+                    rounded-lg bg-primary px-8 py-3 text-sm font-bold 
+                    text-background-dark transition-transform hover:scale-105
+                  "
+                  type="submit"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

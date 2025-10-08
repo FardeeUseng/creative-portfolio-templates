@@ -1,0 +1,11 @@
+section {
+  scroll-margin-top: 150px;
+}
+
+.form-input,
+.form-textarea {
+  --tw-ring-color: transparent !important;
+  --tw-ring-offset-shadow: none !important;
+  --tw-ring-shadow: none !important;
+  box-shadow: none !important;
+}
